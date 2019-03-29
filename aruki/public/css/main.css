@@ -941,10 +941,10 @@ pre .javascript .function {
   padding: 0 20px;
   font-size: 14px;
   color: #555;
-  background: #fff;
+  background: skybule;
   border: 2px solid #555;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 8px;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -1825,7 +1825,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c908ad;
+  background: #b1e5d7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2605,13 +2605,13 @@ pre .javascript .function {
 }
 .header-inner {
   position: absolute;
-  top: 0;
+  top: 20px;
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: initial;
+  border-radius: 10px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2847,12 +2847,13 @@ pre .javascript .function {
   -webkit-transform: none;
 }
 .sidebar-inner {
+  margin-top: 20px;
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: initial;
+  border-radius: 10px;
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -2983,7 +2984,8 @@ pre .javascript .function {
 }
 .post-block {
   padding: 40px;
-  background: #fff;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
 }
@@ -2996,7 +2998,7 @@ pre .javascript .function {
   padding: 40px;
   margin: initial;
   margin-top: 12px;
-  background: #fff;
+  background: rgba(255,255,255,0.5);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
 }
@@ -3016,7 +3018,7 @@ pre .javascript .function {
 .pagination {
   margin: 12px 0 0;
   border-top: initial;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
   padding: 10px 0 10px;
@@ -3119,4 +3121,15 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("http://img.netbian.com/file/2019/0323/a52522a1eaed650cbd4186f8c6b9b91c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.content {
+  border-radius: 50px;
+  margin-top: 20px;
 }
