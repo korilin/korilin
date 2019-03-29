@@ -6,17 +6,9 @@
     <content type="text"><![CDATA[欢迎来到ARUKI’ BLOG,你可以在这里寻找对您有帮助的文章。目前博客仍在建设中，如果对本博客有任何意见，欢迎联系我并提出您的问题！！ Welcome to my blog! You can find articles that useful for you.At present, the blog is still under construction, if you have any comments on this blog, please contact me and raise your questions!! ようこそ ARUKI’ BLOG、ここで君の役に立つ文章を探すことができます。现在、ブログ建设中ですが、もしこのブログに何か意见があれば、私を连络して问题を提出してくだいさい! !]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Hexo文章与其他页面]]></title>
-    <url>%2Farukione.github.io%2F2019%2F03%2F29%2FHexo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%92%8C%E5%85%B6%E5%AE%83%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%BB%BA%E7%AB%8B%2F</url>
-    <content type="text"><![CDATA[目前等待着其他使用Next的建设者进行反馈]]></content>
-      <categories>
-        <category>前端建设</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[Next文件夹分类对应情况]]></title>
     <url>%2Farukione.github.io%2F2019%2F03%2F29%2F%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8NexT%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[目前等待着其他使用Next的建设者进行反馈]]></content>
+    <content type="text"><![CDATA[###部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认了自己的配置没有问题后我将网上找到的方法集合在一起用了：123首先我删除了根目录下的.deploy_git文件夹（有人说删除.gitignore文件，但我的文件原先就是被我删除的了）之后我又用hexo clean清除了一下public文件夹然后我修改了站点配置文件里面URL配置下的root，我把斜杠换成了/arukione.git.io(我的仓库名)了 最后我使用hexo g -d重新部署后，我的网页就变正常了，该展现出来的效果都展现出来了，但我不知道是哪一个步骤起了作用，也有可能是因为延迟导致的，大家如果遇到这个问题也可以一个步骤一个步骤测试，看看是哪个问题导致的，以便以后解决类似的问题。]]></content>
       <categories>
         <category>前端建设</category>
       </categories>
@@ -25,5 +17,13 @@
         <tag>Hexo问题</tag>
         <tag>Next问题</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo文章与其他页面]]></title>
+    <url>%2Farukione.github.io%2F2019%2F03%2F29%2FHexo%E6%96%87%E7%AB%A0%E5%8F%91%E5%B8%83%E5%92%8C%E5%85%B6%E5%AE%83%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%BB%BA%E7%AB%8B%2F</url>
+    <content type="text"><![CDATA[目前等待着其他使用Next的建设者进行反馈]]></content>
+      <categories>
+        <category>前端建设</category>
+      </categories>
   </entry>
 </search>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="目前等待着其他使用Next的建设者进行反馈">
+<meta name="description" content="###部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我">
 <meta name="keywords" content="博客建设,Hexo问题,Next问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Next文件夹分类对应情况">
 <meta property="og:url" content="http://arukione.com/2019/03/29/个人使用NexT遇到的各种问题/index.html">
 <meta property="og:site_name" content="ARUKI&#39;S BLOG">
-<meta property="og:description" content="目前等待着其他使用Next的建设者进行反馈">
+<meta property="og:description" content="###部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-29T11:29:04.675Z">
+<meta property="og:updated_time" content="2019-03-29T19:02:00.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next文件夹分类对应情况">
-<meta name="twitter:description" content="目前等待着其他使用Next的建设者进行反馈">
+<meta name="twitter:description" content="###部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我">
 
 
 
@@ -387,7 +387,8 @@
 
       
         <hr>
-<p>目前等待着其他使用Next的建设者进行反馈</p>
+<p>###部署到github显示的网页和本地测试的网页不一样<br><strong>之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。</strong><br><strong>但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。</strong><br><strong>因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。</strong><br><strong>在我确认了自己的配置没有问题后我将网上找到的方法集合在一起用了：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先我删除了根目录下的.deploy_git文件夹（有人说删除.gitignore文件，但我的文件原先就是被我删除的了）</span><br><span class="line">之后我又用hexo clean清除了一下public文件夹</span><br><span class="line">然后我修改了站点配置文件里面URL配置下的root，我把斜杠换成了/arukione.git.io(我的仓库名)了</span><br></pre></td></tr></table></figure></p>
+<p><strong>最后我使用<code>hexo g -d</code>重新部署后，我的网页就变正常了，该展现出来的效果都展现出来了，但我不知道是哪一个步骤起了作用，也有可能是因为延迟导致的，大家如果遇到这个问题也可以一个步骤一个步骤测试，看看是哪个问题导致的，以便以后解决类似的问题。</strong></p>
 
       
     </div>
@@ -422,14 +423,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/arukione.github.io/2019/03/29/Hexo文章发布和其它页面的建立/" rel="next" title="Hexo文章与其他页面">
+                <i class="fa fa-chevron-left"></i> Hexo文章与其他页面
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/arukione.github.io/2019/03/29/Hexo文章发布和其它页面的建立/" rel="prev" title="Hexo文章与其他页面">
-                Hexo文章与其他页面 <i class="fa fa-chevron-right"></i>
+              <a href="/arukione.github.io/2019/03/29/Welcome/" rel="prev" title="Welcome">
+                Welcome <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
