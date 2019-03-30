@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认">
+<meta name="description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认了自">
 <meta name="keywords" content="博客建设,Hexo-NexT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Hexo-NexT时遇到的问题">
 <meta property="og:url" content="http://arukione.com/2019/03/29/使用Hexo-NexT时遇到的问题/index.html">
 <meta property="og:site_name" content="ARUKI&#39;S BLOG">
-<meta property="og:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认">
+<meta property="og:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认了自">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-30T06:59:49.515Z">
+<meta property="og:updated_time" content="2019-03-30T10:09:16.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo-NexT时遇到的问题">
-<meta name="twitter:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认">
+<meta name="twitter:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认了自">
 
 
 
@@ -386,12 +386,9 @@
       
 
       
-        <hr>
-<hr>
-<h3 id="部署到github显示的网页和本地测试的网页不一样"><a href="#部署到github显示的网页和本地测试的网页不一样" class="headerlink" title="部署到github显示的网页和本地测试的网页不一样"></a>部署到github显示的网页和本地测试的网页不一样</h3><p><strong>之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。</strong><br><strong>但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。</strong><br><strong>因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。</strong><br><strong>在我确认了自己的配置没有问题后我将网上找到的方法集合在一起用了：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先我删除了根目录下的.deploy_git文件夹（有人说删除.gitignore文件，但我的文件原先就是被我删除的了）</span><br><span class="line">之后我又用hexo clean清除了一下public文件夹</span><br><span class="line">然后我修改了站点配置文件里面URL配置下的root，我把斜杠换成了/arukione.git.io(我的仓库名)了</span><br></pre></td></tr></table></figure></p>
-<p><strong>最后我使用<code>hexo g -d</code>重新部署后，我的网页就变正常了，该展现出来的效果都展现出来了，但我不知道是哪一个步骤起了作用，也有可能是因为延迟导致的，大家如果遇到这个问题也可以一个步骤一个步骤测试，看看是哪个问题导致的，以便以后解决类似的问题。另外github部署的时候缓存加载是比较慢，有时候要过一段时间才会显示出你想要的效果，清除一下缓存，多刷新几次就行了。</strong></p>
-<hr>
-<h3 id="生成了空白的html文件"><a href="#生成了空白的html文件" class="headerlink" title="生成了空白的html文件"></a>生成了空白的html文件</h3><p><strong>第一次遇到这个问题的时候，我是直接重新搭建了这个博客的，毕竟一直不知道怎么解决，明明上一步操作还是没问题的，下一步页面突然就崩溃了。</strong><br><strong>后来这个博客又遇到了一次，好在我找到了解决方法：</strong><br><strong>如果找不到index.html文件（在生成的public文件夹里面）的话，要先用<code>npm ls --depth 0</code>检查一下插件情况,如果插件缺失了deploy和generator这两个插件的话就要用<code>npm install</code>重新安装插件。</strong><br><strong>如果是有html文件，但文件是空白的。那么你就要检查你刚刚修改的配置了，如果你修改一个文件里某一个配置下的某一项，但那一个配置忘记打开的话就会导致这样的情况。</strong><br><strong>例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。</strong><br><strong>而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。</strong></p>
+        <h1 id="部署到github显示的网页和本地测试的网页不一样"><a href="#部署到github显示的网页和本地测试的网页不一样" class="headerlink" title="部署到github显示的网页和本地测试的网页不一样"></a>部署到github显示的网页和本地测试的网页不一样</h1><p><strong>之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。</strong><br><strong>但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。</strong><br><strong>因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。</strong><br><strong>在我确认了自己的配置没有问题后我将网上找到的方法集合在一起用了：</strong><br><div class="note info"><p><strong>首先我删除了根目录下的.deploy_git文件夹（有人说删除.gitignore文件，但我的文件原先就是被我删除的了）</strong><br><strong>之后我又用hexo clean清除了一下public文件夹</strong><br><strong>然后我修改了站点配置文件里面URL配置下的root，我把斜杠换成了/arukione.git.io(我的仓库名)了</strong></p></div><br><strong>最后我使用<code>hexo g -d</code>重新部署后，我的网页就变正常了，该展现出来的效果都展现出来了，但我不知道是哪一个步骤起了作用，也有可能是因为延迟导致的，大家如果遇到这个问题也可以一个步骤一个步骤测试，看看是哪个问题导致的，以便以后解决类似的问题。</strong><br><strong>另外github部署的时候缓存加载是比较慢，有时候要过一段时间才会显示出你想要的效果，清除一下缓存，多刷新几次就行了。</strong></p>
+<h1 id="生成了空白的html文件"><a href="#生成了空白的html文件" class="headerlink" title="生成了空白的html文件"></a>生成了空白的html文件</h1><p><strong>第一次遇到这个问题的时候，我是直接重新搭建了这个博客的，毕竟一直不知道怎么解决，明明上一步操作还是没问题的，下一步页面突然就崩溃了。</strong><br><strong>后来这个博客又遇到了一次，好在我找到了解决方法：</strong><br><strong>如果找不到index.html文件（在生成的public文件夹里面）的话，要先用<code>npm ls --depth 0</code>检查一下插件情况,如果插件缺失了deploy和generator这两个插件的话就要用<code>npm install</code>重新安装插件。</strong><br><div class="note warning"><p><strong>如果是有html文件，但文件是空白的。那么你就要检查你刚刚修改的配置了，如果你修改一个文件里某一个配置下的某一项，但那一个配置忘记打开的话就会导致这样的情况。</strong> </p></div></p>
+<p><strong>例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。</strong><br><strong>而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。</strong></p>
 
       
     </div>
@@ -424,7 +421,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/arukione.github.io/2019/03/29/Hexo文章发布和其它页面的建立/" rel="next" title="Next博客建设的相关操作">
+              <a href="/arukione.github.io/2019/03/29/Next博客建设的相关操作/" rel="next" title="Next博客建设的相关操作">
                 <i class="fa fa-chevron-left"></i> Next博客建设的相关操作
               </a>
             
@@ -610,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li></ol></div>
             
 
           </div>
