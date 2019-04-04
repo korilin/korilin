@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[我的学习旅程]]></title>
+    <url>%2Farukione.github.io%2F2019%2F04%2F04%2F%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%85%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[2018年加强自己对计算机的认识，更深层地去理解计算机的工作原理从C语言开始认识程序接下来是自己买了服务器搭建梯子，第一次接触脚本慢慢的听到了许多自己没接触过的东西，例如github、node.js、还有前端啊，但是自己都不知道是什么东西自己买了前端的书学习，知道了如何构建网站参与了wiki的建设，发现了更多自己不知道的知识和vultr的客服交流，开启了服务器25号端口学习java，认识到了面向对象2019年访问了HackOne网站，开始对网络安全产生兴趣接触linux系统学习了github，明白了github的作用和使用方法接触python，发现python的优点购买了域名，尝试搭建博客初次使用git和githubDesktop，并搭建了自己的博客用githubDesktop给博客做备份学习linux系统和python、java，开始接触数据库]]></content>
+      <categories>
+        <category>学习旅程</category>
+      </categories>
+      <tags>
+        <tag>编程学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Welcome]]></title>
     <url>%2Farukione.github.io%2F2019%2F03%2F29%2FWelcome%2F</url>
     <content type="text"><![CDATA[欢迎来到ARUKI’ BLOG,你可以在这里寻找对您有帮助的文章。目前博客仍在建设中，如果对本博客有任何意见，欢迎联系我并提出您的问题！！ Welcome to my blog! You can find articles that useful for you.At present, the blog is still under construction, if you have any comments on this blog, please contact me and raise your questions!! ようこそ ARUKI’ BLOG、ここで君の役に立つ文章を探すことができます。现在、ブログ建设中ですが、もしこのブログに何か意见があれば、私を连络して问题を提出してくだいさい! !]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Next博客建设的相关操作]]></title>
-    <url>%2Farukione.github.io%2F2019%2F03%2F29%2FNext%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[现在需要解决的问题 文章目录的配置边框弧度设置]]></content>
-      <categories>
-        <category>前端建设</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[使用Hexo-NexT时遇到的问题]]></title>
