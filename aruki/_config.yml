@@ -86,3 +86,21 @@ deploy:
   type: git
   repository: git@github.com:arukione/arukione.github.io.git
   branch: master
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-koharu
+  display:
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: true
+

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MySQL增删改查]]></title>
+    <url>%2Farukione.github.io%2F2019%2F04%2F09%2FMySQL%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%2F</url>
+    <content type="text"><![CDATA[建数据库 create database database_name;查看数据库 show databases;选择数据库 use database_name;删除数据库 drop database database_name; 创建建数据表 create table table_name(column_name column_type);查看表创建语句 show create table table_name查看数据表 show tables;删除数据表 drop table table_name; 查看表结构 describe table_name;查看表数据 select * from table_name;添加表数据 insert into table_name (column_name) value (value_name);修改表数据 update table_name set 修改内容 where 条件删除表数据 delete from table_name where 条件; 键类型： primary unique增加属性 alter table table_name add 属性;查看属性 show variables like &#39;属性%&#39;;修改属性 alter table table_name modify 属性;删除属性 alter table table_name drop 属性;修改自增长值 alter table table_name auto_increment=value; 修改自增长值时不能比当前值小清除自增长 alter table table_name modify column_name cloumn_type; 修改字段时如果没有添加自增长，就可以把自增长清除了删除唯一键 alter table table_name drop index unique_name; 注意点 主键只能创建一个：一个主键可以选择多个字段，但是不可以创建多个主键自动增长只能用于数值，一张表只能拥有一个自增长无法修改唯一键，只能通过先删除后增加的方式 内容更新中……]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>编程学习</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL安装到登陆的问题]]></title>
+    <url>%2Farukione.github.io%2F2019%2F04%2F08%2FMySQL%E5%AE%89%E8%A3%85%E5%88%B0%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[经过一晚上的折腾，我终于登陆进数据库了！！这期间遇到了不少问题，虽然网上有很多解决方案，但要找到适用的真的不容易，每个问题都花了很长时间去尝试那些指令，绕了很多弯路才解决。 端口冲突安装完遇到的第一个问题就是，没办法打开mysql服务，删了安装目录下的date文件夹重新用mysqld --initialize初始化，重新配置my.ini文件都没用。之后用mysqld --console查了错误信息发现了端口被占用了： [ERROR] Can’t start server: Bind on TCP/IP port: Address already in use[ERROR] Do you already have another mysqld server running on port: 3306 ? 因为我这边的命令行无法识别netstat -nltp|grep mysql，到后面才用netstat -aon|findstr 3306查到了占用3306端口的进程，记住了进程后面的PID号，用taskkil /f /pid 对应的PID号把进程给杀了才解决问题 无法登陆耗了一些时间后，我用net start mysql开启了数据库后，用mysql -uroot -密码尝试登陆，结果又报了一个这样的错误 mysql: [ERROR] mysql: unknown option ‘-R’. 于是用mysql -uroot -p后再输入密码,才知道原先输入密码前也要加个p，也就是mysql -uroot -p密码。但是接下来又报了一个错误 mysql: [Warning] Using a password on the command line interface can be insecure.ERROR 1045 (28000): Access denied for user ‘root‘@’localhost’ (using password: YES) 查了一下发现是密码错误，因为我输入的是安装时的密码，但是初始化的时候密码重置了，所以密码错了，所以我又绕了一次弯路，把date删了重新初始化了一遍，把初始化输出的临时密码记了下来 [Note] A temporary password is generated for root@localhost: TKk51x#bOi0S之后就可以成功登陆了 修改密码登陆后没办法使用其他语句，说是必须修改一下密码，而且自动生成的密码太难记了，我想改回自己的密码，但是在网上查了很多指令都用不成功，错误提示的ALTER USER语句也不知道怎么用，所以又上网馊了一下，还看了一下官方文档，总结就是看不懂【查到最后终于发现了一个可以用的语句 alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;password&#39;; 这下问题终于解决了，可以开始进一步学习了。 虽然遇到了很多问题，但是也知道了很多MySQL和命令行的语句，有些没派上用场就是了，至少折腾了一夜一些有用的语句都变熟悉了。]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>windows命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的学习旅程]]></title>
     <url>%2Farukione.github.io%2F2019%2F04%2F04%2F%E6%88%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%97%85%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[2018年加强自己对计算机的认识，更深层地去理解计算机的工作原理从C语言开始认识程序接下来是自己买了服务器搭建梯子，第一次接触脚本慢慢的听到了许多自己没接触过的东西，例如github、node.js、还有前端啊，但是自己都不知道是什么东西自己买了前端的书学习，知道了如何构建网站参与了wiki的建设，发现了更多自己不知道的知识和vultr的客服交流，开启了服务器25号端口学习java，认识到了面向对象2019年访问了HackOne网站，开始对网络安全产生兴趣接触linux系统学习了github，明白了github的作用和使用方法接触python，发现python的优点购买了域名，尝试搭建博客初次使用git和githubDesktop，并搭建了自己的博客用githubDesktop给博客做备份学习linux系统和python、java，开始接触数据库]]></content>
@@ -19,7 +43,7 @@
   <entry>
     <title><![CDATA[使用Hexo-NexT时遇到的问题]]></title>
     <url>%2Farukione.github.io%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8Hexo-NexT%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。因为自己也不太懂部署到github是怎么进行的，所以在网上翻了很多资料，有的说是因为延迟，有的说是命令或者配置出了问题。在我确认了自己的配置没有问题后我将网上找到的方法集合在一起用了：首先我删除了根目录下的.deploy_git文件夹（有人说删除.gitignore文件，但我的文件原先就是被我删除的了）之后我又用hexo clean清除了一下public文件夹然后我修改了站点配置文件里面URL配置下的root，我把斜杠换成了/arukione.git.io(我的仓库名)了最后我使用hexo g -d重新部署后，我的网页就变正常了，该展现出来的效果都展现出来了，但我不知道是哪一个步骤起了作用，也有可能是因为延迟导致的，大家如果遇到这个问题也可以一个步骤一个步骤测试，看看是哪个问题导致的，以便以后解决类似的问题。另外github部署的时候缓存加载是比较慢，有时候要过一段时间才会显示出你想要的效果，清除一下缓存，多刷新几次就行了。 生成了空白的html文件第一次遇到这个问题的时候，我是直接重新搭建了这个博客的，毕竟一直不知道怎么解决，明明上一步操作还是没问题的，下一步页面突然就崩溃了。后来这个博客又遇到了一次，好在我找到了解决方法：如果找不到index.html文件（在生成的public文件夹里面）的话，要先用npm ls --depth 0检查一下插件情况,如果插件缺失了deploy和generator这两个插件的话就要用npm install重新安装插件。如果是有html文件，但文件是空白的。那么你就要检查你刚刚修改的配置了，如果你修改一个文件里某一个配置下的某一项，但那一个配置忘记打开的话就会导致这样的情况。 例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。]]></content>
+    <content type="text"><![CDATA[部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。这是因为github部署的时候缓存加载比较慢，有时候要过一段时间才会显示出你想要的效果，用hexo clean清除一下public文件夹,再重新部署用hexo g -d部署一下，多刷新几次就行了。 生成了空白的html文件第一次遇到这个问题的时候，我是直接重新搭建了这个博客的，毕竟一直不知道怎么解决，明明上一步操作还是没问题的，下一步页面突然就崩溃了。后来这个博客又遇到了一次，好在我找到了解决方法：如果找不到index.html文件（在生成的public文件夹里面）的话，要先用npm ls --depth 0检查一下插件情况,如果插件缺失了deploy和generator这两个插件的话就要用npm install重新安装插件。如果是有html文件，但文件是空白的。那么你就要检查你刚刚修改的配置了，如果你修改一个文件里某一个配置下的某一项，但那一个配置忘记打开的话就会导致这样的情况。 例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。 hexo语句发生错误 Template render error: (unknown path)在我写完另外一篇文章后，打算测试一下，发现无论是hexo g还是hexo s都会报错，于是移除了那篇文章，重新尝试了一下发现可以了。在网上看到似乎不能用}}这样的符号，我回去看那篇文章时发现我有一个}误删了，这才的导致解析不通过。结合之前生成空白html的经历，我发现只要文件里面有一点语法错误都会出现很大问题，如果某次操作突然出错了，记得去检查你最近的修改和文章有没有语法错误。]]></content>
       <categories>
         <category>前端建设</category>
       </categories>
