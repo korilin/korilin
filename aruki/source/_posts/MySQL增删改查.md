@@ -3,7 +3,6 @@ title: MySQL增删改查
 date: 2019-4-9
 tags: 
     - MySQL
-    - 编程学习
 categories: 数据库
 ---
 {% note primary %} 

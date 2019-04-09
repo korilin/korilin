@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="ARUKI&#39;S BLOG">
 <meta property="og:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。这是因为github部署的时候缓存加载比较慢，有时候要过一段时间才会显示出你想要的效果，用hexo clean清除一下public文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-09T05:04:58.562Z">
+<meta property="og:updated_time" content="2019-04-09T19:57:23.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo-NexT时遇到的问题">
 <meta name="twitter:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。这是因为github部署的时候缓存加载比较慢，有时候要过一段时间才会显示出你想要的效果，用hexo clean清除一下public文">
@@ -395,6 +395,7 @@
 <h1 id="生成了空白的html文件"><a href="#生成了空白的html文件" class="headerlink" title="生成了空白的html文件"></a>生成了空白的html文件</h1><p><font size="4"><br>第一次遇到这个问题的时候，我是直接重新搭建了这个博客的，毕竟一直不知道怎么解决，明明上一步操作还是没问题的，下一步页面突然就崩溃了。<br>后来这个博客又遇到了一次，好在我找到了解决方法：<br>如果找不到index.html文件（在生成的public文件夹里面）的话，要先用<code>npm ls --depth 0</code>检查一下插件情况,如果插件缺失了deploy和generator这两个插件的话就要用<code>npm install</code>重新安装插件。<br><div class="note warning"><p><strong>如果是有html文件，但文件是空白的。那么你就要检查你刚刚修改的配置了，如果你修改一个文件里某一个配置下的某一项，但那一个配置忘记打开的话就会导致这样的情况。</strong> </p></div></font></p>
 <p>例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。<br>而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。<br><br> </p>
 <h1 id="hexo语句发生错误-Template-render-error-unknown-path"><a href="#hexo语句发生错误-Template-render-error-unknown-path" class="headerlink" title="hexo语句发生错误 Template render error: (unknown path)"></a>hexo语句发生错误 Template render error: (unknown path)</h1><p><font size="4"><br>在我写完另外一篇文章后，打算测试一下，发现无论是hexo g还是hexo s都会报错，于是移除了那篇文章，重新尝试了一下发现可以了。<br>在网上看到似乎不能用}}这样的符号，我回去看那篇文章时发现我有一个}误删了，这才的导致解析不通过。<br>结合之前生成空白html的经历，我发现只要文件里面有一点语法错误都会出现很大问题，如果某次操作突然出错了，记得去检查你最近的修改和文章有没有语法错误。<br></font><br> </p>
+<h1 id="左下角多了一个undefined"><a href="#左下角多了一个undefined" class="headerlink" title="左下角多了一个undefined"></a>左下角多了一个undefined</h1><p><font size="4"><br>最新版本的看板娘，在layout/_layout.swig的前加上{ { live2d() } }，会产生一个默认的看板娘。<br>如果在_config.yml文件中只设置一个，这就会产生冲突，导致有一个无法定义，所以会在页面多出一个undefined语句。<br>在最新版本要把前的{ { live2d() } }删除，这样才不会出错。<br></font><br> </p>
 
       
     </div>
@@ -614,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo语句发生错误-Template-render-error-unknown-path"><span class="nav-number">3.</span> <span class="nav-text">hexo语句发生错误 Template render error: (unknown path)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo语句发生错误-Template-render-error-unknown-path"><span class="nav-number">3.</span> <span class="nav-text">hexo语句发生错误 Template render error: (unknown path)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#左下角多了一个undefined"><span class="nav-number">4.</span> <span class="nav-text">左下角多了一个undefined</span></a></li></ol></div>
             
 
           </div>
