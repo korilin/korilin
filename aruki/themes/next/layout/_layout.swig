@@ -70,6 +70,7 @@
 
   </div>
 
+
   {% include '_scripts/vendors.swig' %}
   {% include '_scripts/commons.swig' %}
 

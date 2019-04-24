@@ -11,6 +11,7 @@
   #}{% else %}{#
     #}{{ page.title + page_title_suffix }}{#
   #}{% endif %}{#
+
 #}{% endblock %}
 
 {% block page_class %}page-post-detail{% endblock %}
@@ -34,7 +35,7 @@
                 {{ _p('counter.tag_cloud', site.tags.length) }}
             </div>
             <div class="tag-cloud-tags">
-              {{ tagcloud({min_font: 12, max_font: 30, amount: 300, color: true, start_color: '#ccc', end_color: '#111'}) }}
+              {{ tagcloud({min_font: 20, max_font: 35, amount: 300, color: true, start_color: '#2F4F4F', end_color: '#000000'}) }}
             </div>
           </div>
         {% elif page.type === 'categories' %}
