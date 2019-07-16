@@ -38,7 +38,7 @@ top: 20190329
 # 左下角多了一个undefined
 
 <font size="4">
-最新版本的看板娘，在layout/_layout.swig的</body>前加上{ { live2d() } }，会产生一个默认的看板娘。
+最新版本的看板娘，在layout/_layout.swig的`</body>`前加上{ { live2d() } }，会产生一个默认的看板娘。
 如果在_config.yml文件中只设置一个，这就会产生冲突，导致有一个无法定义，所以会在页面多出一个undefined语句。
-在最新版本要把</body>前的{ { live2d() } }删除，这样才不会出错。
+在最新版本要把`</body>`前的{ { live2d() } }删除，这样才不会出错。
 </font><br /> 
