@@ -89,19 +89,19 @@
 
 
 
-<meta name="description" content="依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的时候是采取分别识别验证码里面的4个数字的方式。幸好，天翼的验证码里的数字">
+<meta name="description" content="本菜鸡能力有限，本文章主要目的是为了完成自动登录校园网，不是为了教学……依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的">
 <meta name="keywords" content="Python,神经网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="天翼校园网验证码识别">
 <meta property="og:url" content="http://arukione.com/2019/05/25/天翼校园网验证码识别/index.html">
 <meta property="og:site_name" content="ARUKI&#39;S BLOG">
-<meta property="og:description" content="依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的时候是采取分别识别验证码里面的4个数字的方式。幸好，天翼的验证码里的数字">
+<meta property="og:description" content="本菜鸡能力有限，本文章主要目的是为了完成自动登录校园网，不是为了教学……依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://arukione.com/images/天翼验证码训练集图片.png">
-<meta property="og:updated_time" content="2019-07-17T19:52:28.000Z">
+<meta property="og:updated_time" content="2019-08-12T05:48:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="天翼校园网验证码识别">
-<meta name="twitter:description" content="依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的时候是采取分别识别验证码里面的4个数字的方式。幸好，天翼的验证码里的数字">
+<meta name="twitter:description" content="本菜鸡能力有限，本文章主要目的是为了完成自动登录校园网，不是为了教学……依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西…… 如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频 首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的">
 <meta name="twitter:image" content="http://arukione.com/images/天翼验证码训练集图片.png">
 
 
@@ -403,7 +403,7 @@
       
 
       
-        <p><strong>依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码</strong><br>其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西……</p>
+        <p><strong>本菜鸡能力有限，本文章主要目的是为了完成自动登录校园网，不是为了教学……</strong><br><strong>依靠之前学的一个神经网络，尝试写一个识别天翼验证码的代码</strong><br>其实是为了破解那个不得不吐槽的校园网，不得不捣鼓的东西……</p>
 <p><strong>如果不懂爬虫，神经网络的构造，梯度下降算法和反向传播算法，请先找资料学习相关知识，网上有很多讲解的文章，B站也有很多视频</strong></p>
 <p><strong>首先训练神经网络需要一点训练数据，而且，写的那个神经网络也不是靠深度学习框架的，所以识别的时候是采取分别识别验证码里面的4个数字的方式。</strong><br><strong>幸好，天翼的验证码里的数字，非常简单，没有那些奇奇怪怪的加工，每个数字都是一样的，所以训练数据也不用那么多。</strong><br><strong>写一个爬虫抓取一下验证码图片，然后把图片分割一下，就可以得到训练数据了。</strong><br><strong>因为验证码里面的数字都长得一样，这里我每个数字就只用了10张图片来训练</strong><br><img src="\images\天翼验证码训练集图片.png" alt="训练数据数字0~9"></p>
 <p><strong>接下来是训练神经网络</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">class neuralNetwork():</span><br><span class="line"></span><br><span class="line">    # 初始化神经网络</span><br><span class="line">    def __init__(self):</span><br><span class="line">        # 定义输入层节点数量</span><br><span class="line">        self.inputnodes = 13 * 9</span><br><span class="line">        # 定义隐藏层节点数量</span><br><span class="line">        self.hiddennodes = 300</span><br><span class="line">        # 定义输出层节点数量</span><br><span class="line">        self.outnodes = 10</span><br><span class="line">        # 随机初始化权重</span><br><span class="line">        self.input_hidden_weight = random.normal(0.0, pow(self.hiddennodes, -0.5), (self.hiddennodes, self.inputnodes))</span><br><span class="line">        self.hidden_out_weight = random.normal(0.0, pow(self.outnodes, -0.5), (self.outnodes, self.hiddennodes))</span><br><span class="line">        # 设置学习率</span><br><span class="line">        self.learning_rate = 0.1</span><br><span class="line">        # 定义激活函数</span><br><span class="line">        self.activation_function = lambda x: expit(x)</span><br><span class="line"></span><br><span class="line">    def train(self, inputs, targets):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :param inputs: 输入的图片数组</span><br><span class="line">        :param targets: 预测得到的结果</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        # 转化输入的数据</span><br><span class="line">        inputs = nparray(inputs, ndmin=2).T</span><br><span class="line">        # 转化预测的数据</span><br><span class="line">        targets = nparray(targets, ndmin=2).T</span><br><span class="line">        # 神经网络的识别结果</span><br><span class="line">        hidden_inputs = dot(self.input_hidden_weight, inputs)</span><br><span class="line">        hidden_outputs = self.activation_function(hidden_inputs)</span><br><span class="line">        out_inputs = dot(self.hidden_out_weight, hidden_outputs)</span><br><span class="line">        final_outputs = self.activation_function(out_inputs)</span><br><span class="line">        # 分配输出层、隐藏层的各节的损失值</span><br><span class="line">        out_error = targets - final_outputs</span><br><span class="line">        hidden_error = dot(self.hidden_out_weight.T, out_error)</span><br><span class="line">        # 更新权重</span><br><span class="line">        self.hidden_out_weight += self.learning_rate * dot((out_error * final_outputs * (1.0 - final_outputs)),</span><br><span class="line">                                                           hidden_outputs.T)</span><br><span class="line">        self.input_hidden_weight += self.learning_rate * dot((hidden_error * hidden_outputs * (1.0 - hidden_outputs)),</span><br><span class="line">                                                             inputs.T)</span><br><span class="line"></span><br><span class="line">    def query(self, inputs):</span><br><span class="line">        inputs = nparray(inputs, ndmin=2).T</span><br><span class="line">        hidden_inputs = dot(self.input_hidden_weight, inputs)</span><br><span class="line">        hidden_outputs = self.activation_function(hidden_inputs)</span><br><span class="line">        out_inputs = dot(self.hidden_out_weight, hidden_outputs)</span><br><span class="line">        final_outputs = self.activation_function(out_inputs)</span><br><span class="line">        max = argmax(final_outputs)</span><br><span class="line">        return max</span><br></pre></td></tr></table></figure></p>
@@ -531,7 +531,7 @@
               
                 <a href="/arukione.github.io/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -542,7 +542,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/arukione.github.io/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -553,7 +553,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/arukione.github.io/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
