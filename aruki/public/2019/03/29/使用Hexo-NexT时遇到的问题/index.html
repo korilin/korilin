@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="ARUKI&#39;S BLOG">
 <meta property="og:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。这是因为github部署的时候缓存加载比较慢，有时候要过一段时间才会显示出你想要的效果，用hexo clean清除一下public文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-12T05:49:18.000Z">
+<meta property="og:updated_time" content="2019-08-29T20:02:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo-NexT时遇到的问题">
 <meta name="twitter:description" content="部署到github显示的网页和本地测试的网页不一样之前设置了网页的背景图片还有側框的边角，同时添加了右上角的github跳转图标和阅读全文的设置。但是在在本地测试完，部署到github时，发现只有github图标和阅读全文的设置生效了，背景图片和边角设置没有体现出来。这是因为github部署的时候缓存加载比较慢，有时候要过一段时间才会显示出你想要的效果，用hexo clean清除一下public文">
@@ -406,6 +406,7 @@
 <p>例如我在主题配置文件里的友情链接links下增加了网易云音乐这一个选项，但是links前面原先有一个#号，我没有删除打开的话，生成的index.html文件就是空白的。<br>而我就是遇到了这种情况，当时不知道是修改了哪一个配置，忘记把#号删了，结果就没有成功生成页面，发现了之后把#号删了就恢复正常了。<br><br> </p>
 <h1 id="hexo语句发生错误-Template-render-error-unknown-path"><a href="#hexo语句发生错误-Template-render-error-unknown-path" class="headerlink" title="hexo语句发生错误 Template render error: (unknown path)"></a>hexo语句发生错误 Template render error: (unknown path)</h1><p><font size="4"><br>在我写完另外一篇文章后，打算测试一下，发现无论是hexo g还是hexo s都会报错，于是移除了那篇文章，重新尝试了一下发现可以了。<br>在网上看到似乎不能用}}这样的符号，我回去看那篇文章时发现我有一个}误删了，这才的导致解析不通过。<br>结合之前生成空白html的经历，我发现只要文件里面有一点语法错误都会出现很大问题，如果某次操作突然出错了，记得去检查你最近的修改和文章有没有语法错误。<br></font><br> </p>
 <h1 id="左下角多了一个undefined"><a href="#左下角多了一个undefined" class="headerlink" title="左下角多了一个undefined"></a>左下角多了一个undefined</h1><p><font size="4"><br>最新版本的看板娘，在layout/_layout.swig的<code>&lt;/body&gt;</code>前加上{ { live2d() } }，会产生一个默认的看板娘。<br>如果在_config.yml文件中只设置一个，这就会产生冲突，导致有一个无法定义，所以会在页面多出一个undefined语句。<br>在最新版本要把<code>&lt;/body&gt;</code>前的{ { live2d() } }删除，这样才不会出错。<br></font><br> </p>
+<h1 id="文件过大push不了"><a href="#文件过大push不了" class="headerlink" title="文件过大push不了"></a>文件过大push不了</h1><p><font size="4"><br>更新404页面的时候，我这404里面插入了一个视频，然后在上传的时候发现github不支持超过100M的文件，所以我把视频删了，重新部署一遍博客。<br>但每次部署都会继续上传我删掉的那个视频，为什么呢？<br>我已经把404文件夹里面的视频删了，也把public文件夹里面的视频删了，我还检查了一遍.deploy_git下面的文件夹，都没发现那个视频了。<br>上网重新查了一下hexo的部署方式才知道，执行hexo d，就会把这个public文件夹的东西完完整整拷贝到.deploy_git文件夹里。<br>想起了之前部署失败，应该是.deploy_git文件夹里面还保留了之前没push的信息，才会导致现在也部署不了。<br>解决方法就是执行<code>hexo cl</code>清除一下缓存，或者直接把.deploy_git文件夹删了，<br>这样重新部署就没问题了。<br>顺便一提，其实那个视频我还是插进去了，只不过用了另外一种方法…<br></font><br> </p>
 
       
     </div>
@@ -444,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/arukione.github.io/2019/04/04/我的学习旅程/" rel="prev" title="我的学习旅程">
-                我的学习旅程 <i class="fa fa-chevron-right"></i>
+              <a href="/arukione.github.io/2019/04/04/机器学习资源分享/" rel="prev" title="机器学习资源分享">
+                机器学习资源分享 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -625,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo语句发生错误-Template-render-error-unknown-path"><span class="nav-number">3.</span> <span class="nav-text">hexo语句发生错误 Template render error: (unknown path)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#左下角多了一个undefined"><span class="nav-number">4.</span> <span class="nav-text">左下角多了一个undefined</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github显示的网页和本地测试的网页不一样"><span class="nav-number">1.</span> <span class="nav-text">部署到github显示的网页和本地测试的网页不一样</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成了空白的html文件"><span class="nav-number">2.</span> <span class="nav-text">生成了空白的html文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo语句发生错误-Template-render-error-unknown-path"><span class="nav-number">3.</span> <span class="nav-text">hexo语句发生错误 Template render error: (unknown path)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#左下角多了一个undefined"><span class="nav-number">4.</span> <span class="nav-text">左下角多了一个undefined</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件过大push不了"><span class="nav-number">5.</span> <span class="nav-text">文件过大push不了</span></a></li></ol></div>
             
 
           </div>
