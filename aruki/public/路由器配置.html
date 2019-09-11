@@ -31,6 +31,9 @@
             padding: 20px 40px;
 
         }
+        
+        a:link {color: rgb(177, 62, 81);}
+        a:visited {color:rgb(177, 62, 81);}
     </style>
 </head>
 
@@ -38,6 +41,11 @@
     <div class="main">
         <h3>路由器设置</h3>
         <hr color="#ff66cc">
+        <hr color="skyblue">
+        <p>
+        【刷breed和系统方法】：
+        <a href="http://www.upantool.com/sense/luyouqi/14063.html">http://www.upantool.com/sense/luyouqi/14063.html</a>
+        </p>
         <hr color="skyblue">
         <p>
             src/gz 18.12_core http://downloads.pangubox.com:6380/pandorabox/18.12/targets/ralink/mt7621/packages<br>
@@ -77,13 +85,13 @@ config uhttpd web
         <p>
             上传文件<br>
             test -> www 权限<br>
-            yzm.php -> www<br>
-            login1.sh -> root 权限<br>
+            right.sh -> www 权限<br>
+            * -> www
         </p>
         <br>
         <p>
             在 /etc/crontabs/root 里设置定时任务<br>
-            * * * * * /root/login1.sh<br>
+            * * * * * /www/right.sh<br>
             <br>
             在 /etc/rc.local 设置开机启动<br>
             /www/test br-lan daemon<br>
