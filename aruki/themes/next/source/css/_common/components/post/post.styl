@@ -44,6 +44,22 @@
   if hexo-config('motion.transition.coll_header') { .collection-title { opacity: 0; } }
 }
 
+.post-title {
+  font-size: 26px;
+  text-align: center;
+  word-break: break-word;
+  font-weight: $posts-expand-title-font-weight
+  background-color: pink;
+  border-radius:.3em;
+  line-height:1em;
+  padding-bottom:.12em;
+  padding-top:.12em;
+  box-shadow:2px 2px 7px #9fb6cd;
+  +mobile() {
+    font-size: 22px;
+  }
+}
+
 @import "post-expand";
 @import "post-collapse";
 @import "post-type";

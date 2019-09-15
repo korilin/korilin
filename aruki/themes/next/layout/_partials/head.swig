@@ -167,3 +167,6 @@
 {% endif %}
 
 {% include 'head/custom-head.swig' %}
+
+<!-- 网页加载条 -->
+<script src="https://neveryu.github.io/js/src/pace.min.js"></script>
