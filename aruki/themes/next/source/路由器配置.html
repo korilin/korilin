@@ -5,7 +5,7 @@
 
     <style type="text/css">
         body {
-            background-image: url(images/路由器壁纸.jpg);
+            background-image: url(images/路由器/路由器壁纸.jpg);
             background-repeat: no-repeat;
             background-position: top;
             background-attachment: fixed;
@@ -71,7 +71,8 @@
             php5-mod-tokenizer php5-mod-zip
         </p>
         <br><hr color="skyblue">
-        <p>/etc/config/uhttpd 下配置php路径</p>
+        <p>配置php路径</p>
+        <p>vim /etc/config/uhttpd</p>
         <pre id="block">
 config uhttpd web
     list    listen_http 0.0.0.0:88
@@ -90,10 +91,12 @@ config uhttpd web
         </p>
         <br>
         <p>
-            在 /etc/crontabs/root 里设置定时任务<br>
+            设置定时任务<br>
+            vim /etc/crontabs/root<br>
             * * * * * /www/right.sh<br>
             <br>
-            在 /etc/rc.local 设置开机启动<br>
+            设置开机启动<br>
+            vim /etc/rc.local<br>
             /www/test br-lan daemon<br>
         </p>
         <br><hr color="skyblue"><hr color="#ff66cc">
