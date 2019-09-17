@@ -2,6 +2,7 @@
 title: Python程序打包成exe可执行文件
 date: 2019-6-2
 tags: Python
+categories: Python
 top: 9809398
 ---
 
