@@ -1,5 +1,9 @@
 # myblog
 
-我的hexo博客源代码
+使用hexo搭建的个人博客源码
 
-主题由next为基础修改
+仓库作用：开源+备份
+
+主题使用next进行自定义修改
+
+网站部署在github，博客网址：[arukione.com](https://www.arukione.com/)
