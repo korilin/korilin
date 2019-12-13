@@ -86,7 +86,6 @@ deploy:
   type: git
   repository:
     github: git@github.com:arukione/arukione.github.io.git
-    coding: git@e.coding.net:aruki/aruki.git
   branch: master
 
 live2d:
