@@ -13,8 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://arukione.com
-root: /arukione.github.io
+url: https://arukione.com/
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -39,8 +39,8 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace:
   
@@ -78,13 +78,14 @@ search:
   limit: 10000
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: 3-hexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repository:
+    coding: git@e.coding.net:aruki/aruki.git
     github: git@github.com:arukione/arukione.github.io.git
   branch: master
 
