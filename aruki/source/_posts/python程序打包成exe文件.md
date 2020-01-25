@@ -1,7 +1,7 @@
 ---
 title: Python程序打包成exe可执行文件
 date: 2019-6-2
-categories: 开发记录
+categories: 技术文章
 tags:
     -Python
 ---
