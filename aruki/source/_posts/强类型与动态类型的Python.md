@@ -3,7 +3,7 @@ title: 强类型与动态类型的Python
 date: 2019-11-10
 categories: 技术文章
 tags:
-    -Python
+    - Python
 ---
 
 **很多人都会说到Python是一门强类型、动态类型的语言，为什么这么说呢？**

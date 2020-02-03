@@ -3,7 +3,7 @@ title: 使用Hexo-NexT时遇到的问题
 date: 2019-3-29
 categories: 开发记录
 tags:
-    -博客
+    - 博客
 ---
 # 部署到github显示的网页和本地测试的网页不一样
 

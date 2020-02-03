@@ -3,7 +3,7 @@ title: Python程序打包成exe可执行文件
 date: 2019-6-2
 categories: 技术文章
 tags:
-    -Python
+    - Python
 ---
 
 ### 本教程是使用Pyinstaller来将Python程序打包成exe可执行文件

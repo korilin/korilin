@@ -3,7 +3,7 @@ title: 使用setuptools和twine把项目打成pip包
 date: 2020-1-25 16:25
 categories: 技术文章
 tags:
-    -Python
+    - Python
 ---
 
 本文章是在打包web-mysql和nested-list时根据官方教程在实践后后写下的，可以边参考官方教程边阅读本文章，这样可能有助于您理解如何去把项目打包成一个pip软件包
