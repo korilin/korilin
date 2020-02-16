@@ -12,7 +12,7 @@ categories: 生活日常
 
 后来一个偶然的机会，看到了关于这个模组的介绍视频，就点进去看了一下(毕竟还是想知道这个设计是怎么玩的)
 
-附上视频地址：https://www.bilibili.com/video/av26511125/
+附上视频地址：[https://www.bilibili.com/video/av26511125/](https://www.bilibili.com/video/av26511125/)
 
 视频里介绍模组玩法的时候，也有介绍幽幽子的故事背景，当时就给幽幽子的人设和故事给吸引了，开始了寻找幽幽子相关内容的路程！
 
@@ -28,5 +28,6 @@ categories: 生活日常
 
 2020/1/30
 ---
+
 东方歌曲真好听，Bad Apple真带感
 (真香)

@@ -12,14 +12,14 @@ tags:
 
 如果希望更加全面地理解和打包pip软件包请参考
 
-官方教程：https://packaging.python.org/tutorials/packaging-projects/
+官方教程：<https://packaging.python.org/tutorials/packaging-projects/>
 
 需要使用到的东西
 ---
 
 两个Python包：setuptools、twine
 
-一个PyPI账号：https://pypi.org/
+一个PyPI账号：<https://pypi.org/>
 
 打一个pip软件包一定要有这两个工具，setuptools用于创建构建脚本，twine用于上传项目，上传的pip包都会放在这里PyPI
 
@@ -52,7 +52,7 @@ README.md：说明文件
 
 打包的项目就不说了，可能你是直接打包已有项目，也可能是打算打包从头写的项目，打包的关键步骤主要是setup.py的配置和上传命令的使用，上传项目时软件包的信息都是根据setup里面的配置来上传的
 
-**把官方setup.py的配置简化一下就是以下的样子,三个点代表省略**
+**把官方setup.py的配置简化一下就是以下的样子,三个点代表省略:**
 
 ```Python
 import setuptools
@@ -89,15 +89,15 @@ setuptools.setup(
 )
 ```
 
-**官方全部字段的配置说明：https://packaging.python.org/guides/distributing-packages-using-setuptools/**
+**官方全部字段的配置说明：<https://packaging.python.org/guides/distributing-packages-using-setuptools/>**
 
 **配置文件的时候有几个注意点：**
 **1、上传不同版本的软件包，version要修改，因为生成的压缩包版本后缀是根据这一行配置的**
 **2、packages可以手动列出需要打包的Python包列表，如果使用`find_package()`的话则是脚本自动发现所有软件包和子软件包**
-**3、关于classifiers的配置根据不同项目配置都不一样，参考官方分类器列表：https://pypi.org/classifiers/**
+**3、关于classifiers的配置根据不同项目配置都不一样，参考官方分类器列表：<https://pypi.org/classifiers/>**
 **4、如果设置了python_requires，那么所有不符合要求的Python版本都会被pip阻止安装这个软件包**
 
-**配置完setup.py，接下来就是根据你的需要选择许可证：https://choosealicense.com/**
+**配置完setup.py，接下来就是根据你的需要选择许可证：<https://choosealicense.com/>**
 **选择完许可证要把许可证文本写入LICENSE文件，或者也可以在使用GitHub Desktop创建仓库时创建许可证，如果setup.py里有配置license这一项记得修改成对应的类型**
 
 打包
