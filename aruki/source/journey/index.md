@@ -65,11 +65,14 @@ title: 计算机旅途
 
 ### [*一月:*](#一月)
 
-**接下了部门工作, 第一次一个人完成了可以发文章, 带评论和点赞的网站, 学到了很多东西**
+**学习Ajax, 开始了解前后端分离**
+**第一次一个人完成了可以发文章, 带评论和点赞的网站, 学到了很多东西**
 **重新弄博客, 换了3-hexo的主题, 自己修改styl文件配样式, 感觉和css差不多**
-**上传了pip软件包Web-MySQL和Nested-List**
-**了解了一些协议, 编写了两个软件包在GitHub的说明文件README, 正式发布了两个pip软件包**
+**上传了两个简单封装的pip软件包Web-MySQL和Nested-List**
+**了解了一些开源协议, 编写了两个pip软件包在GitHub上的README说明文件**
 **回归Java, 学习Maven**
 **了解了SSM(SpringMVC+Spring+MyBatis)**
 **了解一下Spring Boot和Spring Cloud**
-**为了赶时间没有看完SSM就直接看SpringBoot了，幸好以前有勇Py做Web开发的经验，学起来还算顺利**
+**为了赶时间没有看完SSM就直接看SpringBoot了，幸好以前有用Py做Web开发的经验，学起来还算顺利**
+**学习Docker和Redis的使用**
+**不想使用Thymeleaf模板引擎, 学习Vue.js采用前后端分离的方式开发**
