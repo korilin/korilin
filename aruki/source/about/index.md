@@ -45,7 +45,7 @@ title: 关于我自己
     **WX: jiehaobin**
 
 **其它:**
-    **Telegram: <htt[s://t.me/arukione]>  (很少用)**
+    **Telegram: <https://t.me/arukione]>  (很少用)**
     **GitHub: <https://github.com/arukione>   (侧边栏GitHub)**
 
 ## [**一点其它信息**](#一点其他信息)

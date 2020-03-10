@@ -4,8 +4,8 @@
 
 # Site
 title: ARUKI'S BLOG
-subtitle: 有机少年
-description: Welcome to my blog!
+subtitle: 正しさなんてもの、人のモノサシによって変わる
+description: 有机少年的博客
 keywords: aruki,ARUKI,arukione,Python,有机，有机少年
 author: aruki
 language: zh-Hans
@@ -78,7 +78,7 @@ search:
   limit: 10000
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: 3-hexo
+theme: ocean
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -89,22 +89,15 @@ deploy:
     github: git@github.com:arukione/arukione.github.io.git
   branch: master
 
-live2d:
-  enable: true
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: false
-  debug: false
-  model:
-    use: live2d-widget-model-koharu
-  display:
-    position: left
-    width: 150
-    height: 300
-  mobile:
-    show: true
+feed:
+     type: atom
+     path: atom.xml
+     limit: 20
+     hub:
+     content:
+     content_limit: 140
+     content_limit_delim: ' '
+     order_by: -date
 
 # hexo-neat
 # 博文压缩
