@@ -7,7 +7,7 @@ tags:
     - MySQL
 ---
 
-eb-MySQL是一个用于后端使用Python连接数据库的包, 主要用于小型的Web项目开发时简化数据库连接操作, 它可用于Flask或者Django, 也可用于其他类型的项目开发。
+Web-MySQL是一个用于后端使用Python连接数据库的包, 主要用于小型的Web项目开发时简化数据库连接操作, 它可用于Flask或者Django, 也可用于其他类型的项目开发。
 
 它是基于PyMySQL构建出来的一个简单的SQL命令执行工具包, 可以使用pip进行安装, 主要使用Connector类的executor、fetchone和fetchall这3个功能, 调用了PyMySQL的功能进行自动连接数据库和断开连接。
 
