@@ -9,13 +9,13 @@ description: 有机少年的博客
 keywords: aruki,ARUKI,arukione,Python,有机，有机少年
 author: aruki
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://arukione.com/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -40,9 +40,9 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  line_number: false
-  auto_detect: false
-  tab_replace:
+  line_number: true
+  auto_detect: true
+  tab_replace: 4
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

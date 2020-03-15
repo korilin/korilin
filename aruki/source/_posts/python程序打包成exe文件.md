@@ -6,13 +6,6 @@ tags:
     - Python
 ---
 
-使用Pyinstaller来将Python程序打包成exe可执行文件
-首先要安装Pyinstaller包
-在命令行进入要打包的python程序的目录下面使用`pyinstaller file.py`打包
-打包后会生成dict文件夹和buid文件夹还有一个.spec文件, 其中dict就是放置我们要的exe文件的文件夹
-
-<!--more-->
-
 ### 本教程是使用Pyinstaller来将Python程序打包成exe可执行文件
 
 ### **实现步骤：**
@@ -22,6 +15,7 @@ tags:
 **安装成功后就可以进行打包了**
 **在命令行进入要打包的python程序的目录下面**
 **接着使用**   `pyinstaller file.py`   **就可以打包了(file.py是指你要打包的python文件)**
+<!--more-->
 **这个指令也可以附带其他属性：**
 
 ```text

@@ -7,11 +7,11 @@ tags:
 ---
 
 搭建Hexo博客使用NexT主题时遇到的问题以及解决方法：
-1、部署到github显示的网页和本地测试的网页不一样
-2、生成了空白的html文件
-3、hexo语句发生错误 Template render error: (unknown path)
-4、左下角多了一个undefined
-5、文件过大push不了
+1、[部署到github显示的网页和本地测试的网页不一样](#部署到github显示的网页和本地测试的网页不一样)
+2、[生成了空白的html文件](#生成了空白的html文件)
+3、[hexo语句发生错误 Template render error: (unknown path)](#hexo语句发生错误%20Template%20render20%error:%20(unknown%20path))
+4、[左下角多了一个undefined](#左下角多了一个undefined)
+5、[文件过大push不了](#文件过大push不了)
 
 <!--more-->
 

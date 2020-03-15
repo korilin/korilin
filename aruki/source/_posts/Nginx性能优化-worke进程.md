@@ -8,16 +8,7 @@ tags:
 
 在Nginx中, 是由master进程来管理worker进程的工作, 由worker进程来处理http请求。
 一个worker进程可以同时处理多个请求, 其处理的请求数只受限于内存大小, 并且不同的worker进程之间处理并发请求几乎没有同步锁的限制, worker进程通常不会进入睡眠状态。
-
-多个worker进程处理互联网请求既可以实现多核并发处理, 也可以提高服务的健壮性,worker进程的数量将会直接影响性能。
-
-可以通过修改一些配置项来优化Nginx的性能。
-
 <!--more-->
-
-在Nginx中, 是由master进程来管理worker进程的工作, 由worker进程来处理http请求。
-一个worker进程可以同时处理多个请求, 其处理的请求数只受限于内存大小, 并且不同的worker进程之间处理并发请求几乎没有同步锁的限制, worker进程通常不会进入睡眠状态。
-
 多个worker进程处理互联网请求既可以实现多核并发处理, 也可以提高服务的健壮性, 所以worker进程的数量将会直接影响性能。
 在master/worker运行方式下, 我们可以通过修改worker_processes配置项的值来配置worker的进程数
 

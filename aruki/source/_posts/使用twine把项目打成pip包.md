@@ -11,19 +11,8 @@ tags:
 本人使用的是Python3, 操作可能会和Python2有点不同, 同时使用的命令是参考了其他的教程, 和官方命令也不太一样, 免去了许多参数的选择, 更加简单。
 
 如果希望更加全面地理解和打包pip软件包请参考
-
 官方教程：<https://packaging.python.org/tutorials/packaging-projects/>
-
 <!--more-->
-
-本文章是在打包web-mysql和nested-list时根据官方教程在实践后后写下的, 可以边参考官方教程边阅读本文章, 这样可能有助于您理解如何去把项目打包成一个pip软件包
-
-本人使用的是Python3, 操作可能会和Python2有点不同, 同时使用的命令是参考了其他的教程, 和官方命令也不太一样, 免去了许多参数的选择, 更加简单。
-
-如果希望更加全面地理解和打包pip软件包请参考
-
-官方教程：<https://packaging.python.org/tutorials/packaging-projects/>
-
 需要使用到的东西
 ---
 
