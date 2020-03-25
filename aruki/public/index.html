@@ -63,6 +63,143 @@
       <h1 class="page-type-title"></h1>
       
         
+          <article id="post-Nginx请求处理配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/">Nginx请求处理配置</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-03-18T08:20:00.000Z" itemprop="datePublished">2020-03-18</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                    <p>Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理软件时，每个网络请求都会先由Nginx接收，Nginx会根据配置文件里的配置对请求进行过滤处理，等请求完全接收完再发送给上游服务器一次性处理，从而可以提高上游服务器的工作性能。</p>
+                                                        
+                                                            <a class="article-more-link" href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/">
+                                                                阅读全文
+                                                            </a>
+                                                            
+                                                                
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://arukione.com/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/" data-id="ck7x2udpo00067cv5abre1g2s" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-蓝桥杯试题：基础练习-十六进制转八进制" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%85%AB%E8%BF%9B%E5%88%B6/">蓝桥杯基础练习试题:十六进制转八进制(Java实现)</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%85%AB%E8%BF%9B%E5%88%B6/" class="article-date">
+  <time datetime="2020-03-15T16:00:00.000Z" itemprop="datePublished">2020-03-16</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%BB%A3%E7%A0%81/">算法代码</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                    <h2 id="试题-基础练习-十六进制转八进制"><a href="#试题-基础练习-十六进制转八进制" class="headerlink" title="试题 基础练习 十六进制转八进制"></a>试题 基础练习 十六进制转八进制</h2><p><strong>问题描述</strong><br>　　给定n个十六进制正整数，输出它们对应的八进制数。</p>
+<p><strong>输入格式</strong><br>　　输入的第一行为一个正整数n （1&lt;=n&lt;=10）。<br>　　接下来n行，每行一个由0<del>9、大写字母A</del>F组成的字符串，表示要转换的十六进制正整数，每个十六进制数长度不超过100000。</p>
+<p><strong>输出格式</strong><br>　　输出n行，每行为输入对应的八进制正整数。</p>
+<p>　　【注意】<br>　　输入的十六进制数不会有前导0，比如012A。<br>　　输出的八进制数也不能有前导0。</p>
+<p>这道题目的第一个注意点是，蓝桥杯是一次性输入数据，所以用一个Scanner获取一次数据就够了，用多个会出现运行错误；<br>第二个注意点是，结果不能有前导0</p>
+<p>解题思路，根据提示【先将十六进制数转换成某进制数，再由某进制数转换成八进制】，我们可以使用平时进制转换的做法，先把十六进制转换为二进制，然后再从二进制转换为八进制。</p>
+                                                        
+                                                            <a class="article-more-link" href="/%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%85%AB%E8%BF%9B%E5%88%B6/">
+                                                                阅读全文
+                                                            </a>
+                                                            
+                                                                
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://arukione.com/%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0-%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%85%AB%E8%BF%9B%E5%88%B6/" data-id="ck7x2udr4002f7cv5ba0v5b1z" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
           <article id="post-Vue和Axios上传文件" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
@@ -119,7 +256,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/Vue%E5%92%8CAxios%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" data-id="ck7rzxb5o0001wcv51rac7936" class="article-share-link">
+                                        <a data-url="https://arukione.com/Vue%E5%92%8CAxios%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/" data-id="ck7x2udqc000y7cv599zbdhzm" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -135,7 +272,7 @@
 
 </article>
         
-          <article id="post-Nginx请求处理配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+          <article id="post-Java压缩文件为Zip压缩包" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -143,7 +280,7 @@
                 
   
     <h2 itemprop="name">
-      <a class="article-title" href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/">Nginx请求处理配置</a>
+      <a class="article-title" href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/">Java压缩文件为Zip压缩包</a>
     </h2>
   
   
@@ -156,12 +293,12 @@
 
                 
                     <div class="article-meta">
-                        <a href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-03-13T21:00:00.000Z" itemprop="datePublished">2020-03-14</time>
+                        <a href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/" class="article-date">
+  <time datetime="2020-03-13T16:00:00.000Z" itemprop="datePublished">2020-03-14</time>
 </a>
                             
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
   </div>
 
                     </div>
@@ -176,20 +313,87 @@
                                             
 
                                                 
-                                                    <p>Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理软件时，每个网络请求都会先由Nginx接收，Nginx会根据配置文件里的配置对请求进行过滤处理，等请求完全接收完再发送给上游服务器一次性处理，从而可以提高上游服务器的工作性能。</p>
+                                                    <p>这是目前我尝试过的Java压缩文件最快的方法, 使用Channel来将文件压缩成压缩包</p>
+<p>压缩方法是建立一个压缩包文件对象, 然后用Zip压缩流来输出压缩包, 用输入流来写入压缩包, 通过使用Channel建立两个流的通道, 利用通道进行数据传输。</p>
                                                         
-                                                            <a class="article-more-link" href="/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/">
+                                                            <a class="article-more-link" href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/">
                                                                 阅读全文
                                                             </a>
                                                             
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/Nginx%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE/" data-id="ck7rzskh00006wsv50xf0bt82" class="article-share-link">
+                                        <a data-url="https://arukione.com/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/" data-id="ck7x2udpi00017cv5f91v3l1x" class="article-share-link">
                                             Share
                                         </a>
                                         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-开发记录-将请求的JSON字符串转为Java对象" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/">开发记录-将JSON字符串转为Java对象</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-03-13T16:00:00.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">开发记录</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                    <p>目前 Java 有很多 JSON 解析库, 本文记录的是在开发中项目中使用了阿里巴巴的开源 JSON 解析库 fastjson, 来解析请求中的 JSON 字符串。</p>
+                                                        
+                                                            <a class="article-more-link" href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/">
+                                                                阅读全文
+                                                            </a>
+                                                            
+                                                                
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/" data-id="ck7x2udqn001a7cv5g6oibt4x" class="article-share-link">
+                                            Share
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
                                     </footer>
 
@@ -252,7 +456,7 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-SpringBoot%E8%BF%94%E5%9B%9E%E6%96%87%E4%BB%B6/" data-id="ck7rzskhd000jwsv5f91o3aay" class="article-share-link">
+                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-SpringBoot%E8%BF%94%E5%9B%9E%E6%96%87%E4%BB%B6/" data-id="ck7x2udqo001d7cv51mvb4c6v" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -318,77 +522,11 @@
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5/" data-id="ck7rzskhf000nwsv5gaih3geu" class="article-share-link">
+                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%B1%E8%B4%A5/" data-id="ck7x2udqp001g7cv59qb85izt" class="article-share-link">
                                             Share
                                         </a>
                                         
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-开发记录-将请求的JSON字符串转为Java对象" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/">开发记录-将JSON字符串转为Java对象</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-03-13T16:00:00.000Z" itemprop="datePublished">2020-03-14</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">开发记录</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p>目前 Java 有很多 JSON 解析库, 本文记录的是在开发中项目中使用了阿里巴巴的开源 JSON 解析库 fastjson, 来解析请求中的 JSON 字符串。</p>
-                                                        
-                                                            <a class="article-more-link" href="/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E5%B0%86%E8%AF%B7%E6%B1%82%E7%9A%84JSON%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BAJava%E5%AF%B9%E8%B1%A1/" data-id="ck7rzskhh000qwsv5fi5k6co3" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
                                     </footer>
 
@@ -454,78 +592,11 @@ ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION</code></pre>
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%A0%E6%95%88/" data-id="ck7rzskhk000xwsv5frwohn6y" class="article-share-link">
+                                        <a data-url="https://arukione.com/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81%E7%9A%84%E5%93%8D%E5%BA%94%E6%97%A0%E6%95%88/" data-id="ck7x2udqr001k7cv53iv987x1" class="article-share-link">
                                             Share
                                         </a>
                                         
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Boot/" rel="tag">Spring Boot</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-Java压缩文件为Zip压缩包" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/">Java压缩文件为Zip压缩包</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/" class="article-date">
-  <time datetime="2020-03-13T16:00:00.000Z" itemprop="datePublished">2020-03-14</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p>这是目前我尝试过的Java压缩文件最快的方法, 使用Channel来将文件压缩成压缩包</p>
-<p>压缩方法是建立一个压缩包文件对象, 然后用Zip压缩流来输出压缩包, 用输入流来写入压缩包, 通过使用Channel建立两个流的通道, 利用通道进行数据传输。</p>
-                                                        
-                                                            <a class="article-more-link" href="/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/Java%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E4%B8%BAZip%E5%8E%8B%E7%BC%A9%E5%8C%85/" data-id="ck7rzxb5i0000wcv53xm0cvmv" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
                                     </footer>
 
@@ -587,7 +658,7 @@ ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION</code></pre>
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E6%9B%B4%E6%8D%A2ocean%E4%B8%BB%E9%A2%98/" data-id="ck7rzskhx001wwsv5gzi154ke" class="article-share-link">
+                                        <a data-url="https://arukione.com/%E6%9B%B4%E6%8D%A2ocean%E4%B8%BB%E9%A2%98/" data-id="ck7x2udqt001r7cv56ww6gn35" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -666,7 +737,7 @@ Consider the following:
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="https://arukione.com/2020.2.25%20SpringBoot%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck7rzskgn0000wsv57prk4ti3" class="article-share-link">
+                                        <a data-url="https://arukione.com/2020.2.25%20SpringBoot%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck7x2udpc00007cv55rzrb5ed" class="article-share-link">
                                             Share
                                         </a>
                                         
@@ -682,434 +753,12 @@ Consider the following:
 
 </article>
         
-          <article id="post-2020新年的t7s" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020%E6%96%B0%E5%B9%B4%E7%9A%84t7s/">2020新年的ナナスタ</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020%E6%96%B0%E5%B9%B4%E7%9A%84t7s/" class="article-date">
-  <time datetime="2020-02-22T16:00:00.000Z" itemprop="datePublished">2020-02-23</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/">生活日常</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p><strong>这是爱和信仰</strong><br><strong>留作纪念❤</strong></p>
-<p><strong>看完了[EPISODE 5.0 -Fall in Love-]了</strong><br>这剧情太让人感动了, t7s最近几个故事都很感人<br>尤其是白雪在说码农那一段, 我眼睛都泛出泪水了<br>保存了结尾封面, 吹爆茂木</p>
-                                                        
-                                                            <a class="article-more-link" href="/2020%E6%96%B0%E5%B9%B4%E7%9A%84t7s/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/2020%E6%96%B0%E5%B9%B4%E7%9A%84t7s/" data-id="ck7rzskh20008wsv50fec5ceu" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-Nginx性能优化-worke进程" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-worke%E8%BF%9B%E7%A8%8B/">Nginx性能优化配置</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-worke%E8%BF%9B%E7%A8%8B/" class="article-date">
-  <time datetime="2020-02-07T19:30:00.000Z" itemprop="datePublished">2020-02-08</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p>在Nginx中, 是由master进程来管理worker进程的工作, 由worker进程来处理http请求。<br>一个worker进程可以同时处理多个请求, 其处理的请求数只受限于内存大小, 并且不同的worker进程之间处理并发请求几乎没有同步锁的限制, worker进程通常不会进入睡眠状态。</p>
-                                                        
-                                                            <a class="article-more-link" href="/Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-worke%E8%BF%9B%E7%A8%8B/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/Nginx%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-worke%E8%BF%9B%E7%A8%8B/" data-id="ck7rzskh8000cwsv5hsbj2h92" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/" rel="tag">Nginx</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-2020.2.6 Java学习笔记" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020.2.6%20Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">2020.2.6 Java学习笔记</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020.2.6%20Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2020-02-06T07:30:00.000Z" itemprop="datePublished">2020-02-06</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <h2 id="函数参数传的数组是引用"><a href="#函数参数传的数组是引用" class="headerlink" title="函数参数传的数组是引用"></a>函数参数传的数组是引用</h2><p>和Python一样, 如果把一个数组或者列表当做函数的参数传入, 是传了一个地址的引用, 如果在调用的函数里直接修改了数组的值, 那么原本数组的值也会跟着改变</p>
-<pre><code class="Java">
-public class Hello{
-    public static void(String[] args){
-        int[] a = {1,2,3};
-        change(a);
-    }
-
-    public static void change(int[] b){
-        b[0] = 0;
-        b[1] = 0;
-    }
-}
-</code></pre>
-<p>按照上面的代码执行完, 数组a的值将会变成{0,0,3}, 可以通过克隆的方法避免这种情况, 通过调用clone()方法来获得一个复制的数组, 再传入, 此时传入的数组是另一个对象的引用了。</p>
-<pre><code class="Java">
-public class Hello{
-    public static void(String[] args){
-        int[] a = {1,2,3};
-        change(a.clone());
-    }
-
-    public static void change(int[] b){
-        b[0] = 0;
-        b[1] = 0;
-    }
-}
-</code></pre>
-                                                        
-                                                            <a class="article-more-link" href="/2020.2.6%20Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/2020.2.6%20Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck7rzskgv0002wsv5fxlb0znt" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-蓝桥杯B组试题B：年号字串" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84%E8%AF%95%E9%A2%98B%EF%BC%9A%E5%B9%B4%E5%8F%B7%E5%AD%97%E4%B8%B2/">蓝桥杯B组试题B:年号字串</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84%E8%AF%95%E9%A2%98B%EF%BC%9A%E5%B9%B4%E5%8F%B7%E5%AD%97%E4%B8%B2/" class="article-date">
-  <time datetime="2020-02-05T16:00:00.000Z" itemprop="datePublished">2020-02-06</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%BB%A3%E7%A0%81/">算法代码</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p>第十届蓝桥杯大赛软件类省赛C/C++大学B组<br><strong>试题B: 年号字串</strong><br><strong>【问题描述】</strong></p>
-<p><strong>小明用字母A对应数字1, B对应2, 以此类推, 用Z对应26。对于27以上的数字, 小明用两位或者更长的字符串来对应, 例如AA对应27, AB对应28, AZ对应52, LQ对应329。</strong><br><strong>请问2019对应的字符串是什么？</strong></p>
-                                                        
-                                                            <a class="article-more-link" href="/%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84%E8%AF%95%E9%A2%98B%EF%BC%9A%E5%B9%B4%E5%8F%B7%E5%AD%97%E4%B8%B2/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84%E8%AF%95%E9%A2%98B%EF%BC%9A%E5%B9%B4%E5%8F%B7%E5%AD%97%E4%B8%B2/" data-id="ck7rzski6002bwsv530qv8qk0" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-基于operator构建的Nested-List" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/%E5%9F%BA%E4%BA%8Eoperator%E6%9E%84%E5%BB%BA%E7%9A%84Nested-List/">基于operator构建的Nested-List</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/%E5%9F%BA%E4%BA%8Eoperator%E6%9E%84%E5%BB%BA%E7%9A%84Nested-List/" class="article-date">
-  <time datetime="2020-01-30T13:30:00.000Z" itemprop="datePublished">2020-01-30</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a><a href="#简介">简介</a></h2><p>Nested-List是一个使用operator库构建的一个嵌套列表操作库, 主要用于对元素不是基本数据类型的列表进行排序、删除等操作, 里面的大多函数使用了operator库, 可以简化项目代码编写量。</p>
-                                                        
-                                                            <a class="article-more-link" href="/%E5%9F%BA%E4%BA%8Eoperator%E6%9E%84%E5%BB%BA%E7%9A%84Nested-List/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E5%9F%BA%E4%BA%8Eoperator%E6%9E%84%E5%BB%BA%E7%9A%84Nested-List/" data-id="ck7rzskhp001cwsv54eye07c7" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-闲着没事造轮子" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/">闲着没事造轮子2020/1/30</a>
-    </h2>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/" class="article-date">
-  <time datetime="2020-01-29T18:30:00.000Z" itemprop="datePublished">2020-01-30</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">开发记录</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                    <p><strong>造轮子背景:</strong></p>
-<p>1、之前在开发新年祝福专栏的网页的时候, 使用PyMySQL连接数据库, 把一些操作给简化和封装了一下<br>2、在对文章进行排序的时候, 记得list有一个sort函数可以使用, 但是我列表里元素类型都是dict, 就想着要是有简化对内嵌了其它类型元素的列表操作的工具包就好了<br>3、2020新年这段期间是新型冠状病毒2019-nCoV在人与人间传染的非常时期, 外出不得, 闲着没事干(虽然有人陪我玩游戏)<br>4、最近看着空荡荡没有一个开源仓库的GitHub账号, 想填充一下GitHub仓库<br><strong>接着, 我的造轮子之路开始了</strong></p>
-                                                        
-                                                            <a class="article-more-link" href="/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/">
-                                                                阅读全文
-                                                            </a>
-                                                            
-                                                                
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="https://arukione.com/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/" data-id="ck7rzski7002fwsv5daqs7tmg" class="article-share-link">
-                                            Share
-                                        </a>
-                                        
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
     </article>
     
   
     
       <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next</a>
       </nav>
     
   </section>
