@@ -87,6 +87,7 @@ deploy:
   repository:
     coding: git@e.coding.net:aruki/aruki.git
     github: git@github.com:arukione/arukione.github.io.git
+    server: git@arukione.cn:/home/git/blog.git
   branch: master
 
 feed:
