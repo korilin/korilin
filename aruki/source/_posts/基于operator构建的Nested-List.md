@@ -139,4 +139,4 @@ Nested-List起初的开发是针对项目中对列表中字典的排序, 但随�
 
 **Python Cookbook 3rd Edition Documentation：**[https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html](https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
 
-[闲着没事造轮子](https://www.arukione.com/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/)
+[闲着没事造轮子](/%E9%97%B2%E7%9D%80%E6%B2%A1%E4%BA%8B%E9%80%A0%E8%BD%AE%E5%AD%90/)

@@ -66,6 +66,13 @@ title: 计算机旅途
 **回归Java, 学习Maven**
 **了解了SSM(SpringMVC+Spring+MyBatis)**
 **了解一下Spring Boot和Spring Cloud**
-**为了赶时间没有看完SSM就直接看SpringBoot了，幸好以前有用Py做Web开发的经验，学起来还算顺利**
+**为了赶时间没有看完SSM就直接看SpringBoot了，幸好以前有用Python做Web开发的经验，学起来还算顺利**
 **学习Docker和Redis的使用**
 **不想使用Thymeleaf模板引擎, 学习Vue.js采用前后端分离的方式开发**
+**继续学习SpringBoot和Vue.js**
+
+### [*五月:*](#五月)
+
+**简单学习webpack和Vue-CLI**
+**使用Vue脚手架和iView UI库来开发课程设计的SPA界面**
+**在课程设计中使用MyBtais-Plus作为持久层框架**
