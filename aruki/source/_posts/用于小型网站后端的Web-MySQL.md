@@ -1,7 +1,7 @@
 ---
 title: 用于小型网站后端的Web-MySQL
 date: 2020-1-30 1:49
-categories: 技术文章
+categories: 技术笔记
 tags:
     - Python
     - MySQL

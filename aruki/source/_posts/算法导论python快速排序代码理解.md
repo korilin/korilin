@@ -1,7 +1,7 @@
 ---
 title: 算法导论python快速排序代码理解
 date: 2020-1-25
-categories: 学习笔记
+categories: 技术笔记
 tags:
     - Python
 ---

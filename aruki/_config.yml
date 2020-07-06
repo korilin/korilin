@@ -85,9 +85,9 @@ theme: ocean
 deploy:
   type: git
   repository:
-    coding: git@e.coding.net:aruki/aruki.git
+    # coding: git@e.coding.net:aruki/aruki.git
     github: git@github.com:arukione/arukione.github.io.git
-    server: git@arukione.cn:/home/git/blog.git
+    server: git@arukione.cn:/home/git/aruki.git
   branch: master
 
 feed:

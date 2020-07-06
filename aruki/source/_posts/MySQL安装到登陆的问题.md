@@ -1,7 +1,7 @@
 ---
 title: MySQL安装到登陆的问题
 date: 2019-4-8
-categories: 学习笔记
+categories: 技术笔记
 tags:
     - MySQL
     - 数据库

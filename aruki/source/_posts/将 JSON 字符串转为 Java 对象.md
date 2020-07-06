@@ -1,13 +1,15 @@
 ---
-title: 开发记录-将JSON字符串转为Java对象
+title: 将 JSON 字符串转为 Java 对象
 date: 2020-3-14
-categories: 开发记录
+categories: 技术笔记
 tags:
     - Java
 ---
 
-目前 Java 有很多 JSON 解析库, 本文记录的是在开发中项目中使用了阿里巴巴的开源 JSON 解析库 fastjson, 来解析请求中的 JSON 字符串。
+目前 Java 有很多 JSON 解析库，本文记录的是在开发中项目中使用了阿里巴巴的开源 JSON 解析库 fastjson, 来解析请求中的 JSON 字符串。
+
 <!--more-->
+
 **fastjson GitHub 地址：<https://github.com/alibaba/fastjson>**
 
 ## 引入 fastjson
@@ -26,7 +28,7 @@ tags:
 
 ## 使用 JSONObject
 
-当我们发送一个请求后获取到了 JSON 字符串, 可以使用 JSONObject 把字符串转换为 JSON 对象
+当我们发送一个请求后获取到了 JSON 字符串，可以使用 JSONObject 把字符串转换为 JSON 对象
 
 ```Java
 // 发送请求
@@ -39,7 +41,7 @@ String body = response.body();
 JSONObject JSONdata = JSONObject.parseObject(body);
 ```
 
-JSONObject 对象有 put 和 get 方法可以来存入和获取值, 使用方法和 Map 差不多, 如果是嵌套的 JSON 数据（通过 key 获取到的对象本质也是一个 JSON 字符串）, 要继续获取里面的值可以转为 JSONObject 对象
+JSONObject 对象有 put 和 get 方法可以来存入和获取值，使用方法和 Map 差不多，如果是嵌套的 JSON 数据（通过 key 获取到的对象本质也是一个 JSON 字符串）, 要继续获取里面的值可以转为 JSONObject 对象
 
 ```Java
 JSONObject jsonObj = new JSONObject();
@@ -55,7 +57,7 @@ JSONObject data = (JSONObject) respond.get("data");
 String info = data.getString("info");
 ```
 
-当然 fastjson 的功能不仅仅这些, 除了使用简单和速度快之外, fastjson 还有其他序列化和反序列化方式
+当然 fastjson 的功能不仅仅这些，除了使用简单和速度快之外，fastjson 还有其他序列化和反序列化方式
 
 ## 官方例子
 

@@ -1,7 +1,7 @@
 ---
 title: Nginx请求处理配置
 date: 2020-3-18 16:20
-categories: 学习笔记
+categories: 技术笔记
 tags:
     - Nginx
 ---

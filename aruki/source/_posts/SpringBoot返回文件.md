@@ -1,16 +1,18 @@
 ---
-title: 开发记录-SpringBoot返回文件
+title: SpringBoot 返回文件
 date: 2020-3-14
-categories: 开发记录
+categories: 技术笔记
 tags:
     - Spring Boot
     - Java
 ---
 
-项目开发需求, 要在用户发送请求后把对应的数据打包成压缩包, 再放回给浏览器, 这种情况下无法使用`<a>`标签来进行跳转下载, 所以我们可以通过返回文件的方式来, 在压缩包打包后让浏览器下载
+项目开发需求，要在用户发送请求后把对应的数据打包成压缩包，再放回给浏览器，这种情况下无法使用`<a>`标签来进行跳转下载，所以我们可以通过返回文件的方式来，在压缩包打包后让浏览器下载
 
-使用 ResponseEntity 配置 Http 的响应, 在使用文件系统资源类 FileSystemResource 来把文件放入响应的数据中
+使用 ResponseEntity 配置 Http 的响应，在使用文件系统资源类 FileSystemResource 来把文件放入响应的数据中
+
 <!--more-->
+
 首先需要配置响应头和创建文件资源对象
 
 ```Java
@@ -27,8 +29,8 @@ headers.add("Last-Modified", new Date().toString());
 headers.add("ETag", String.valueOf(System.currentTimeMillis()));
 ```
 
-这里的响应头有一个行是配置可以配置下载的文件的名称, 由`Content-Disposition`的`filename可`来决定文件的名称, 并且需要将字符串转为 UTF—8 的格式, 这样才能支持中文。
-由于消息头有特定的格式, 所以要注意传入的文件名不能有双引号, 否则会导致消息头格式错误返回无效的响应
+这里的响应头有一个行是配置可以配置下载的文件的名称，由`Content-Disposition`的`filename可`来决定文件的名称，并且需要将字符串转为 UTF—8 的格式，这样才能支持中文。
+由于消息头有特定的格式，所以要注意传入的文件名不能有双引号，否则会导致消息头格式错误返回无效的响应
 
 接着返回带有文件的响应信息
 
@@ -43,7 +45,7 @@ return ResponseEntity
 
 这样就可以把文件放回出去了
 
-在我的项目里, 完整代码是这样
+在我的项目里，完整代码是这样
 
 ```Java
 @GetMapping("/downZip/{activity}/{collegename}")

@@ -1,7 +1,7 @@
 ---
 title: Nginx性能优化配置
 date: 2020-2-8 3:30
-categories: 学习笔记
+categories: 技术笔记
 tags:
     - Nginx
 ---

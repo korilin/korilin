@@ -1,7 +1,7 @@
 ---
 title: SQL查询笔记
 date: 2020-4-24
-categories: 学习笔记
+categories: 技术笔记
 tags:
     - 数据库
 ---

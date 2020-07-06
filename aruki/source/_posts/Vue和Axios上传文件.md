@@ -1,7 +1,7 @@
 ---
 title: Vue和Axios上传文件
 date: 2020-3-15
-categories: 技术文章
+categories: 技术笔记
 tags:
     - Vue
     - Axios

@@ -1,7 +1,7 @@
 ---
 title: 更换ocean主题
 date: 2020-3-11
-categories: 开发记录
+categories: 闲着记录
 tags: 
     - 博客
 ---

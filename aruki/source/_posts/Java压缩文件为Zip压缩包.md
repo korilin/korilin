@@ -1,7 +1,7 @@
 ---
 title: Java压缩文件为Zip压缩包
 date: 2020-3-14
-categories: 技术文章
+categories: 技术笔记
 tags:
     - Java
 ---

@@ -1,7 +1,7 @@
 ---
 title: 基于operator构建的Nested-List
 date: 2020-1-30 21:30
-categories: 技术文章
+categories: 技术笔记
 tags:
     - Python
 ---
