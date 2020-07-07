@@ -1,5 +1,5 @@
 ---
-title: 蓝桥杯 B 组试题 B: 年号字串
+title: 蓝桥杯 B 组试题 B：年号字串
 date: 2020-2-6
 categories: 技术笔记
 tags:
