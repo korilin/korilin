@@ -1,0 +1,56 @@
+# Menu
+menu:
+  # Home: /
+  归档: /archives
+  关于: /about
+  旅途: /journey
+  # 标签: /tags
+  技术笔记: /categories/技术笔记
+  闲着记录: /categories/闲着记录
+  # 链接: /links
+rss: /atom.xml
+
+
+# Miscellaneous
+favicon: /images/avatar.png
+brand: /images/avatar.png
+
+# Ocean Video
+# Because I put videos in multiple formats on the same path, I just labeled the path here.
+ocean:
+  overlay: false
+  path: /img/ocean/
+  brand: /img/inverted.svg
+
+# Content
+excerpt_link: 阅读全文
+
+# Tags
+show_count: true
+
+# Toc
+toc: true
+
+# fancybox
+fancybox: true
+
+# Gitalk
+gitalk:
+  enable: true # true
+  clientID: 30daf96e536313585e82 # GitHub Application Client ID
+  clientSecret: c380eff4277e1a8e3efabd5fe82074c019d0ede9 # Client Secret
+  repo: myblog # Repository name
+  owner: arukione # GitHub ID
+  admin: arukione # GitHub ID
+
+# Valine
+valine:
+  enable: false # true
+  el: 'vcomments'
+  appId: 17DmyamVy3DdIwCaM0RhtVzf-gzGzoHsz
+  appKey: oWxy3w8TwP6dEWSlfhfMFLxP
+  notify: true
+  verify: true
+  avatar: 'retro'
+  pageSize: '20'
+  placeholder: '请输入...' 
