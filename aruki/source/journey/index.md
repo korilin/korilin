@@ -73,11 +73,12 @@ title: 计算机旅途
 
 ### [*五月:*](#五月)
 
-**简单学习 webpack 和 Vue-CLI**
+**简单学习 Webpack 和 Vue-CLI**
 **使用 Vue 脚手架和 iView UI 库来开发课程设计的 SPA 界面**
 **在课程设计中使用 MyBtais-Plus 作为持久层框架**
 
 ### [*七月:*](#七月)
 
-**回补 Tomcat 和 Servlet 的知识**
-**学习 OAuth2.0 和 Spring Cloud**
+**回补一点 Tomcat 和 Servlet 的知识**
+**学习 OAuth2.0 和了解一些 Spring Cloud 微服务的知识**
+**学习 Go 语言**

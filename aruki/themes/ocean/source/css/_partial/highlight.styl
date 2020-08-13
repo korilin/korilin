@@ -1,4 +1,4 @@
-highlight-background = rgba(183,219,255,0.2);
+highlight-background = #d4ebff29;
 highlight-current-line = #efefef
 highlight-selection = #d6d6d6
 highlight-foreground = #4d4d4c
@@ -11,11 +11,28 @@ highlight-aqua = #66cccc
 highlight-blue = #6699cc
 highlight-purple = #cc99cc
 
+
+$color-1 = #333
+$color-2 = #279c81ad
+$color-3 = #df5000
+$color-4 = #d73a49
+$color-5 = #0086b3
+$color-6 = #63a35c
+$color-7 = #6f42c1
+$color-8 = #55a532
+$color-9 = #eaffea
+$color-10 = #bd2c00
+$color-11 = #ffecec
+$color-12 = #005cc5
+$color-13 = #008e32
+
 $code-block
   background highlight-background
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1)
+  border: 1px solid #ebeef5;
   padding 1.5rem
   margin 1.5rem 0
-  border-radius .4rem
+  border-radius .8rem
   overflow auto
   color highlight-foreground
 
@@ -35,7 +52,7 @@ $line-numbers
   code
     background highlight-background
     padding .25rem .8rem
-    color #5299bc
+    color #5670a0 
     margin 0 .5rem
     border-radius(.4rem)
   pre
@@ -105,52 +122,65 @@ $line-numbers
           &:hover
             text-decoration underline
 
-pre
-  .comment
-  .title
-    color highlight-comment
-  .variable
-  .attribute
-  .tag
-  .regexp
-  .ruby .constant
-  .xml .tag .title
-  .xml .pi
-  .xml .doctype
-  .html .doctype
-  .css .id
-  .css .class
-  .css .pseudo
-    color highlight-red
-  .number
-  .preprocessor
-  .built_in
-  .literal
-  .params
-  .constant
-    color highlight-orange
-  .class
-  .ruby .class .title
-  .css .rules .attribute
-    color highlight-green
-  .string
-  .value
-  .inheritance
-  .header
-  .ruby .symbol
-  .xml .cdata
-    color highlight-green
-  .css .hexcolor
-    color highlight-aqua
-  .function
-  .python .decorator
-  .python .title
-  .ruby .function .title
-  .ruby .title .keyword
-  .perl .sub
-  .javascript .title
-  .coffeescript .title
-    color highlight-blue
-  .keyword
-  .javascript .function
-    color highlight-purple
+
+
+.hljs
+    display block
+    background white
+    padding 0.5em
+    color $color-1
+    overflow-x auto
+
+.hljs-comment
+.hljs-meta
+    color $color-2
+
+.hljs-variable
+.hljs-template-variable
+.hljs-strong
+.hljs-emphasis
+.hljs-quote
+    color $color-3
+
+.hljs-keyword
+.hljs-selector-tag
+.hljs-type
+    color $color-4
+
+.hljs-literal
+.hljs-symbol
+.hljs-bullet
+.hljs-attribute
+    color $color-5
+
+.hljs-section
+.hljs-name
+    color $color-6
+
+.hljs-tag
+    color $color-1
+
+.hljs-title
+.hljs-attr
+.hljs-selector-id
+.hljs-selector-class
+.hljs-selector-attr
+.hljs-selector-pseudo
+    color $color-7
+
+.hljs-addition
+    color $color-8
+    background-color $color-9
+
+.hljs-deletion
+    color $color-10
+    background-color $color-11
+
+.hljs-link
+    text-decoration underline
+
+.hljs-number
+    color $color-12
+
+.hljs-string
+    color $color-13

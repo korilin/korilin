@@ -1,5 +1,5 @@
 ---
-title: OAuth 2.0 认证授权详解
+title: OAuth 2.0 认证授权
 date: 2020-7-6
 categories: 技术笔记
 tags:

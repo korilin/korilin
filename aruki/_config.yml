@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ARUKI'S BLOG
+title: Kori's blog
 subtitle: 正しさなんてもの、人のモノサシによって変わる
 description: 有机少年的博客
-keywords: aruki,ARUKI,arukione,Python,有机，有机少年
-author: aruki
+keywords: kori,Kori,Kori Lin,有机,有机少年
+author: kori lin
 language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://arukione.com/
+url: https://arukione.cn/
 root: /
 permalink: :title/
 permalink_defaults:
