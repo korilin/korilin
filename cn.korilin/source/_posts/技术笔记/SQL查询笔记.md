@@ -6,7 +6,7 @@ tags:
     - 数据库
 ---
 
-这段时间终于是教SQL了, 还是习惯小写的SQL语句, 大写后总觉得有点难入眼。
+这段时间终于是教SQL了, 还是习惯小写的SQL语句, 大写后总觉得有点不习惯。
 上课基本都是在教查询就是了, 毕竟查询是用的最多的。
 查询分单表查询和多表查询, 单表查询并不难, 主要难点都是在多表查询。
 
@@ -34,10 +34,10 @@ select * from table where field not in (value1,value2,...);
 | [^] | 表示不在某一范围的字符 |
 
 ```SQL
-select * from table where field like 'aruki%';
-select * from table where field like '_ruki%';
-select * from table where field like 'aruki[0-9]';
-select * from table where field like 'aruki[^0-9]';
+select * from table where field like 'name%';
+select * from table where field like '_name%';
+select * from table where field like 'name[0-9]';
+select * from table where field like 'name[^0-9]';
 ```
 
 好像老版本的SQL的中文字符要用两个下划线来匹配, 现在一个下划线也可以匹配一个中文了。
@@ -85,7 +85,7 @@ select * from table1 [left|rgiht|full] join table2 on table1.field=table2.field;
 **交叉查询:**
 
 ```SQL
-select * from table1 cro ss join table2;
+select * from table1 cross join table2;
 ```
 
 查询结果的集合的行数是两个表行数的乘积, 列数是两个表列数的和。
