@@ -4,11 +4,11 @@
 
 # Site
 title: KORILIN
-subtitle: 中文技术博客
-description: 利益的向往是自由，技术的终点是开源
+subtitle: English Technology Blog
+description: The longing for interests is freedom, and the end point of technology is Open Source
 keywords: kori,Kori,korilin,Kori Lin,有机,有机少年,particle
 author: korilin
-language: zh-Hans
+language: en
 timezone: Asia/Shanghai
 
 # URL
@@ -100,6 +100,6 @@ deploy:
   type: git
   repository:
     # coding: git@e.coding.net:aruki/aruki.git
-    github: git@github.com:korilin/cn.korilin.github.io
-    server: git@arukione.cn:/home/git/cn.korilin.git
+    github: git@github.com:korilin/en.korilin.github.io
+    server: git@arukione.cn:/home/git/en.korilin.git
   branch: master
