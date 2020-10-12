@@ -1,7 +1,7 @@
 ---
 title: 使用 setuptools 和 twine 把项目打成 pip 包
 date: 2020-1-25 16:25
-categories: 技术笔记
+categories: 开发记录
 tags:
     - Python
 ---

@@ -1,7 +1,7 @@
 ---
 title: 使用 Hexo-NexT 时遇到的问题
 date: 2019-3-29
-categories: 技术笔记
+categories: 开发记录
 tags:
     - 博客
 ---

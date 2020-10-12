@@ -1,7 +1,7 @@
 ---
 title: SpringBoot 返回文件
 date: 2020-3-14
-categories: 技术笔记
+categories: 开发记录
 tags:
     - Spring Boot
     - Java

@@ -1,14 +1,16 @@
 ---
-title: Nginx请求处理配置
+title: Nginx 请求处理配置
 date: 2020-3-18 16:20
-categories: 技术笔记
+categories: 开发记录
 tags:
     - Nginx
 ---
 
-Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理软件时，每个网络请求都会先由Nginx接收，Nginx会根据配置文件里的配置对请求进行过滤处理，等请求完全接收完再发送给上游服务器一次性处理，从而可以提高上游服务器的工作性能。
+Nginx 可以用来做 Web 服务器或者反向代理，当 Nginx 作为反向代理软件时，每个网络请求都会先由 Nginx 接收，Nginx 会根据配置文件里的配置对请求进行过滤处理，等请求完全接收完再发送给上游服务器一次性处理，从而可以提高上游服务器的工作性能。
+
 <!--more-->
-以下是Nginx常用的一些http请求连接的配置。
+
+以下是 Nginx 常用的一些 http 请求连接的配置。
 
 ## [Http请求配置项](#Http请求配置项)
 
@@ -30,7 +32,7 @@ Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理�
 
 ### [Http包体最大值](#Http消息体最大值)
 
-该配置影响请求消息体的最大值，Http包头会有一个Content-Length的字段，代表Http包体的大小，如果这个值超过了client_max_body_size的值，将会中断连接返回413("Request Entity Too Large")响应给客户端
+该配置影响请求消息体的最大值，Http 包头会有一个 Content-Length 的字段，代表 Http 包体的大小，如果这个值超过了 client_max_body_size 的值，将会中断连接返回 413("Request Entity Too Large") 响应给客户端
 
 ```config
 语法: client_max_body_size size;
@@ -40,7 +42,7 @@ Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理�
 
 ### [请求的限速](#请求的限速)
 
-限制客户端每秒传输的字节数，0代表不限速
+限制客户端每秒传输的字节数，0 代表不限速
 
 ```config
 语法: limit_rate speed;
@@ -60,7 +62,7 @@ Nginx可以用来做Web服务器或者反向代理，当Nginx作为反向代理�
 
 ### [禁用某些浏览器使用keepalive](#禁用某些浏览器使用keepalive)
 
-keepalive可以让多个请求服用一个HTTP长连接来提高服务器性能，但是IE6及其早期版本、Safari浏览器对使用keepalive功能的POST请求处理有问题，所以Nginx默认禁用了keepalive功能
+keepalive 可以让多个请求服用一个 HTTP 长连接来提高服务器性能，但是 IE6 及其早期版本、Safari 浏览器对使用 keepalive 功能的 POST 请求处理有问题，所以 Nginx 默认禁用了 keepalive 功能
 
 ```config
 语法: keepalive_disable [ msie6 | safari | none ]...;
@@ -70,7 +72,7 @@ keepalive可以让多个请求服用一个HTTP长连接来提高服务器性能�
 
 ### [keepalive超时时间](#keepalive超时时间)
 
-当一个keepalive连接闲置超过一段时间后(默认75秒)，服务器和浏览器会关闭这个连接，keepalive_timeout配置项用来约束Nginx服务器，Nginx会按照规范把这个时间传给浏览器
+当一个 keepalive 连接闲置超过一段时间后（默认 75 秒），服务器和浏览器会关闭这个连接，keepalive_timeout 配置项用来约束 Nginx 服务器，Nginx 会按照规范把这个时间传给浏览器
 
 ```config
 语法: keepalive_timeout time(默认单位: 秒);
@@ -102,7 +104,7 @@ off: 不管是否已经有准备就绪的用户数据都关闭连接
 
 ### [连接关闭时间](#连接关闭时间)
 
-在返回响应后经过lingering_time设置的时间，Nginx将不管用户是否仍在上传，都会关闭连接
+在返回响应后经过 lingering_time 设置的时间，Nginx 将不管用户是否仍在上传，都会关闭连接
 
 ```config
 语法: lingering_time time;
@@ -112,7 +114,7 @@ off: 不管是否已经有准备就绪的用户数据都关闭连接
 
 ### [连接关闭延迟](#连接关闭延迟)
 
-在关闭连接前，如果超过lingering_timeout时间后没有数据可读，直接关闭连接；否则，读取完连接缓冲区上的数据并丢弃后才会关闭连接
+在关闭连接前，如果超过 lingering_timeout 时间后没有数据可读，直接关闭连接；否则，读取完连接缓冲区上的数据并丢弃后才会关闭连接
 
 ```config
 语法: lingering_timeout time;

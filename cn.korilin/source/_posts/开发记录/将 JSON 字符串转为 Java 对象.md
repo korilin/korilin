@@ -1,7 +1,7 @@
 ---
 title: 将 JSON 字符串转为 Java 对象
 date: 2020-3-14
-categories: 技术笔记
+categories: 开发记录
 tags:
     - Java
 ---

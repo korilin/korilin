@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: KORILIN
-subtitle: 中文技术博客
-description: 利益的向往是自由，技术的终点是开源
-keywords: kori,Kori,korilin,Kori Lin,有机,有机少年,particle
+title: こおり
+subtitle: 日本語日常記録ブログ
+description: 正しさなんてもの、人のモノサシによって変わる
+keywords: kori,Kori,korilin,Kori Lin,有机,有机少年,particle,こおり
 author: korilin
-language: zh-Hans
+language: jp
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://cn.korilin.com
+url: https://jp.korilin.com
 root: /
 permalink: :title/
 permalink_defaults:
@@ -100,6 +100,6 @@ deploy:
   type: git
   repository:
     # coding: git@e.coding.net:aruki/aruki.git
-    github: git@github.com:korilin/korilin.cn.github.io
-    server: git@arukione.cn:/home/git/cn.korilin.git
+    github: git@github.com:korilin/jp.korilin.github.io
+    server: git@arukione.cn:/home/git/jp.korilin.git
   branch: master
