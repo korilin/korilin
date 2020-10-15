@@ -101,5 +101,5 @@ deploy:
   repository:
     # coding: git@e.coding.net:aruki/aruki.git
     github: git@github.com:korilin/en.korilin.github.io
-    server: git@arukione.cn:/home/git/en.korilin.git
+    server: git@korilin.com:/home/git/en.korilin.git
   branch: master

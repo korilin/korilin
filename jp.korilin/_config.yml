@@ -4,7 +4,7 @@
 
 # Site
 title: こおり
-subtitle: 日本語日常記録ブログ
+subtitle: 日本語と日常の記録ブログ
 description: 正しさなんてもの、人のモノサシによって変わる
 keywords: kori,Kori,korilin,Kori Lin,有机,有机少年,particle,こおり
 author: korilin
@@ -101,5 +101,5 @@ deploy:
   repository:
     # coding: git@e.coding.net:aruki/aruki.git
     github: git@github.com:korilin/jp.korilin.github.io
-    server: git@arukione.cn:/home/git/jp.korilin.git
+    server: git@korilin.com:/home/git/jp.korilin.git
   branch: master
