@@ -1,40 +1,50 @@
 ---
-title: 关于我自己
+title: 哦吼~
 ---
 
-## [**Kori**](#Kori)
+### [Korilin](#Korilin)
 
-**Kori Lin 是英文名，Kori 来源于日语”氷（こおり）”的罗马音，省略了中间“お”的音，“氷”翻译过来是冰，取这个名字是因为和我的中文名有关联，Lin 是我的姓**
-**将来本博客的域名也会在 arukione.cn 和 arukione.com 过期后迁移到 korilin.cn**
+korilin 是英文名，kori 来源于日语”氷（こおり）”的罗马音，省略了中间“お”的音，“氷”翻译过来是冰
+取这个名字是因为日文和我的中文名有点关联，lin 是我的姓
 
-## [**关于我自己的兴趣爱好**](#关于我自己的兴趣爱好)
+将来本博客的域名已经迁移到 korilin.com，原本的 arukione.cn 将在到期后停止使用
 
-**从喜欢玩游戏，现在玩的主要是王者和 Tokyo 7th Sisters, 其实大部分类型的游戏都玩，只要有人陪着的话**
-**以前喜欢打篮球，现在到球场可能都跑不了多久，只能感叹“年轻真好”**
-**喜欢听歌，学过日语，现在听的大部分歌都是日语歌，偶尔会唱一下，喜欢看动漫，也喜欢游戏同人作品**
-**现在对计算机方面的技术比较痴迷，一个是兴趣点刚好在这，一个是自身学习能力和执着于探索，也有一些童年的原因，现在能一整天都躲在室内看电脑**
-**可以说是一个二次猿 + 程序猿 + 技术宅，嗯，同时也是一个直男吧...**
+### [一点个人信息](#一点个人信息)
 
-## [**一点信息**](#一点信息)
+一个二次元 + 技术宅 + 直男
 
-**软件工程专业学生，有点强迫症，不希望自己代码里出现黄色警告（开发时间充裕的情况下）**
-**现实日常不太擅长正面，倒是挺喜欢观察别人说话和做事**
-**博客从大一的时候就搭建了，当时没什么东西可以写的，倒是不嫌费劲不怕浪费时间挺执着于给博客弄漂亮一点，换了几个主题**
-**为了加强自己说话的能力，成为了 bilibili 的 up 主**
-**目前的方向预定是 Go 全栈**
+软件工程专业学生，喜欢开源，有点强迫症，不希望自己代码里出现黄色警告（开发时间充裕的情况下）
 
-## [**联系方式**](#联系方式)
+在校：校易班学生工作站技术部部长
+目前：半野生-全栈？（自学为主，教学计划为辅的夜猫子）
 
-**Gmail 邮箱：zqljiebin@gmail.com**
-**QQ 邮箱：1281359826@qq.com**
+为了练习说话，成为了 bilibili 的年更 up 主
 
-**QQ: 1281359826**
-**WX: arukione**
-**bilibili：kori-lin**
+### [关于博客](#关于博客)
 
-**Twitter：korilin_dev**
-**GitHub: <https://github.com/korilin>**
+博客从大一的时候就搭建了，采用 HEXO 引擎
+不嫌费劲不怕浪费时间挺执着于给博客弄漂亮一点，换了几个主题
 
-## [**一点其它信息**](#一点其他信息)
+目前主题是自己做的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题。
+另外两个博客也是使用这个主题：
+英文博客：[en.korilin.com](https://en.korilin.com)
+日语博客：[jp.korilin.com](https://jp.korilin.com)
 
-**计算机旅途：<https://www.arukione.com/journey>**
+### [联系方式](#联系方式)
+
+Gmail 邮箱：zqljiebin@gmail.com
+QQ 邮箱：1281359826@qq.com
+
+QQ: 1281359826
+wx: arukione
+
+GitHub: [korilin](https://github.com/korilin)
+bilibili：[korilin-dev](https://space.bilibili.com/109823533)
+Twitter：[korilin_dev](https://twitter.com/korilin_dev)
+Telegram：[korilin](https://t.me/korilin)
+
+### [计算机旅途](#计算机旅途)
+
+记录了我学计算机以来接触的东西
+
+计算机旅途：<https://cn.korilin.com/journey>

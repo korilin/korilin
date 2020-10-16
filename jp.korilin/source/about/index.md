@@ -1,40 +1,37 @@
 ---
-title: 关于我自己
+title: 私について
 ---
 
-## [**Kori**](#Kori)
+### [私とこのブログ](#私とこのブログ)
 
-**Kori Lin 是英文名，Kori 来源于日语”氷（こおり）”的罗马音，省略了中间“お”的音，“氷”翻译过来是冰，取这个名字是因为和我的中文名有关联，Lin 是我的姓**
-**将来本博客的域名也会在 arukione.cn 和 arukione.com 过期后迁移到 korilin.cn**
+ソフトウェアエンジニアリング専攻の学生
 
-## [**关于我自己的兴趣爱好**](#关于我自己的兴趣爱好)
+二次元が好きで、アニメとゲームも好きだ！
 
-**从喜欢玩游戏，现在玩的主要是王者和 Tokyo 7th Sisters, 其实大部分类型的游戏都玩，只要有人陪着的话**
-**以前喜欢打篮球，现在到球场可能都跑不了多久，只能感叹“年轻真好”**
-**喜欢听歌，学过日语，现在听的大部分歌都是日语歌，偶尔会唱一下，喜欢看动漫，也喜欢游戏同人作品**
-**现在对计算机方面的技术比较痴迷，一个是兴趣点刚好在这，一个是自身学习能力和执着于探索，也有一些童年的原因，现在能一整天都躲在室内看电脑**
-**可以说是一个二次猿 + 程序猿 + 技术宅，嗯，同时也是一个直男吧...**
+中国人だから、日本語を勉強している
 
-## [**一点信息**](#一点信息)
+好きな日本ゲームはナナスタ、キャラクターの方はカジカちゃんとハルちゃんが好きだ。
+プレイヤー ID は私の [Twitter](https://twitter.com/korilin_dev) の紹介にある
 
-**软件工程专业学生，有点强迫症，不希望自己代码里出现黄色警告（开发时间充裕的情况下）**
-**现实日常不太擅长正面，倒是挺喜欢观察别人说话和做事**
-**博客从大一的时候就搭建了，当时没什么东西可以写的，倒是不嫌费劲不怕浪费时间挺执着于给博客弄漂亮一点，换了几个主题**
-**为了加强自己说话的能力，成为了 bilibili 的 up 主**
-**目前的方向预定是 Go 全栈**
+このブログは私の日常と日本語勉強を記録するためにのもので、文章には色々な問題ああるかもしれませんが、皆さんが直してください
 
-## [**联系方式**](#联系方式)
+他には二つのブロクがある
+中国語ブログ：[en.korilin.com](https://en.korilin.com)
+英語技術ブログ：[en.korilin.com](https://en.korilin.com)
 
-**Gmail 邮箱：zqljiebin@gmail.com**
-**QQ 邮箱：1281359826@qq.com**
+### [連絡先](#連絡先)
 
-**QQ: 1281359826**
-**WX: arukione**
-**bilibili：kori-lin**
+Gmail メール：zqljiebin@gmail.com
+QQ メール：1281359826@qq.com
 
-**Twitter：korilin_dev**
-**GitHub: <https://github.com/korilin>**
+QQ: 1281359826
+wx: arukione
 
-## [**一点其它信息**](#一点其他信息)
+GitHub: [korilin](https://github.com/korilin)
+bilibili：[korilin-dev](https://space.bilibili.com/109823533)
+Twitter：[korilin_dev](https://twitter.com/korilin_dev)
+Telegram：[korilin](https://t.me/korilin)
 
-**计算机旅途：<https://www.arukione.com/journey>**
+Twitter と Telegram があまり使われていない、メールボックスはメールが多いので、無視することもある
+
+Twitter はメール送信が開いているから、連絡したら QQ とウィーチャット以外は Twitter を使ってください。
