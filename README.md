@@ -1,5 +1,11 @@
-# myblog
+# korilin-blog
 
-使用hexo搭建的个人博客源码
+使用hexo搭建的3个博客存储库
 
-网站部署在github，博客网址：[arukione.com](https://www.arukione.cn/)
+网站部署在阿里云，博客网址：[korilin.com](https://korilin.com/)
+
+中文技术博客：cn.korilin.com
+
+英文技术博客：en.korilin.com
+
+日语记录博客：jp.korilin.com
