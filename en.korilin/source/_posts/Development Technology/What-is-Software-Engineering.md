@@ -1,7 +1,7 @@
 ---
 title: What is Software Engineering
 date: 2020-10-14
-categories: Technology Development
+categories: Development Technology
 ---
 
 Internet has been playing an increasingly important role in our day-to-day life. As an indispensable part of the Internet, software plays an important role in various fields. And Software Engineering has

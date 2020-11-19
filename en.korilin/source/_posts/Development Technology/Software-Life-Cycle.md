@@ -1,7 +1,7 @@
 ---
 title: Software Life Cycle
 date: 2020-10-15
-categories: Technology Development
+categories: Development Technology
 ---
 
 The life cycle is the most fundamental concept in Software Engineering. The methods, tools,and management of Software Engineering are activities based on the software life cycle.
