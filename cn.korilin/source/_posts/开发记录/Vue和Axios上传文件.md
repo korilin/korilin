@@ -123,9 +123,9 @@ var upload = new Vue({
 <input type="file" ref="file" @change="changeFile($event)">
 <button type="submit" @click="upload">上传</button>
 <!-- 上传信息 -->
-<p style="font-size: 14px;color: rgb(21, 146, 196);" v-show="percentage==0?false:(percentage==100?false:true)">{ { percentage } }%</p>
-<p style="font-size: 14px;color: green;" v-show="mseshow">{ { mes } }</p>
-<p style="font-size: 14px;color: red;" v-show="errshow">{ { mes } }</p>
+<p style="font-size: 14px;color: rgb(21, 146, 196);" v-show="percentage==0?false:(percentage==100?false:true)">{{percentage}}%</p>
+<p style="font-size: 14px;color: green;" v-show="mseshow">{{mes}}</p>
+<p style="font-size: 14px;color: red;" v-show="errshow">{{mes}}</p>
 ```
 
 在 Axios 中，我们可以通过 axios 发送请求时 config 里的`onUploadProgress`函数来获取上传进度，修改完的代码如下：
