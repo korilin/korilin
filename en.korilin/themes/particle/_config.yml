@@ -1,0 +1,97 @@
+# Theme Github link: https://github.com/korilin/hexo-theme-particle
+# Developer: korilin
+
+# html lang
+language: en
+
+# avatar image url
+head_img: /images/avatar.png
+
+# home page head info block
+head_block_enable: false
+
+# home page head background style.
+# If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
+# Use image as background ==> home_background: "background-image:url('../home.jpg')"
+# Use a color as background ==> home_background: "background: balck"
+home_background: "background-image:url('../images/home.png')"
+
+# Particle theme icon is adopts the ant design vue icons
+# Link：https://www.antdv.com/components/icon-cn/
+
+# main menu navigation
+menu:
+  home:
+    icon:
+      name: home
+      theme: filled
+    src: /
+  about:
+    icon:
+      name: idcard
+      theme: filled
+    src: /about
+  categories:
+    icon:
+      name: book
+      theme: filled
+    src: /categories
+  中文博客:
+    icon:
+      name: heart
+      theme: filled
+    src: https://cn.korilin.com
+  記録ブログ:
+    icon:
+      name: read
+      theme: filled
+    src: https://jp.korilin.com
+
+# side info card
+card:
+  enable: true
+  description: ["software engineering student", "an ACG enthusiast"]
+  icon_links:
+    github:
+      icon:
+        type: antd-icon
+        name: github
+        theme: filled
+        src:
+      link: https://github.com/korilin
+    twitter:
+      icon:
+        type: antd-icon
+        name: twitter
+        theme:
+        src:
+      link: https://twitter.com/korilin_dev
+  friend_links:
+    Chinese Blog: https://cn.korilin.com
+    Record Blog: https://jp.korilin.com
+
+# footer info
+footer:
+  since: 2020
+  # Customize the server domain name ICP
+  ICP:
+    enable: true
+    code: 粤ICP备19149652号
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+  enable: true
+  clientID: 114210f37c6e96c06d16 
+  clientSecret: 8810fe374b3dfcee17ceab0702afe963fa9008c0 
+  repo: en.korilin.github.io
+  owner: korilin 
+  admin: korilin 
+  language: en # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
+
+# theme style: full / night / maiden, defalut: full
+style: night
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/particle.js

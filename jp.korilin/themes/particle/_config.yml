@@ -1,0 +1,97 @@
+# Theme Github link: https://github.com/korilin/hexo-theme-particle
+# Developer: korilin
+
+# html lang
+language: jp
+
+# avatar image url
+head_img: /images/avatar.png
+
+# home page head info block
+head_block_enable: true
+
+# home page head background style.
+# If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
+# Use image as background ==> home_background: "background-image:url('../home.jpg')"
+# Use a color as background ==> home_background: "background: balck"
+home_background: "background-image:url('../images/home.jpg')"
+
+# Particle theme icon is adopts the ant design vue icons
+# Link：https://www.antdv.com/components/icon-cn/
+
+# main menu navigation
+menu:
+  ホームページ:
+    icon:
+      name: home
+      theme: filled
+    src: /
+  ついて:
+    icon:
+      name: idcard
+      theme: filled
+    src: /about
+  分類:
+    icon:
+      name: book
+      theme: filled
+    src: /categories
+  中文博客:
+    icon:
+      name: heart
+      theme: filled
+    src: https://cn.korilin.com
+  English Blog:
+    icon:
+      name: compass
+      theme: filled
+    src: https://en.korilin.com
+
+# side info card
+card:
+  enable: true
+  description: ["正しさなんてもの", "人のモノサシによって変わる"]
+  icon_links:
+    github:
+      icon:
+        type: antd-icon
+        name: github
+        theme: filled
+        src:
+      link: https://github.com/korilin
+    twitter:
+      icon:
+        type: antd-icon
+        name: twitter
+        theme:
+        src:
+      link: https://twitter.com/korilin_dev
+  friend_links:
+    中国語ブログ: https://cn.korilin.com
+    英語ブログ: https://en.korilin.com
+
+# footer info
+footer:
+  since: 2018
+  # Customize the server domain name ICP
+  ICP:
+    enable: false
+    code: 粤ICP备19149652号
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+  enable: true
+  clientID: 2639d6cc5679419e2856 # your appId *
+  clientSecret: c2746b5e3d4cfe7e8b4ef909535e2c57b21d01ee # your appKey *
+  repo: jp.korilin.github.io
+  owner: korilin # https://valine.js.org/avatar.html
+  admin: korilin # zh-CN,zh-TW,en,ja
+  language: en # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
+
+# theme style: full / night / maiden, defalut: full
+style: maiden
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/particle.js

@@ -120,13 +120,12 @@ var upload = new Vue({
 在 @submit 后面加上 prevent 可以阻止表单提交时页面刷新，然后定义一些默认不显示的标签来展示上传时和上传后的消息
 
 ```Html
-<form id="upload" @submit.prevent="upload">
-    <input type="file" ref="file" @change="changeFile($event)">
-    <input type="submit" value="上传">
-    <p style="font-size: 14px;color: rgb(21, 146, 196);" v-show="percentage==0?false:(percentage==100?false:true)">{{percentage}}%</p>
-    <p style="font-size: 14px;color: green;" v-show="mseshow">{{mes}}</p>
-    <p style="font-size: 14px;color: red;" v-show="errshow">{{mes}}</p>
-</form>
+<input type="file" ref="file" @change="changeFile($event)">
+<button type="submit" @click="upload">上传</button>
+<!-- 上传信息 -->
+<p style="font-size: 14px;color: rgb(21, 146, 196);" v-show="percentage==0?false:(percentage==100?false:true)">{ { percentage } }%</p>
+<p style="font-size: 14px;color: green;" v-show="mseshow">{ { mes } }</p>
+<p style="font-size: 14px;color: red;" v-show="errshow">{ { mes } }</p>
 ```
 
 在 Axios 中，我们可以通过 axios 发送请求时 config 里的`onUploadProgress`函数来获取上传进度，修改完的代码如下：
@@ -135,7 +134,7 @@ var upload = new Vue({
 var upload = new Vue({
     el: "#upload",
     data: {
-        file: ""
+        file: "",
         percentage: 0,
         mseshow: false,
         errshow: false,
