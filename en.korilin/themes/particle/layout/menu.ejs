@@ -1,7 +1,7 @@
+<% var rootlink = config.root %> 
 <nav id="menu">
-
     <div class="desktop-menu">
-        <a href="/">
+        <a href="<%- rootlink %>">
             <span class="title"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>

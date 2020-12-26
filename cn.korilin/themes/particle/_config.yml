@@ -5,7 +5,7 @@
 language: zh
 
 # avatar image url
-head_img: /images/avatar.png
+head_img: images/avatar.png
 
 # home page head info block
 head_block_enable: true
@@ -14,7 +14,7 @@ head_block_enable: true
 # If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
 # Use image as background ==> home_background: "background-image:url('../home.jpg')"
 # Use a color as background ==> home_background: "background: balck"
-home_background: "background-image:url('../images/home.jpg')"
+home_background: "background-image:url('images/home.jpg')"
 
 # Particle theme icon is adopts the ant design vue icons
 # Link：https://www.antdv.com/components/icon-cn/
