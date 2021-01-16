@@ -1,2 +1,3 @@
-particle_dev
-hexo_site/*
+/blog/node_modules
+/blog/docs/.vuepress
+/blog/.vscode

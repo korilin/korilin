@@ -1,11 +1,29 @@
-# korilin-blog
+## Hi there 👋 不点个follow吗
 
-使用hexo搭建的3个博客存储库
+- 在读大学生，摸鱼小队长🏫
+- 活在二次元，可爱即正义🌌
+- 技术宅，热爱开源，熬夜冠军🌛
+- 博客地址：[korilin.com](https://korilin.com/)
 
-网站部署在阿里云，博客网址：[korilin.com](https://korilin.com/)
+### 偶尔搞的东西💣
 
-中文技术博客：[cn.korilin.com](https://cn.korilin.com/)
+![Vue](https://img.shields.io/badge/-Vue-4FC08D?style=flat-square&logo=Vue.js&logoColor=fff)
+![Java](https://img.shields.io/badge/-Java-007396?style=flat-square&logo=Java&logoColor=fff)
+![Spring](https://img.shields.io/badge/-Spring-6DB33F?style=flat-square&logo=Spring&logoColor=fff)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=fff)
+![Flask](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=Python&logoColor=fff)
+![Linux](https://img.shields.io/badge/-Linux-0D597F?style=flat-square&logo=Linux&logoColor=fff)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=fff)
+![Nginx](https://img.shields.io/badge/-Nginx-269539?style=flat-square&logo=Nginx&logoColor=fff)
 
-英文技术博客：[en.korilin.com](https://en.korilin.com/)
+<div>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&icon_color=88c0d0&text_color=273849&title_color=41b883&hide_title=false&line_height=30">
+</a>
+</div>
 
-日语记录博客：[jp.korilin.com](https://jp.korilin.com/)
+<div>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=vue&layout=compact&card_width=450&langs_count=10&hide=html,css&custom_title=Github Languages Stats">
+</a>
+</div>
