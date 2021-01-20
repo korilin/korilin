@@ -6,10 +6,6 @@ layout: About
 
 中文名 -> 冰 -> 氷（こおり）-> kori -> Kori Lin
 
-Kori Lin 是英文名，kori 来源于日语”氷（こおり）”的罗马音，省略了中间“お”的音，“氷”翻译过来是冰，取这个名字是因为日文翻译和我的中文名有点关联
-
-## [Info](#Info)
-
 二次元🌌 + 技术宅技术💻 + 熬夜冠军🌛
 
 - 擅长醒着发呆、睡着思考
@@ -43,7 +39,7 @@ Kori Lin 是英文名，kori 来源于日语”氷（こおり）”的罗马音
 - MySQL 8
 - Redis
 
-## 项目
+## [项目](#项目)
 
 **中间授权服务**
 
@@ -66,8 +62,8 @@ more？
 
 博客开始于 2018（大一），最初采用 Hexo 引擎搭建，目前迁移到了 VuePress。
 
-Hexo 时期最后使用的主题是自己开发的 Particle，因为第一次开发主题代码没设计好，虽然主题可以使用但存在很多潜在问题，引入 Vue 后依旧存在很多问题，所以迁移到了 VuePress 并直接开发了新主题 [Twipress](https://github.com/korilin/vuepress-theme-twipress) 给本博客使用。
+Hexo 时期最后使用的主题是自己开发的 Particle，因为第一次开发主题代码没设计好，虽然主题可以使用但存在很多潜在问题，引入 Vue 后依旧存在很多问题，所以迁移到了 VuePress 并直接开发了新主题 [TwiPress](https://github.com/korilin/vuepress-theme-twipress) 给本博客使用。
 
-## 联系
+## [联系方式](#联系方式)
 
-上面不是有吗是🤪
+🤪上面不是有吗
