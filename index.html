@@ -11,23 +11,28 @@
             margin: 0;
             min-width: 100vw;
             min-height: 100vh;
-            background: url(./bg.jpg);
             background-size: contain;
             background-repeat: no-repeat;
+            background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        .info {
+            width: 100%;
+        }
+
         .wrap {
             position: relative;
-            min-width: 400px;
-            min-height: 250px;
+            min-width: 450px;
+            min-height: 300px;
+            padding: 15px;
             width: 30vw;
             height: 20vw;
-            background: #ffffffa6;
-            border-radius: 20px;
+            background: #ffffffb3;
+            border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,6 +57,7 @@
 
         .desc {
             text-align: center;
+            width: 100%;
         }
 
         .blog {
@@ -61,7 +67,8 @@
         }
 
         .blog a {
-            padding: 10px 25px;
+            font-size: 14px;
+            padding: 8px 20px;
             background: #1da1f2;
             color: white;
             text-decoration: none;
@@ -71,11 +78,35 @@
         .ICP {
             position: absolute;
             bottom: 15px;
+            width: calc(100% - 30px);
+            text-align: center;
         }
 
         .ICP a {
             color: #1da1f2;
             text-decoration: none;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            body {
+                background: white;
+            }
+
+            .wrap {
+                min-width: calc(100% - 60px);
+                height: 50vh;
+                padding: 30px;
+            }
+
+            .blog a {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .ICP {
+                width: calc(100% - 60px);
+            }
         }
     </style>
 </head>
@@ -85,8 +116,11 @@
         <img src="./avatar.jpg" class="avatar" width="120px" height="120px">
         <div class="info">
             <div class="name">Kori Lin</div>
-            <div class="desc">一个热爱二次元与技术的开发者</div>
-            <div class="blog"><a href="https://korilin.com/blog/">进入博客</a></div>
+            <div class="desc">一个热爱二次元与开源技术的开发者，深圳Kotlin用户组(KUG)筹办者</div>
+            <div class="blog">
+                <a href="https://korilin.com/blog/">进入博客</a>
+                <a href="https://korilin.com/KUGshenzhen/">KUG深圳</a>
+            </div>
             <div class="ICP">
                 备案号：<a data-v-a1d15838="" target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">
                     粤ICP备19149652号
