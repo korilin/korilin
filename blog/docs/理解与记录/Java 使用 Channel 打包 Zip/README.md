@@ -1,7 +1,7 @@
 ---
 title: Java 使用 Channel 打包 Zip
 date: 2020-3-14
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Java
 ---

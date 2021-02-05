@@ -1,7 +1,7 @@
 ---
 title: SpringBoot 返回下载文件
 date: 2020-3-14
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Spring Boot
     - Java

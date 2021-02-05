@@ -1,7 +1,7 @@
 ---
 title: Vue 和 Axios 上传文件并显示进度
 date: 2020-3-15
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Vue
     - Axios

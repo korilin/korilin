@@ -1,7 +1,7 @@
 ---
 title: 使用 Pyinstaller 将 Python 程序打包成 exe 可执行文件
 date: 2019-6-2
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Python
 ---

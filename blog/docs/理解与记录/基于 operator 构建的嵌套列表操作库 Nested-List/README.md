@@ -1,7 +1,7 @@
 ---
 title: 基于 operator 构建的嵌套列表操作库 Nested-List
 date: 2020-1-30
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Python
 ---

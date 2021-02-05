@@ -1,7 +1,7 @@
 ---
 title: HTTP PROXY 对 Vue CLI 的影响
-date: 2020-11-6 13:00
-categories: 解决方案
+date: 2020-11-6
+categories: 理解与记录
 tags:
     - Vue.js
 ---

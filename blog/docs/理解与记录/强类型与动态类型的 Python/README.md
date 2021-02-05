@@ -1,7 +1,7 @@
 ---
 title: 强类型与动态类型的 Python
 date: 2019-11-10
-categories: 设计理解
+categories: 理解与记录
 tags:
     - Python
 ---

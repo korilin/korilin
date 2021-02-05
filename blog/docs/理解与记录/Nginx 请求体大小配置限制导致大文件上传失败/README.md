@@ -1,7 +1,7 @@
 ---
 title: Nginx 请求体大小配置限制导致大文件上传失败
 date: 2020-3-14
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Nginx
 ---

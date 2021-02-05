@@ -1,7 +1,7 @@
 ---
 title: 基于 PyMySQL 构建的 SQL 命令执行工具包 Web-MySQL
 date: 2020-1-30 1:49
-categories: 解决方案
+categories: 理解与记录
 tags:
     - Python
     - MySQL

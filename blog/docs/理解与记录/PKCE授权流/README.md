@@ -1,7 +1,7 @@
 ---
 title: PKCE 授权流
 date: 2020-7-6
-categories: 设计理解
+categories: 理解与记录
 tags:
     - OAuth 2.0
     - PKCE
