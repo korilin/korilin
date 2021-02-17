@@ -18,20 +18,10 @@
 
 ## GitHub Statistics
 
-<div>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&icon_color=88c0d0&text_color=273849&title_color=41b883&hide_title=false&line_height=30">
-</a>
-</div>
+[![](https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&icon_color=88c0d0&text_color=273849&title_color=41b883&hide_title=false&line_height=30)](https://github.com/anuraghazra/github-readme-stats)
 
-<div>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=vue&layout=compact&card_width=450&langs_count=10&hide=html,css&custom_title=Github Languages Stats">
-</a>
-</div>
+[![](https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=vue&layout=compact&card_width=450&langs_count=10&hide=html,css)](https://github.com/anuraghazra/github-readme-stats)
 
 ## WakaTime
 
-<div>
-<a href="https://wakatime.com"><img src="https://wakatime.com/share/@060845a3-9cdb-4448-9cf6-fd6dbe8f795c/3f1db03f-97b8-4851-ae5a-43f50e5b7a59.png" /></a>
-</div>
+[![](https://wakatime.com/share/@060845a3-9cdb-4448-9cf6-fd6dbe8f795c/3f1db03f-97b8-4851-ae5a-43f50e5b7a59.png)](https://wakatime.com)
