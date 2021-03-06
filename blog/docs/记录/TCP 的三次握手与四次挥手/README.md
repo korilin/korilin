@@ -55,6 +55,16 @@ tags:
 
 当接收到 ACK 包时，可以通过检查 ACK 包中 ACKnum 的值是否与原本发送 SYN 或 FIN 包时的 ISN 相匹配，来判断该 ACK 包是否有效。
 
+## 短连接和长连接
+
+**长连接**：客户端和服务端建立连接后不进行断开，之后客户端再次访问这个服务器上的内容时，继续使用这一条连接通道。
+
+**短连接**：客户端和服务端建立连接，发送完数据后立马断开连接。下次要取数据，需要再次建立连接。
+
+短连接可能会出现客户端或服务端 `TIME_WAIT` 状态过多的问题，优化方法：
+- 尽量复用`TIME_WAIT` 状态的 TCP 连接。出现 `TIME_WAIT` 状态的连接，一定出现在主动关闭连接的一方，当主动方在 `TIME_WAIT` 状态下需要重新进行连接，则可以复用该连接。
+- 当 `TIME_WAIT` 状态的 TCP 连接过多，抛弃 / 重置所有 `TIME_WAIT` 连接（这个不知道会不会造成什么问题哦）。
+
 ## SYN Flood
 
 SYN 攻击是一种 Dos/DDos 攻击。
@@ -80,3 +90,4 @@ SYN 攻击是一种 Dos/DDos 攻击。
 - [TCP三次握手中SYN，ACK，Seq含义](https://blog.csdn.net/qq_25948717/article/details/80382766)
 - [TCP 协议 - 笔记面试知识整理](https://hit-alibaba.github.io/interview/basic/network/TCP.html)
 - [20-1-tcp连接——初始化序列号(ISN)](https://blog.csdn.net/qq_35733751/article/details/80552037)
+- [TCP连接的TIME_WAIT和CLOSE_WAIT 状态解说](https://www.cnblogs.com/kevingrace/p/9988354.html)
