@@ -77,12 +77,6 @@ SYN 攻击是一种 Dos/DDos 攻击。
 - 过滤网关防护
 - SYN cookies 技术
 
-## TIME_WAIT 状态过多
-
-（暴力）修改内核参数，开启下面两个功能：
-1. 大于阈值时重置所有 TIME_WAIT 连接
-2. 对于超出一定时间阈值的 TIME_WAIT 状态的 TCP 连接进行复用
-
 ## 参考资料
 
 - [Transmission Control Protocol - Wiki](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
