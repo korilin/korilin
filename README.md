@@ -1,11 +1,11 @@
-# Hi there 👋 不点个 follow 吗
+## Hi there 👋 不点个 follow 吗
 
 - 在读大学生，摸鱼小队长🏫
 - 活在二次元，可爱即正义🌌
 - 技术宅，热爱开源，熬夜冠军🌛
 - 博客地址：[korilin.com](https://korilin.com/)
 
-## 偶尔搞的东西💣
+### 偶尔搞的东西💣
 
 ![Kotlin](https://img.shields.io/badge/-Kotlin-0095D5?style=flat-square&logo=Kotlin&logoColor=fff)
 ![Java](https://img.shields.io/badge/-Java-007396?style=flat-square&logo=Java&logoColor=fff)
@@ -16,8 +16,15 @@
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=fff)
 ![Flask](https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=Python&logoColor=fff)
 
-## GitHub Statistics
+
+
+<details>
+<summary>
+  <strong>GitHub Statistics</strong>
+</summary>
 
 [![](https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&icon_color=88c0d0&text_color=273849&title_color=41b883&hide_title=false&line_height=30)](https://github.com/anuraghazra/github-readme-stats)
 
 [![](https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=vue&layout=compact&card_width=450&langs_count=10&hide=html,css)](https://github.com/anuraghazra/github-readme-stats)
+
+</details>
