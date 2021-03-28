@@ -3,7 +3,8 @@
 - 在读大学生，摸鱼小队长🏫
 - 活在二次元，可爱即正义🌌
 - 技术宅，热爱开源，熬夜冠军🌛
-- 博客地址：[korilin.com](https://korilin.com/)
+- 个人博客：<https://korilin.com/>
+- InfoQ：<https://www.infoq.cn/u/korilin/>
 
 ### 偶尔搞的东西💣
 
