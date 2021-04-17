@@ -13,9 +13,7 @@
         <template v-else>
             <div class="theme-default-content">
                 <div class="getback">
-                    <router-link to="/archive/">
-                       < 返回
-                    </router-link>
+                    <router-link to="/archive/"> < 返回 </router-link>
                 </div>
                 <div class="head">
                     <div class="title">
@@ -56,6 +54,18 @@
                 </div>
             </div>
         </footer>
+        <div v-pre>
+            <script>
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src =
+                        "https://hm.baidu.com/hm.js?d62f66de800fca08989571f8a0878539";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
+        </div>
     </main>
 </template>
 
