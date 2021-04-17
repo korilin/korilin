@@ -2,9 +2,9 @@ module.exports = {
     title: "Kori Lin",
     description: "Kori Lin - 林洁彬的个人博客",
     base: "/blog/",
-    head: [["link", { rel: "icon", href: "/hero.jpg" }]],
+    head: [["link", { rel: "icon", href: "/korilin.png" }]],
     themeConfig: {
-        logo: "/hero.jpg",
+        logo: "/korilin.png",
         nav: [
             { text: "主页", link: "/" },
             { text: "文章", link: "/archive/" },

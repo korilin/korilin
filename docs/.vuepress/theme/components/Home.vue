@@ -21,7 +21,7 @@
             </div>
 
             <div class="img">
-                <img :src="$withBase('hero.jpg')" alt="" />
+                <img :src="$withBase($themeConfig.logo)" alt="log" />
             </div>
         </div>
         <div class="kug">
