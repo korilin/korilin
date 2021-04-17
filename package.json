@@ -1,0 +1,15 @@
+{
+  "name": "korilin",
+  "version": "1.0.0",
+  "description": "Kori's Blog",
+  "main": "index.js",
+  "author": "Kori Lin",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
