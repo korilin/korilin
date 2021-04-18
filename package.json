@@ -9,7 +9,8 @@
     "vuepress": "^1.8.2"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "blog:dev": "vuepress dev docs",
+    "blog:build": "vuepress build docs",
+    "blog:deploy": "scp -r docs/.vuepress/dist/* root@korilin.com:/www/korilin/blog"
   }
 }
