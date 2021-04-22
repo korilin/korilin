@@ -217,7 +217,7 @@ LineNumberTable:
 - **JVM Stack** 用于存放调用方法时压入栈的栈帧。相信学过数据结构的对栈应该不陌生，JVM Stack 压入的单位为栈帧（Frame），用于存储数据、动态链接、方法返回值和调度异常等。每次调用一个方法都会创建一个新的栈帧压入 JVM Stack 来存储该方法的信息，当该方法调用完成时，对应的栈帧也会跟着被销毁。一个栈帧都有自己的局部变量数组、操作数栈、对当前方法类的运行常量池的引用。
 - **Native Method Stack** 则是用于调用操作系统本地方法时使用的栈空间。
 
-![JVM Stack 结构](jvm-stack.png)
+![JVM Stack 结构](./jvm-stack.png)
 
 每个线程都可用访问的内存空间为线程共享区域，它包含 Head 和 Method Area 两个部分，Head 用于存放实例对象，也是 GC 回收的主要区域，而 Method Area 用于存放类结构与静态变量。
 
@@ -298,6 +298,9 @@ LineNumberTable:
 ## 参考
 
 > 字节码增强技术探索：https://tech.meituan.com/2019/09/05/java-bytecode-enhancement.html
+> 
 > 一文看懂 JVM 内存布局及 GC 原理：https://www.infoq.cn/article/3wyretkqrhivtw4frmr3
+> 
 > Oracle 官方说明文档：https://docs.oracle.com/javase/specs/jvms/se16/html/jvms-4.html#jvms-4.10
+> 
 > Oracle 官方指令文档：https://docs.oracle.com/javase/specs/jvms/se16/html/jvms-6.html

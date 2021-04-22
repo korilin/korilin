@@ -5,7 +5,6 @@ module.exports = {
     head: [
         ["link", { rel: "icon", href: "/korilin.png" }],
         ["script", { src: "/statistics.js" }],
-        // ["link", { rel: "preload", href: "/statistics.js", as: "script" }],
     ],
     themeConfig: {
         logo: "/korilin.png",
