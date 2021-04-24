@@ -1,5 +1,5 @@
 ---
-title: 使用数组实现的 List - ArrayList
+title: List 接口的可调整数组实现 - ArrayList
 date: 2021-04-24
 category: Oh! Java
 ---

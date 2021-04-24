@@ -1,7 +1,12 @@
+---
+title: List 和 Deque 接口的双链表实现 - LinkedList
+date: 2020-01-01
+category: Oh! Java
+---
 
+待填坑
 
-
-而 LinkedList 直接 extends `AbstractSequentialList<E>` abstract 类，间接 extends `AbstractList<E>`，由于实现了 `Deque<E>`，它同时是 List 接口和 Queue 接口的实现类。
+LinkedList 直接 extends `AbstractSequentialList<E>` abstract 类，间接 extends `AbstractList<E>`，由于实现了 `Deque<E>`，它同时是 List 接口和 Queue 接口的实现类。
 
 ```Java
 public class LinkedList<E> extends AbstractSequentialList<E>
