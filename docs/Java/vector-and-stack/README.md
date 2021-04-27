@@ -22,7 +22,7 @@ public class Stack<E> extends Vector<E>
 
 ## 与 ArrayList 类似的 Vector
 
-*如果希望了解 ArrayList 的底层结构可阅读另一篇文章 [ArrayList 与 LinkedList 底层结构](../arraylist-and-linkedlist-principle)*
+*如果希望了解 ArrayList 的底层结构可阅读另一篇文章 [ArrayList 与 LinkedList 底层结构](https://korilin.com/blog/Java/arraylist-and-linkedlist-principle/)*
 
 与 ArrayList 一样，Vector 的底层结构也是 Object 数组 `elementData`，通过 `elementCount` 来表示 Vector 存储的元素个数，但与 ArrayList 不同的是，ArrayList 创建时不指定容器个数时，elementData 是一个长度为 0 的数组，只有在第一次添加元素的时候才会创建一个长度为 10 的数组，而 Vector 则是在构造方法中调用另一个构造方法直接为 elementData 创建一个长度为 10 的数组。
 
@@ -154,3 +154,13 @@ List list = Collections.synchronizedList(new ArrayList(...));
 ```Java
 Deque<Integer> stack = new ArrayDeque<Integer>();
 ```
+
+## 参考
+
+> JDK 1.8 源码
+> 
+> https://docs.oracle.com/javase/8/docs/api/java/util/List.html
+> 
+> https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html
+> 
+> https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html
