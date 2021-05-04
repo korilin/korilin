@@ -27,6 +27,7 @@
                     </div>
                 </div>
                 <Content />
+                <div id="gitalk-container"></div>
             </div>
         </template>
 
@@ -62,10 +63,27 @@ import PageEdit from "@theme/components/PageEdit.vue";
 import PageNav from "@theme/components/PageNav.vue";
 import Archive from "./Archive";
 import Home from "./Home";
+import "gitalk/dist/gitalk.css";
+import Gitalk from "gitalk";
 
 export default {
     components: { PageEdit, PageNav, Archive, Home },
     props: ["sidebarItems"],
+    mounted() {
+        var gitalk = new Gitalk({
+            clientID: "b7aa589ca8f3de3b34fc",
+            clientSecret: "9aed479aabee6e5cf3843b672f33c989deb3d83a",
+            repo: "https://github.com/korilin/korilin",
+            owner: "korilin",
+            admin: [
+                "korilin",
+            ],
+            id: location.pathname, // Ensure uniqueness and length less than 50
+            distractionFreeMode: false, // Facebook-like distraction free mode
+        });
+
+        gitalk.render("gitalk-container");
+    },
     methods: {
         getDate(date) {
             var d = new Date(date);

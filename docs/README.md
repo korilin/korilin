@@ -17,3 +17,6 @@ date: 2020-01-01
 | 目前研究方向 | Android |
 | etc. | Vue.js、Spring Boot、Python、Flask |
 
+### 微信公众号
+
+![Tech Kori](./wechatgongzhong.png)
