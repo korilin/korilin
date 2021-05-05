@@ -73,7 +73,7 @@ export default {
         var gitalk = new Gitalk({
             clientID: "b7aa589ca8f3de3b34fc",
             clientSecret: "9aed479aabee6e5cf3843b672f33c989deb3d83a",
-            repo: "https://github.com/korilin/korilin",
+            repo: "korilin",
             owner: "korilin",
             admin: [
                 "korilin",
