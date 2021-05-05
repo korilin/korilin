@@ -19,4 +19,4 @@ date: 2020-01-01
 
 ### 微信公众号
 
-![Tech Kori](./wechatgongzhong.png)
+![Tech Kori](./tech-kori.jpg)

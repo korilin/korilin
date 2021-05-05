@@ -79,7 +79,7 @@ export default {
         onSelect(category) {
             let index = this.selected.indexOf(category);
             if (index >= 0) {
-                this.selected.splice(index, index + 1);
+                this.selected.splice(index, 1);
             } else {
                 this.selected.push(category);
             }

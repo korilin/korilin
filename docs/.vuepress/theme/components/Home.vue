@@ -43,7 +43,7 @@
         <div class="about">
             <h2>About</h2>
             <div>
-                <Content />
+                <Content class="theme-default-content" />
             </div>
         </div>
     </div>
