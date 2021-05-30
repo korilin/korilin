@@ -13,7 +13,7 @@
         <template v-else>
             <div class="theme-default-content">
                 <div class="getback">
-                    <router-link to="/archive/"> < 返回 </router-link>
+                    <router-link to="/archive/"> &lt; 返回 </router-link>
                 </div>
                 <div class="head">
                     <div class="title">

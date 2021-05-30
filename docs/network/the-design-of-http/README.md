@@ -1,7 +1,7 @@
 ---
-title: HTTP/HTTPS 协议的设计
+title: HTTP/HTTPS 协议的设计（Unfinished）
 date: 2020-01-01
-category: network
+category: Network
 ---
 
 待填坑
