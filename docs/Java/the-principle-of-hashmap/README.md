@@ -1,10 +1,10 @@
 ---
-title: HashMap 的底层原理（Unfinished）
-date: 2021-05-27
+title: HashMap 的底层原理
+date: 2021-05-31
 category: Oh! Java
 ---
 
-Java 的 HashMap 可以说是用的最多、问的最多的一个 Collection 了。HashMap 是非同步的，并且它允许存放的 key 为 null。在 HashMap 中并不保证映射的顺序，也不保证这个顺序随时间保持不变。
+Java 的 HashMap 可以说是用的最多、问的最多的一个 Collection 了。HashMap 是非同步的，即线程不安全。HashMap 允许存放的 key 为 null，但并不保证映射的顺序，也不保证这个顺序随时间保持不变。
 
 *本文对 HashMap 的代码分析基于 JDK 1.8*
 
@@ -114,9 +114,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 
 ## hash 与 下标计算
 
-添加节点所调用的 `putVal` 方法第一个参数就是 key 的 hash 值，hash 值通过 `(n - 1) & hash` 这一运算，映射为 table 中存放位置的下标。
-
-在 HashMap 中通过 `hash()` 方法完成来获得 key 对应的 hash 值。
+添加节点所调用的 `putVal` 方法第一个参数就是 key 的 hash 值，hash 值通过 `(n - 1) & hash` 这一运算，映射为 table 中存放位置的下标。在 HashMap 中通过 `hash()` 方法来获得 key 对应的 hash 值。
 
 ```Java
 static final int hash(Object key) {
@@ -145,7 +143,7 @@ HashMap 对这个扰乱操作是从实用性、速度、质量方面考虑的，
 
 此外，每个 Node 节点在创建时就会保存对应的 hash 值，后续扩容迁移节点时计算下标，不需要重新计算 key 的 hash 值。
 
-## 扩容机制 resize()
+## resize() 扩容机制
 
 我们知道发生冲突时，会使用链表或者树来处理 bucket 的碰撞集，那么 table 将不会发生溢出的情况。当 table 大部分 bucket 存有节点的时候，那么此时碰撞率将会非常高，碰撞会降低 HashMap 的查找效率，因此需要给 table 设置一个容纳极限 `threshold`。
 
@@ -335,4 +333,7 @@ if (oldTab != null) {
 
 ## 参考
 
-
+> JDK 1.8 源码
+>
+> [不按套路出牌，HashMap负载因子超过1会怎样？](https://juejin.cn/post/6844903993265618951)
+>
