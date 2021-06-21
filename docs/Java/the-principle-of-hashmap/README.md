@@ -4,7 +4,7 @@ date: 2021-05-31
 category: Oh! Java
 ---
 
-Java 的 HashMap 可以说是用的最多、问的最多的一个 Collection 了。HashMap 是非同步的，即线程不安全。HashMap 允许存放的 key 为 null，但并不保证映射的顺序，也不保证这个顺序随时间保持不变。
+Java 的 HashMap 可以说是用的最多、问的最多的一个 Map Collection 了。HashMap 是非同步的，即线程不安全。HashMap 允许存放的 key 为 null，但并不保证映射的顺序，也不保证这个顺序随时间保持不变。
 
 *本文对 HashMap 的代码分析基于 JDK 1.8*
 
@@ -67,7 +67,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
 }
 ```
 
-HashMap 存放和获取数据时，都需要通过计算 key 的 hash 值来并映射为 bucket 的下标。不同的 key 得到的下标可能相同，在存放新数据时，计算出来的下标对应的 bucket 中如果已经存在其它节点，这种情况称为**哈希碰撞**。
+HashMap 存放和获取数据时，都需要通过计算 key 的 hash 值来并映射为 bucket 的下标。不同的 key 得到的下标可能相同，在存放新数据时，计算出来的下标对应的 bucket 中如果已经存在其它节点，这种情况称为**哈希碰撞 / 哈希冲突**。
 
 在 HashMap 中采取的是闭散列的方式来处理哈希碰撞，当发生碰撞时，通过链表的方式，将新的节点连接在已有节点的后面，当链表长度超过规定的阈值时，将会把链表转换为红黑树来进行存储（红黑树是在 JDK 1.8 才引入的）。
 
@@ -330,6 +330,55 @@ if (oldTab != null) {
 ![draw-5](./draw-5.jpg)
 
 实际上增加的那一位在数值上大小就是原本 table 的容量大小，如果新增加的那一位是 1，那么代表新的下标为当前的下标加上原本的容量大小 `j + oldCap`，这也是为什么 HashMap 规定 table 的长度必须是 2 的幂。
+
+## 在发生冲突的 bucket 中查找节点
+
+```Java
+public V get(Object key) {
+    Node<K,V> e;
+    return (e = getNode(hash(key), key)) == null ? null : e.value;
+}
+```
+
+HashMap 的查找操作使用 `get(Object key)` 来获取对应 Key 的 Node 节点，并返回节点中的 value 值。查找时需要获取对应的 key 的 hash 值，查找时需要获取到 key 的 hash 值来计算对应 Node 节点所在的 bucket 的下标。
+
+```Java
+final Node<K,V> getNode(int hash, Object key) {
+    Node<K,V>[] tab; Node<K,V> first, e; int n; K k;
+    if ((tab = table) != null && (n = tab.length) > 0 &&
+        (first = tab[(n - 1) & hash]) != null) {
+        if (first.hash == hash && // always check first node
+            ((k = first.key) == key || (key != null && key.equals(k))))
+            return first;
+        if ((e = first.next) != null) {
+            if (first instanceof TreeNode)
+                return ((TreeNode<K,V>)first).getTreeNode(hash, key);
+            do {
+                if (e.hash == hash &&
+                    ((k = e.key) == key || (key != null && key.equals(k))))
+                    return e;
+            } while ((e = e.next) != null);
+        }
+    }
+    return null;
+}
+```
+
+我们知道 bucket 可能发生哈希碰撞，因此在 bucket 可能存在多个节点（以链表或树的结构组织起来），此时如果要找到对应 key 的节点，则需要对 bucket 中存放的节点逐个对 key 进行匹配。
+
+在 HashMap 匹配 key 的方式，是先判断两个对象是否相同，如果不同再使用 `equals()` 方法来判断两个对象的内容是否相等。当节点中的 key 与我们查找的 key 相同时，则返回该节点，如果所有节点的 key 都不匹配时，则返回 null。
+
+这个操作不仅仅存在于查找元素，也存在于 `put()` 方法进行元素的存放，当发生碰撞后，新存放的元素对应的 key 在 bucket 中已经存在对应的 Node 节点时，将会用新节点覆盖原有节点的。
+
+```Java
+// putVal 发生碰撞的 else 块中
+
+if (p.hash == hash &&
+    ((k = p.key) == key || (key != null && key.equals(k))))
+    e = p;
+```
+
+因此，无论是 `put()` 或是 `get()`，第一步都是需要通过 `hashCode()` 进行运算来获得 hash 值，并找到对应 bucket 的下标，发生哈希碰撞时需要使用 `equals()` 来判断两个 key 是否相等，这也是为什么我们在编写类时，如果重写了 `hashCode()` 需要重写 `equals()` 方法。
 
 ## 参考
 
