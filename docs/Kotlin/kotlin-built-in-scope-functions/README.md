@@ -1,5 +1,5 @@
 ---
-title: Kotlin 标准库中的函数
+title: Kotlin Standard.kt 中的函数
 date: 2021-06-24
 category: Hello! Kotlin
 ---
@@ -244,3 +244,7 @@ Exception in thread "main" kotlin.NotImplementedError:
     An operation is not implemented: 还没实现的逻辑
 */
 ```
+
+## 参考
+
+> [作用域函数 - Kotlin 语言中文站 (kotlincn.net)](https://www.kotlincn.net/docs/reference/scope-functions.html)
