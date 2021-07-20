@@ -12,31 +12,31 @@ Activity 在生命周期中会有多个状态，通过相对应的回调来切�
 
 ## 回调与状态切换
 
-**onCreate**
+#### onCreate
 
 系统在首次创建该 Activity 子后会进入**已创建**状态，并触发 `onCreate()` 回调，执行 Activity 的基本启动逻辑，该逻辑在 Activity 的整个生命周期中应当只发生一次，我们必须实现这个回调，确保 Activity 正常启动。该回调执行后 Activity 会进入**已开始**状态。
 
-**onStart**
+#### onStart
 
 当一个 Activity 进入**已开始**状态时，系统会调用此回调，使得 Activity 对用户可见，当 `onStart()` 执行结束时，Activity 会进入进入**已恢复**状态，并来到前台。
 
-**onResume**
+#### onResume
 
 当 Activity 进入了**已恢复**状态时，会调用 `onResume()`。调用结束后，Activity 会一直保持**已恢复**状态。
 
-**onPause**
+#### onPause
 
 当发生中断事件，或者当前 Activity 仍然可见或部分可见，但失去焦点时，Activity 会进入**已暂停**状态，并调用 `onPause()` 回调。
 
-**onStop**
+#### onStop
 
 当 Activity 不再对用户可见时，或已经结束运行即将终止时，会进入**已暂停**状态，并调用 `onStop()` 回调，释放或调整在应用对用户不可见时的无用资源，Activity 在**已暂停**状态会驻留在内存的 Activity 返回栈中。
 
-**onRestart**
+#### onRestart
 
 处于**已暂停**状态的 Activity 可能会返回到前台，此时会调用 `onRestart()` 来将暂停的 Activity 恢复到**已开始**状态，并重新调用 `onStart()`
 
-**onDestory**
+#### onDestory
 
 如果 Activity 即将结束，在 `onStop()` 完成之后就会进入**已销毁**状态，销毁之前会先调用 `onDestory()` 释放该 Activity 的所有资源。
 
