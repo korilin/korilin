@@ -51,6 +51,6 @@ date: 2020-01-01
 
 <div style="text-align: center">
 
-![Tech Kori](./tech-kori.jpg)
+![Tech Kori](./tech-kori-l.png)
 
 </div>

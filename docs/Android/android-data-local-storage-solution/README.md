@@ -94,7 +94,7 @@ val v3 = sp.getBoolean("key1", false)
 SQLiteOpenHelper 是一个抽象类，需要我们去实现它的两个抽象方法：
 
 - `onCreate()` 当找不到对应数据库时，会调用这个方法来执行我们创建数据库的操作
-- `onUpgrade()` SQLiteOpenHelper 构造方法的第四个参数是版本号，如果当前的版本号大于原本数据库的版本好，会调用这个方法来执行我们更新数据库的操作
+- `onUpgrade()` SQLiteOpenHelper 构造方法的第四个参数是版本号，如果当前的版本号大于原本数据库的版本号，会调用这个方法来执行我们更新数据库的操作
 
 ```Kotlin
 const val databaseName = "ExampleDatabase.Name"

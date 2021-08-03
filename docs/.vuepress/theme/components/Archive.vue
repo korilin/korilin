@@ -106,7 +106,7 @@ export default {
             transition 0.3s
             line-height 1
             border 1px solid rgba(39, 40, 44, 0.5)
-            margin 0 0 10px 15px
+            margin 5px 5px
             color rgba(39, 40, 44, 0.5)
             background white
             transition 0.2s all

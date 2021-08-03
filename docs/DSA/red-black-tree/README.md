@@ -1,5 +1,5 @@
 ---
-title: 理解红黑树（RBTree）的性质与操作
+title: 基于 2-3-4 树理解红黑树的性质与操作
 date: 2021-05-02
 category: DSA
 ---
