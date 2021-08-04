@@ -202,8 +202,7 @@ val cursor = db.rawQuery("select * from $tableName", null)
 
 ## 参考
 
-> 《第一行代码 Android 第三版》 - 郭霖
-> 
-> SQLiteDatabase 部分源码和注释
-> 
-> SharedPreferences 源码注释
+- Android 官方文档：<https://developer.android.com/guide/topics/data?hl=zh-cn>
+- 《第一行代码 Android 第三版》 - 郭霖
+- SQLiteDatabase 部分源码和注释
+- SharedPreferences 源码注释
