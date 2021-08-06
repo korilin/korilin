@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
             settings.javaScriptEnabled = true
             setBackgroundColor(Color.WHITE)
             webViewClient = object : WebViewClient() {
-                override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-                    if (request?.url?.host == HOST) return false
-                    Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+                override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest): Boolean {
+                    if (request.url?.host == HOST) return false
+                    Intent(Intent.ACTION_VIEW, Uri.parse(request.url.toString())).apply {
                         startActivity(this)
                     }
                     return true
