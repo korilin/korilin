@@ -4,6 +4,8 @@
 - 活在二次元，可爱即正义🌌
 - 技术宅，热爱开源，熬夜冠军🌛
 - 个人博客：<https://korilin.com/>
+- 即刻 id：korilin
+- 邮箱：korilin.dev@gmail.com
 
 ### 脑壳里装的是什么 💣
 
