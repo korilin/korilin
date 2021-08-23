@@ -69,7 +69,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
 
 HashMap 存放和获取数据时，都需要通过计算 key 的 hash 值来并映射为 bucket 的下标。不同的 key 得到的下标可能相同，在存放新数据时，计算出来的下标对应的 bucket 中如果已经存在其它节点，这种情况称为**哈希碰撞 / 哈希冲突**。
 
-在 HashMap 中采取的是闭散列的方式来处理哈希碰撞，当发生碰撞时，通过链表的方式，将新的节点连接在已有节点的后面，当链表长度超过规定的阈值时，将会把链表转换为红黑树来进行存储（红黑树是在 JDK 1.8 才引入的）。
+在 HashMap 中采取的是开散列的方式来处理哈希碰撞，当发生碰撞时，通过链表的方式，将新的节点连接在已有节点的后面，当链表长度超过规定的阈值时，将会把链表转换为红黑树来进行存储（红黑树是在 JDK 1.8 才引入的）。
 
 ```Java
 static final int TREEIFY_THRESHOLD = 8;

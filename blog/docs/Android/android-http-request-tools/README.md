@@ -174,7 +174,7 @@ call.enqueue(callback)
 fun html(): Call<ResponseBody>
 
 // Callback<ResponseBody>
- override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
     println(response.body()?.string())
 }
 ```
