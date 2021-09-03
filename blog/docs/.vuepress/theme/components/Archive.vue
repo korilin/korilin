@@ -26,7 +26,8 @@
                         page.path != '/' &&
                         page.path != '/about/' &&
                         page.path != '/archive/' &&
-                        selected.includes(page.frontmatter.category)
+                        selected.includes(page.frontmatter.category) &&
+                        page.frontmatter.hidden != true
                     "
                     v-bind:key="page.path"
                 >
