@@ -118,8 +118,6 @@ ThreadLocalMap getMap(Thread t) {
 
 按照注释说明，之所以使用 WeakReference 来引用键，是因为方便处理比较大又需要长时间使用的空间。
 
-> 
-
 ```Java
 /**
  * To help deal with very large and long-lived usages, 
