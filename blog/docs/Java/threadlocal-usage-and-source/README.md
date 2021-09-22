@@ -375,7 +375,7 @@ static ThreadLocal<Integer> threadLocal1 = ThreadLocal.withInitial(() -> 0);
 static ThreadLocal<Demo> threadLocal2 = ThreadLocal.withInitial(Demo::new);
 ```
 
-`withInitial()` 方法会返回一个 SuppliedThreadLocal 对象，SuppliedThreadLocal 的大部分功能继承自 ThreadLocal，但它把我们重写了 `initialValue()` 方法，通过调用传入的 Supplier 对象的 `get()` 方法来获取初始化值。
+`withInitial()` 方法会返回一个 SuppliedThreadLocal 对象，SuppliedThreadLocal 的大部分功能继承自 ThreadLocal，但它帮我们重写了 `initialValue()` 方法，通过调用传入的 Supplier 对象的 `get()` 方法来获取初始化值。
 
 ```Java
 public static <S> ThreadLocal<S> withInitial(Supplier<? extends S> supplier) {
