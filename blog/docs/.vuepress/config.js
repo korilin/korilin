@@ -10,7 +10,8 @@ module.exports = {
         logo: "/korilin.png",
         nav: [
             { text: "主页", link: "/" },
-            { text: "文章", link: "/archive/" },
+            { text: "技术长文", link: "/archive/" },
+            { text: "笔记杂谈", link: "/tittle-tattle/" },
             { text: "深圳KUG", link: "https://korilin.com/KUGshenzhen/" },
         ],
         smoothScroll: true,

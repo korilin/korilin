@@ -7,9 +7,6 @@
         <template v-else-if="this.$route.path == '/archive/'">
             <Archive class="theme-default-content" />
         </template>
-        <template v-else-if="this.$route.path == '/about/'">
-            <Content class="theme-default-content" />
-        </template>
         <template v-else>
             <div class="theme-default-content">
                 <div class="getback">
