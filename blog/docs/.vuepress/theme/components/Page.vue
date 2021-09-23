@@ -61,7 +61,7 @@ import PageNav from "@theme/components/PageNav.vue";
 import Archive from "./Archive";
 import Home from "./Home";
 import "gitalk/dist/gitalk.css";
-import Gitalk from './Gitalk.vue';
+import Gitalk from "./Gitalk.vue";
 
 export default {
     components: { PageEdit, PageNav, Archive, Home, Gitalk },
@@ -80,60 +80,60 @@ export default {
 
 <style lang="stylus" scoped>
 .page {
-    padding-bottom 2rem
-    display block
+    padding-bottom: 2rem;
+    display: block;
 
     .head {
-        border-top 1px solid #27282c33
-        border-bottom 1px solid #27282c33
-        padding 30px 0
-        margin-bottom 20px
+        border-top: 1px solid #27282c33;
+        border-bottom: 1px solid #27282c33;
+        padding: 30px 0;
+        margin-bottom: 20px;
     }
 
     .title {
-        text-align center
+        text-align: center;
     }
 
     .info {
-        text-align center
-        color #27282cbf
-        font-size 14px
-        margin 10px
+        text-align: center;
+        color: #27282cbf;
+        font-size: 14px;
+        margin: 10px;
 
         span {
-            display inline-block
-            margin-right 10px
+            display: inline-block;
+            margin-right: 10px;
         }
 
         a {
-            color #27282cbf
+            color: #27282cbf;
         }
     }
 
     .getback {
-        margin-bottom 20px
+        margin-bottom: 20px;
 
         a, a:hover {
-            color #3498db
-            line-height 20px
+            color: #3498db;
+            line-height: 20px;
         }
     }
 }
 
 #footer {
-    background #fff
-    box-shadow 0px 0px 12px 0px #0000001a
-    padding 30px 0
-    color #222222
-    font-size 14px
+    background: #fff;
+    box-shadow: 0px 0px 12px 0px #0000001a;
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
 
     .content {
-        width 80%
-        max-width 960px
-        margin auto
+        width: 80%;
+        max-width: 960px;
+        margin: auto;
 
         div {
-            margin-top 5px
+            margin-top: 5px;
         }
     }
 }

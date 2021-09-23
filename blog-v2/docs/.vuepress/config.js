@@ -1,4 +1,8 @@
+
+const { path } = require('@vuepress/utils')
+
 module.exports = {
+    debug: true,
     lang: 'zh-CN',
     title: 'korilin',
     description: 'korilin - 林洁彬的个人博客',
@@ -7,6 +11,7 @@ module.exports = {
         ["link", { rel: "icon", href: "/korilin.png" }],
         ["script", { src: "/statistics.js" }],
     ],
+    theme: path.resolve(__dirname, 'G:/main/blog-v2/docs/.vuepress/theme'),
     themeConfig: {
       logo: '/korilin.png',
       navbar: [
