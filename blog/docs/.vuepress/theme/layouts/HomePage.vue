@@ -43,7 +43,7 @@
         <div class="about">
             <h2>About</h2>
             <div>
-                <Content class="theme-default-content" />
+                <Content/>
             </div>
         </div>
     </div>
@@ -57,154 +57,154 @@ export default {
 
 <style lang="stylus" scoped>
 .container {
-    width 100%
-    margin-top 60px
-    padding 60px 0
+    width: 100%;
+    margin-top: 60px;
+    padding: 60px 0;
 
     .hero {
-        margin auto
-        display flex
-        flex-direction column-reverse
-        justify-content space-around
-        align-items center
-        width 80%
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
 
-        @media (min-width 1200px) {
-            flex-direction row
-            justify-content center
-            width 90%
-            height 70vh
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            justify-content: center;
+            width: 90%;
+            height: 70vh;
         }
 
         .desc {
-            padding-top 3rem
+            padding-top: 3rem;
 
-            @media (min-width 1200px) {
-                width 48%
+            @media (min-width: 1200px) {
+                width: 48%;
             }
 
-            display flex
-            flex-direction column
-            justify-content center
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             h1 {
-                margin 0 0 10px 0
-                font-size 48px
-                font-weight 700
-                line-height 56px
-                color black
+                margin: 0 0 10px 0;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                color: black;
             }
 
             h2 {
-                border 0
-                margin-bottom 50px
-                font-size 24px
-                font-weight normal
+                border: 0;
+                margin-bottom: 50px;
+                font-size: 24px;
+                font-weight: normal;
             }
 
             .icons {
-                padding 0 10px
+                padding: 0 10px;
 
                 a {
-                    margin 0 10px
+                    margin: 0 10px;
                 }
 
                 img {
-                    width 40px
+                    width: 40px;
                 }
             }
         }
 
         .img {
             img {
-                width 100%
-                animation move 2.5s linear infinite
-                position relative
+                width: 100%;
+                animation: move 2.5s linear infinite;
+                position: relative;
             }
 
             @keyframes move {
                 0% {
-                    top 0
+                    top: 0;
                 }
 
                 25% {
-                    top -10px
+                    top: -10px;
                 }
 
                 50% {
-                    top 0
+                    top: 0;
                 }
 
                 75% {
-                    top 10px
+                    top: 10px;
                 }
 
                 100% {
-                    top 0
+                    top: 0;
                 }
             }
 
-            @media (min-width 1200px) {
-                width 48%
+            @media (min-width: 1200px) {
+                width: 48%;
 
                 img {
-                    max-width 500px
+                    max-width: 500px;
                 }
             }
 
-            @media (max-width 1200px) {
+            @media (max-width: 1200px) {
                 img {
-                    max-width 250px
+                    max-width: 250px;
                 }
             }
 
-            text-align center
+            text-align: center;
         }
     }
 
     .about, .kug {
-        padding 2rem 2.5rem
-        max-width 960px !important
-        margin auto
+        padding: 2rem 2.5rem;
+        max-width: 1024px !important;
+        margin: auto;
 
         li::before {
-            content '\eb79'
+            content: '\eb79';
         }
 
         h2 {
-            text-align center
-            border 0
-            font-size 32px
+            text-align: center;
+            border: 0;
+            font-size: 32px;
 
             &::after, &::before {
-                content ''
-                width 50px
-                height 2px
-                background #3498db
-                display inline-block
-                margin 10px 15px
+                content: '';
+                width: 50px;
+                height: 2px;
+                background: #3498db;
+                display: inline-block;
+                margin: 10px 15px;
             }
         }
 
         .kug-btn {
-            font-weight 600
-            font-size 14px
-            letter-spacing 1px
-            display inline-block
-            padding 12px 32px
-            border-radius 50px
-            transition 0.3s
-            line-height 1
-            color #3498db
-            -webkit-animation-delay 0.8s
-            animation-delay 0.8s
-            margin-top 6px
-            border 2px solid #3498db
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            transition: 0.3s;
+            line-height: 1;
+            color: #3498db;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            margin-top: 6px;
+            border: 2px solid #3498db;
 
             &:hover {
-                background #3498db
-                color #fff
-                text-decoration none
+                background: #3498db;
+                color: #fff;
+                text-decoration: none;
             }
         }
     }

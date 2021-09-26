@@ -1,6 +1,7 @@
 ---
 title: Home
 date: 2020-01-01
+layout: HomePage
 ---
 
 #### 基本信息
@@ -47,8 +48,4 @@ date: 2020-01-01
 
 公众号的技术文章的话，基本是从这博客复制过去的文章吧。其它可能还会写一些个人的经历，也会协助 Kotlin User Group 发些相关的推文或视频。
 
-<div style="text-align: center">
-
 ![Tech Kori](./tech-kori-l.png)
-
-</div>
