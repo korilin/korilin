@@ -1,12 +1,13 @@
 ---
 title: Android 数据本地存储方案
 date: 2021-7-19
-category: Android
 ---
 
 Android 开发中有 3 种持久化数据存储方案：**文件存储**、**SharePreferences**、**SQLite 数据库**。
 
 这里做个笔记记录一下这 3 种方案的使用方式。
+
+<!-- more -->
 
 ## 文件存储
 

@@ -1,6 +1,8 @@
 <template>
     <div class="theme-default-content note-tattle">
-        <h1 class="t">笔记 & 杂谈</h1>
+        <div>
+            <h1 class="t">笔记 & 杂谈</h1>
+        </div>
 
         <template v-for="page in this.$site.pages">
             <div
@@ -12,21 +14,19 @@
                 "
                 v-bind:key="page.path"
             >
-                <div class="title">
-                    <router-link :to="page.path">
-                        <h1>{{ page.title }}</h1>
-                    </router-link>
-                </div>
                 <div class="info">
                     <span>{{ getDate(page.frontmatter.date) }}</span>
                 </div>
                 <div class="excerpt">
+                    <div class="title">{{ page.title }}</div>
+
                     <div v-html="page.excerpt"></div>
-                </div>
-                <div class="footer">
-                    <router-link :to="page.path" class="readmore">
-                        阅读全文
-                    </router-link>
+
+                    <div class="footer">
+                        <router-link :to="page.path" class="readmore">
+                            阅读全文
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </template>
@@ -49,39 +49,28 @@ export default {
 
 <style scoped lang="stylus">
 h1 {
-    font-size: 1.7rem;
+    font-size: 1.7rem !important;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
 }
 
 .t {
-    margin: 30px !important;
     color: #3498db;
+    margin: 0.67em 0 50px;
 }
 
 .post {
-    border: solid 1px #d0d7de;
-    border-radius: 6px;
-    padding: 30px 50px 50px;
-    background: #f6f8fa;
+    margin-bottom: 50px;
 
     .title {
-        a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-weight: bold !important;
-            transition: all 0.2s;
-
-            &:hover {
-                color: #3498db;
-            }
-        }
+        font-size: 1.7rem;
+        font-weight: bold;
     }
 
     .info {
@@ -99,8 +88,15 @@ h3 {
         }
     }
 
+    .excerpt {
+        border: solid 1px #d0d7de;
+        border-radius: 6px;
+        padding: 30px;
+        background: #f6f8fa;
+    }
+
     .footer {
-        margin-top: 40px;
+        margin-top: 30px;
         text-align: center;
 
         .readmore {

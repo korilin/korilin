@@ -30,6 +30,5 @@ export default {
 
 <style lang="stylus" scoped>
 .f-to-h {
-    margin-top: 60px;
 }
 </style>

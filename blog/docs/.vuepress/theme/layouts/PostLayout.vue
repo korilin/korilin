@@ -1,7 +1,9 @@
 <template>
     <div class="theme-default-content page">
         <div class="getback">
-            <router-link to @click="$router.go(-1)"> &lt; 返回 </router-link>
+            <span @click="goBefore()" style="cursor: pointer; color: #3498db">
+                &lt; 返回
+            </span>
         </div>
         <div class="head">
             <div class="title">
@@ -32,6 +34,9 @@ export default {
             var month = d.getMonth() + 1;
             var day = d.getDate();
             return year + "年" + month + "月" + day + "日";
+        },
+        goBefore() {
+            this.$router.go(-1);
         },
     },
 };

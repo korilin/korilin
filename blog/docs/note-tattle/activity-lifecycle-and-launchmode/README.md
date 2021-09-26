@@ -1,12 +1,13 @@
 ---
 title: Activity 生命周期和启动模式
 date: 2021-6-25
-category: Android
 ---
 
 Activity 是 Android 四大组件之一，用于提供绘制界面的窗口，在 Android 系统中通过在其生命周期调用特定的回调方法来启动 Activity 的代码。
 
 Activity 在生命周期中会有多个状态，通过相对应的回调来切换状态。
+
+<!-- more -->
 
 ![activity_lifecycle](./activity_lifecycle.png)
 
@@ -142,17 +143,16 @@ Activity 有一个 `allowTaskReparenting` 属性，如果配置为 `true` 代表
 - `clearTaskOnLaunch` 该属性只对任务的根 Activity 有意义，当根 Activity 设置为 true 时，用户一离开任务，该任务就会清除掉其它的 Activity，只留下根 Activity。
 - `finishOnTaskLaunch` 只会作用于一个 Activity，当某个 Activity 设置为 true 时，只要离开任务，这个 Activity 无论在哪都会被清除。
 
-
 ## 参考
 
 > [\<activity>  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/topics/manifest/activity-element?hl=zh-cn)
-> 
+>
 > [Activity 简介  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/components/activities/intro-activities?hl=zh-cn)
-> 
+>
 > [了解 Activity 生命周期  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/components/activities/activity-lifecycle?hl=zh-cn)
-> 
+>
 > [处理 Activity 状态更改  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/components/activities/state-changes?hl=zh-cn)
-> 
+>
 > [了解任务和返回堆栈  |  Android 开发者  |  Android Developers](https://developer.android.com/guide/components/activities/tasks-and-back-stack?hl=zh-cn)
-> 
+>
 > [Android Activity启动模式图解 - 简书 (jianshu.com)](https://www.jianshu.com/p/3baa0b046813)

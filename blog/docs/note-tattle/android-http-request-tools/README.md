@@ -1,10 +1,11 @@
 ---
 title: Android HTTP 请求工具
 date: 2021-8-4
-category: Android
 ---
 
 在开发中，调用后端的 API 通常只需要知道如何发起一个 HTTP 请求并获取响应的数据就够了，Android 中可以进行 HTTP 请求的工具也很多，这里记录 HttpURLConnection、OkHttp、Retrofit 这 3 种的使用方法。
+
+<!-- more -->
 
 ## HttpURLConnection
 

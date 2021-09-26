@@ -1,7 +1,6 @@
 ---
 title: 二进制取幂（快速幂）
 date: 2021-8-14
-category: Data Structures & Algorithms
 ---
 
 **快速幂、二进制取幂（Binary Exponentiation）** 是一个在 `O(log n)` 时间复杂度计算 x 的 n 次方的思维，其实有点类似我们自己手算 n 次方时使用的拆分技巧。
