@@ -10,12 +10,12 @@ export default ({
         let db = new Date(b.frontmatter.date);
         return db.getTime() - da.getTime();
     });
+    
+    // 类别收集
+    // 杂谈区域应该没有类别才对
     let categories = [];
 
     for (let i = 0; i < siteData.pages.length; i++) {
-        if(siteData.pages[i].path == '/' || siteData.pages[i].path == '/archive/') {
-            continue
-        }
         let category = siteData.pages[i].frontmatter.category;
         if (category != undefined) {
             if (!categories.includes(category)) {

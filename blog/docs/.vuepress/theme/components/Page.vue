@@ -2,7 +2,9 @@
     <main class="page">
         <div class="theme-default-content">
             <div class="getback">
-                <router-link to="/archive/"> &lt; 返回 </router-link>
+                <router-link to @click="$router.go(-1)">
+                    &lt; 返回
+                </router-link>
             </div>
             <div class="head">
                 <div class="title">
@@ -22,7 +24,6 @@
 </template>
 
 <script>
-import "gitalk/dist/gitalk.css";
 import Gitalk from "./Gitalk.vue";
 
 export default {
@@ -46,9 +47,9 @@ export default {
     display: block;
 
     .head {
-        border-top: 1px solid #27282c33;
-        border-bottom: 1px solid #27282c33;
-        padding: 30px 0;
+        border-top: 1px dashed #27282c33;
+        border-bottom: 1px dashed #27282c33;
+        padding: 25px 0;
         margin-bottom: 20px;
     }
 
@@ -59,7 +60,7 @@ export default {
     .info {
         text-align: center;
         color: #27282cbf;
-        font-size: 14px;
+        font-size: 15px;
         margin: 10px;
 
         span {

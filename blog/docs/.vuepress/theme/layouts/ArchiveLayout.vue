@@ -57,7 +57,6 @@
 
 <script>
 export default {
-    name: "Archive",
     created() {
         for (var i = 0; i < this.$themeConfig.categories.length; i++) {
             this.selected.push(this.$themeConfig.categories[i]);
@@ -104,11 +103,10 @@ export default {
 }
 
 .toolbar {
-    padding-bottom: 10px;
-
+    // padding-bottom: 10px;
     .category-select {
         padding: 20px 0;
-        border-top: 1px solid #27282c33;
+        // border-top: 1px solid #27282c33;
         border-bottom: 1px solid #27282c33;
 
         .select {
@@ -143,7 +141,7 @@ export default {
 
 .posts {
     .post {
-        border-bottom: 1px solid #9699a533;
+        border-bottom: 1px dashed #9699a533;
         padding: 10px 0 30px;
 
         .title {

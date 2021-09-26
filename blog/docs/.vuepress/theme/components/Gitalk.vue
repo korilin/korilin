@@ -4,6 +4,8 @@
 
 <script>
 import Gitalk from "gitalk";
+import "gitalk/dist/gitalk.css";
+
 export default {
     mounted() {
         var gitalk = new Gitalk({

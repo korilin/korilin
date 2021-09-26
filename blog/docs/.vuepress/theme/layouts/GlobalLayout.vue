@@ -2,7 +2,7 @@
     <div id="global-layout">
         <Navbar />
         <component :is="layout" />
-        <Footer />
+        <Footer class="f-to-h" />
     </div>
 </template>
 
@@ -23,5 +23,13 @@ export default {
             return "NotFound";
         },
     },
+    created() {
+    }
 };
 </script>
+
+<style lang="stylus" scoped>
+.f-to-h {
+    margin-top: 60px;
+}
+</style>
