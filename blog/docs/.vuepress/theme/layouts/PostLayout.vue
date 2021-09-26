@@ -1,34 +1,30 @@
 <template>
-    <main class="page">
-        <div class="theme-default-content">
-            <div class="getback">
-                <router-link to @click="$router.go(-1)">
-                    &lt; 返回
-                </router-link>
-            </div>
-            <div class="head">
-                <div class="title">
-                    <h1>{{ this.$page.title }}</h1>
-                </div>
-                <div class="info">
-                    <span>{{ getDate(this.$page.frontmatter.date) }}</span>
-                    <span style="margin-left: 20px">{{
-                        this.$page.frontmatter.category
-                    }}</span>
-                </div>
-            </div>
-            <Content />
-            <Gitalk />
+    <div class="theme-default-content page">
+        <div class="getback">
+            <router-link to @click="$router.go(-1)"> &lt; 返回 </router-link>
         </div>
-    </main>
+        <div class="head">
+            <div class="title">
+                <h1>{{ this.$page.title }}</h1>
+            </div>
+            <div class="info">
+                <span>{{ getDate(this.$page.frontmatter.date) }}</span>
+                <span style="margin-left: 20px">{{
+                    this.$page.frontmatter.category
+                }}</span>
+            </div>
+        </div>
+        <Content />
+        <Gitalk />
+    </div>
 </template>
 
 <script>
-import Gitalk from "./Gitalk.vue";
+import Gitalk from "../components/Gitalk.vue";
 
 export default {
+    name: "PostLayout",
     components: { Gitalk },
-    props: ["sidebarItems"],
     methods: {
         getDate(date) {
             var d = new Date(date);

@@ -1,5 +1,7 @@
 <template>
     <div class="theme-default-content note-tattle">
+        <h1 class="t">笔记 & 杂谈</h1>
+
         <template v-for="page in this.$site.pages">
             <div
                 class="post"
@@ -46,6 +48,23 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+h1 {
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+.t {
+    margin: 30px !important;
+    color: #3498db;
+}
+
 .post {
     border: solid 1px #d0d7de;
     border-radius: 6px;
