@@ -16,6 +16,7 @@ module.exports = {
         ],
         displayAllHeaders: true,
         smoothScroll: true,
+        // sidebar: "auto",
         socialPlatform: [
             {
                 name: "github",
