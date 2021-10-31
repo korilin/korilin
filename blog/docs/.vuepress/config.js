@@ -11,12 +11,12 @@ module.exports = {
         nav: [
             { text: "主页", link: "/" },
             { text: "技术长文", link: "/archive/" },
-            { text: "笔记杂谈区", link: "/note-tattle/" },
+            { text: "笔记杂谈", link: "/note-tattle/" },
             { text: "深圳KUG", link: "https://korilin.com/KUGshenzhen/" },
         ],
         displayAllHeaders: true,
         smoothScroll: true,
-        // sidebar: "auto",
+        sidebar: "auto",
         socialPlatform: [
             {
                 name: "github",
