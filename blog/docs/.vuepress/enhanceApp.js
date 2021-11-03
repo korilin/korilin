@@ -13,16 +13,26 @@ export default ({
     
     // 类别收集
     // 杂谈区域应该没有类别才对
-    let categories = [];
+    let allTag = [];
 
     for (let i = 0; i < siteData.pages.length; i++) {
-        let category = siteData.pages[i].frontmatter.category;
-        if (category != undefined) {
-            if (!categories.includes(category)) {
-                categories.push(category);
+        let tags = siteData.pages[i].frontmatter.tags;
+        if (tags != undefined) {
+            
+            if(typeof(tags) == "string") {
+                if (!allTag.includes(tags)) {
+                    allTag.push(tags);
+                }
+            } else {
+                tags.forEach(e => {
+                    if (!allTag.includes(e)) {
+                        allTag.push(e);
+                    }
+                });
             }
+
         }
     }
 
-    siteData.themeConfig["categories"] = categories;
+    siteData.themeConfig["allTag"] = allTag;
 };

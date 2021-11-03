@@ -1,7 +1,7 @@
 ---
 title: 被遗弃的 Vector 和 Stack
 date: 2021-04-27
-category: Oh! Java
+tags: Java
 ---
 
 在 **Java Collections Framework** 中有两个被遗弃的 List 实现类 —— **Vector** 和 **Stack**。

@@ -1,7 +1,7 @@
 ---
 title: Kotlin Standard.kt 中的函数
 date: 2021-06-24
-category: Hi! Kotlin
+tags: Kotlin
 ---
 
 在 Kotlin 中有一个 Standard.kt 的文件，这个是 Kotlin 的标准库，里面是我们平时经常使用的函数，其中包括作用域函数、对象状态检查函数、`TODO()`函数。

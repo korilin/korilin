@@ -1,7 +1,7 @@
 ---
 title: ArrayList 与 LinkedList 底层结构
 date: 2021-04-24
-category: Oh! Java
+tags: Java
 ---
 
 在 Java 中，数组可用来存储相同类型的多个数据，但由于长度不可变，在某些场景下使用比较局限。当我们希望使用类似数组的结构来存储未知个数的元素时，可以使用 `ArrayList<E>` 和 `LinkedList<E>`，它们都是 **Java Collection Framework** 的成员，相比普通的数组，它们提供了更多的操作来方便我们开发。由于底层使用的数据结构不同，它们也经常被拿来做比较。

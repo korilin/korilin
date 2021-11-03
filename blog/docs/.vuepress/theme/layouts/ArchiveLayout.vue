@@ -2,19 +2,17 @@
     <div class="theme-default-content archive">
         <div class="toolbar">
             <h1>近期文章</h1>
-            <div class="category-select">
+            <div class="tag-select">
                 分类：
                 <a
                     v-bind:class="
-                        selected.includes(category)
-                            ? 'select selected'
-                            : 'select'
+                        selected.includes(tag) ? 'select selected' : 'select'
                     "
-                    v-for="category in $themeConfig.categories"
-                    v-bind:key="category"
-                    @click="onSelect(category)"
+                    v-for="tag in $themeConfig.allTag"
+                    v-bind:key="tag"
+                    @click="onSelect(tag)"
                 >
-                    {{ category }}
+                    {{ tag }}
                 </a>
             </div>
         </div>
@@ -25,9 +23,9 @@
                     v-if="
                         page.path.match('/archive/') &&
                         page.path != '/archive/' &&
-                        selected.includes(page.frontmatter.category) &&
                         page.frontmatter.hidden != true
                     "
+                    v-show="isSelect(page.frontmatter.tags)"
                     v-bind:key="page.path"
                 >
                     <div class="title">
@@ -37,9 +35,7 @@
                     </div>
                     <div class="info">
                         <span>{{ getDate(page.frontmatter.date) }}</span>
-                        <span style="margin-left: 20px">{{
-                            page.frontmatter.category
-                        }}</span>
+                        <Tags :tags="page.frontmatter.tags" />
                     </div>
                     <div class="excerpt">
                         <div v-html="page.excerpt"></div>
@@ -56,12 +52,10 @@
 </template>
 
 <script>
+import Tags from "../components/Tags.vue";
+
 export default {
-    created() {
-        for (var i = 0; i < this.$themeConfig.categories.length; i++) {
-            this.selected.push(this.$themeConfig.categories[i]);
-        }
-    },
+    components: { Tags },
     data() {
         return {
             selected: [],
@@ -75,13 +69,25 @@ export default {
             var day = d.getDate();
             return year + "年" + month + "月" + day + "日";
         },
-        onSelect(category) {
-            let index = this.selected.indexOf(category);
+        onSelect(tag) {
+            let index = this.selected.indexOf(tag);
             if (index >= 0) {
                 this.selected.splice(index, 1);
             } else {
-                this.selected.push(category);
+                this.selected.push(tag);
             }
+        },
+        isSelect(tags) {
+            if (this.selected.length == 0) return true;
+            if (tags == undefined) return false;
+            if (typeof tags == "string") {
+                return this.selected.includes(tags);
+            }
+            for (let index = 0; index < tags.length; index++) {
+                const tag = tags[index];
+                if (this.selected.includes(tag)) return true;
+            }
+            return false;
         },
     },
 };
@@ -104,7 +110,7 @@ export default {
 
 .toolbar {
     // padding-bottom: 10px;
-    .category-select {
+    .tag-select {
         padding: 20px 0;
         // border-top: 1px solid #27282c33;
         border-bottom: 1px solid #27282c33;

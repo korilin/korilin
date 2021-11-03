@@ -1,7 +1,7 @@
 ---
 title: 基于 JDK 1.8 分析 HashMap 的底层原理
 date: 2021-05-31
-category: Oh! Java
+tags: Java
 ---
 
 Java 的 HashMap 可以说是用的最多、问的最多的一个 Map Collection 了。HashMap 是非同步的，即线程不安全。HashMap 允许存放的 key 为 null，但并不保证映射的顺序，也不保证这个顺序随时间保持不变。

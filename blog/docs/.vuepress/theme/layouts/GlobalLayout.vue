@@ -118,5 +118,9 @@ export default {
 
 <style lang="stylus" scoped>
 .f-to-h {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
 }
 </style>
