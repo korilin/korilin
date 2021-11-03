@@ -47,6 +47,10 @@ export default {
     padding-bottom: 2rem;
     display: block;
 
+    @media (min-width: 959px) {
+        padding-left: 22.5rem !important;
+    }
+
     .head {
         border-top: 1px dashed #27282c33;
         border-bottom: 1px dashed #27282c33;

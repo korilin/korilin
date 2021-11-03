@@ -15,6 +15,7 @@
     "home:deploy": "scp -r index.html root@korilin.com:/www/korilin/"
   },
   "dependencies": {
-    "gitalk": "^1.7.2"
+    "gitalk": "^1.7.2",
+    "yarn": "^1.22.17"
   }
 }

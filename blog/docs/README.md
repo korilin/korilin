@@ -2,6 +2,7 @@
 title: Home
 date: 2020-01-01
 layout: HomePage
+sidebar: false
 ---
 
 #### 基本信息
