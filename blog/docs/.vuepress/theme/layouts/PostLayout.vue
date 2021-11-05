@@ -11,9 +11,7 @@
             </div>
             <div class="info">
                 <span>{{ getDate(this.$page.frontmatter.date) }}</span>
-                <span style="margin-left: 20px">{{
-                    this.$page.frontmatter.category
-                }}</span>
+                <Tags :tags="this.$page.frontmatter.tags" />
             </div>
         </div>
         <Content />
@@ -23,10 +21,11 @@
 
 <script>
 import Gitalk from "../components/Gitalk.vue";
+import Tags from "../components/Tags.vue";
 
 export default {
     name: "PostLayout",
-    components: { Gitalk },
+    components: { Gitalk, Tags },
     methods: {
         getDate(date) {
             var d = new Date(date);

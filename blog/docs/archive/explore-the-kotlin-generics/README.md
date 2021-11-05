@@ -1,6 +1,6 @@
 ---
 title: 探索 Java & Kotlin 泛型
-date: 2021-11-4
+date: 2021-11-6
 tags:
     - Kotlin
     - Java

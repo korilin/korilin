@@ -49,7 +49,7 @@ export default {
 
 .tag {
     font-size: 10px;
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 50px;
     background: black;
     color: white;

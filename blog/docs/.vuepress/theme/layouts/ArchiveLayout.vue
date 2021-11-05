@@ -17,7 +17,11 @@
             </div>
         </div>
         <div class="posts">
-            <template v-for="page in this.$site.pages">
+            <transition
+                name="post"
+                v-for="page in this.$site.pages"
+                :key="page.path"
+            >
                 <div
                     class="post"
                     v-if="
@@ -46,7 +50,7 @@
                         </router-link>
                     </div>
                 </div>
-            </template>
+            </transition>
         </div>
     </div>
 </template>
@@ -108,6 +112,17 @@ export default {
     }
 }
 
+.post-enter-active, .post-leave-active {
+    transition: all 0.8s ease;
+    max-height: 200px;
+}
+
+.post-enter, .post-leave-to {
+    opacity: 0;
+    max-height: 0px;
+    padding: 0px;
+}
+
 .toolbar {
     // padding-bottom: 10px;
     .tag-select {
@@ -147,10 +162,13 @@ export default {
 
 .posts {
     .post {
-        border-bottom: 1px dashed #9699a533;
-        padding: 10px 0 30px;
+        border-bottom: 1px dashed #9699a54d;
+        padding: 0 30px;
+        overflow: hidden;
 
         .title {
+            margin-top: 10px;
+
             a {
                 color: #2c3e50;
                 text-decoration: none;
@@ -183,6 +201,7 @@ export default {
 
         .footer {
             margin-top: 20px;
+            margin-bottom: 30px;
 
             .readmore {
                 font-size: 14px;
