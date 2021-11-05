@@ -1,3 +1,6 @@
+
+$border = #27282c;
+
 #app {
     position: relative;
     padding-bottom: 150px;
@@ -60,8 +63,13 @@
     display: none;
 }
 
+div[class*='language-'] {
+    border-radius: 15px;
+    border: 1px solid $border;
+}
+
 div[class*='language-'] pre, div[class*='language-'] pre[class*='language-'] {
-    background: #282c34;
+    background: $border;
 }
 
 div[class~=language-js]:before {
@@ -70,6 +78,10 @@ div[class~=language-js]:before {
 
 div[class~=language-Java]:before {
     content: 'Java';
+}
+
+div[class~=language-HTML]:before {
+    content: 'HTML';
 }
 
 div[class~=language-Kotlin]:before {
@@ -138,22 +150,20 @@ div[class~=language-Cpp]:before {
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 14px;
-        margin: 0 5px;
+        margin: 0 0;
     }
 
     pre {
-        padding: 20px;
+        padding: 1rem 1.5rem 0.5rem !important;
         margin: 25px 0;
-        border-radius: 20px;
+        border-radius: 15px !important;
         overflow: auto;
         position: relative;
 
         code {
             padding: 0;
-            line-height: 2;
-            font-size: 13px;
             margin: 0;
-            color: #fff !important;
+            color: #e9e9e9 !important;
 
             .hljs-built_in {
                 color: #42a4d6;
