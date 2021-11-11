@@ -123,9 +123,9 @@ class Demo<T> where T : CharSequence, T : Comparable<T>
 - 逆变性（contravariance)：逆转了子类型的序关系
 - 不变性（invariance）：不存在子类型关系
 
-泛型类是多个类型组合的复杂类型，在代数数据类型中（ADT）中属于积类型。在编译时期，泛型类指定不同类型参数时代表了不同类型，例如 `List<String>` 和 `List<Interge>` 不是并同一个类型。
+泛型类是多个类型组合的复杂类型，在代数数据类型中（ADT）中属于积类型。在编译时期，泛型类指定不同类型参数时代表了不同类型，例如 `List<String>` 和 `List<Integer>` 不是并同一个类型。
 
-Java 和 Kotlin 的简单泛型是不型变的，也就是 `List<Interge>` 不属于 `List<Number>` 的子类型，下面的操作将会在编译时期就报错。
+Java 和 Kotlin 的简单泛型是不型变的，也就是 `List<Integer>` 不属于 `List<Number>` 的子类型，下面的操作将会在编译时期就报错。
 
 ```Java
 List<Integer> integerList = new ArrayList<>();
@@ -176,7 +176,7 @@ Object object = list2.get(0);
 > 在 《Effective Java》中，Joshua Bloch 称那些只能从中读取的对象为生产者，那些只能写入的对象为消费者。
 
 > 并提出了以下助记符：
-> PECS（**P**roducer `Extends`, **C**onsumer `Super`） 生产者 -Extends、消费则 -Super
+> PECS（**P**roducer `Extends`, **C**onsumer `Super`） 生产者 -Extends、消费者 -Super
 
 ## Kotlin 的声明处型变
 
