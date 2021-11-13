@@ -17,26 +17,13 @@
             </div>
         </div>
         <div class="posts">
-            <transition
-                name="post"
-                v-for="page in this.$site.pages"
-                :key="page.path"
-            >
-                <div
-                    class="post"
-                    v-if="
-                        page.path.match('/archive/') &&
-                        page.path != '/archive/' &&
-                        page.frontmatter.hidden != true
-                    "
-                    v-show="isSelect(page.frontmatter.tags)"
-                    v-bind:key="page.path"
-                >
-                    <div class="title">
+            <transition name="post" v-for="page in pages" :key="page.path">
+                <div class="post" v-show="isSelect(page.frontmatter.tags)">
+                    <h1 class="title">
                         <router-link :to="page.path">
-                            <h1>{{ page.title }}</h1>
+                            {{ page.title }}
                         </router-link>
-                    </div>
+                    </h1>
                     <div class="info">
                         <span>{{ getDate(page.frontmatter.date) }}</span>
                         <Tags :tags="page.frontmatter.tags" />
@@ -60,9 +47,21 @@ import Tags from "../components/Tags.vue";
 
 export default {
     components: { Tags },
+    created() {
+        this.$site.pages.forEach((page) => {
+            if (
+                page.path.match("/archive/") &&
+                page.path != "/archive/" &&
+                page.frontmatter.hidden != true
+            ) {
+                this.pages.push(page);
+            }
+        });
+    },
     data() {
         return {
             selected: [],
+            pages: [],
         };
     },
     methods: {

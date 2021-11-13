@@ -53,5 +53,6 @@ export default {
     border-radius: 50px;
     background: black;
     color: white;
+    user-select: none;
 }
 </style>

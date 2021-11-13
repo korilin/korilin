@@ -4,16 +4,8 @@
             <h1 class="t">笔记 & 杂谈</h1>
         </div>
 
-        <template v-for="page in this.$site.pages">
-            <div
-                class="post"
-                v-if="
-                    page.path.match('/note-tattle/') &&
-                    page.path != '/note-tattle/' &&
-                    page.frontmatter.hidden != true
-                "
-                v-bind:key="page.path"
-            >
+        <template v-for="page in pages">
+            <div class="post" v-bind:key="page.path">
                 <div class="info">
                     <span>{{ getDate(page.frontmatter.date) }}</span>
                 </div>
@@ -35,6 +27,22 @@
 
 <script>
 export default {
+    created() {
+        this.$site.pages.forEach((page) => {
+            if (
+                page.path.match("/note-tattle/") &&
+                page.path != "/note-tattle/" &&
+                page.frontmatter.hidden != true
+            ) {
+                this.pages.push(page);
+            }
+        });
+    },
+    data() {
+        return {
+            pages: [],
+        };
+    },
     methods: {
         getDate(date) {
             var d = new Date(date);
@@ -67,10 +75,13 @@ h3 {
 
 .post {
     margin-bottom: 50px;
+    
 
     .title {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         font-weight: bold;
+        margin-bottom: 15px;
+        text-decoration: solid;
     }
 
     .info {
@@ -89,10 +100,10 @@ h3 {
     }
 
     .excerpt {
-        border: solid 1px #d0d7de;
+        border: dashed 2px #d0d7de;
         border-radius: 6px;
         padding: 30px;
-        background: #f6f8fa;
+        // background: #f6f8fa;
     }
 
     .footer {
