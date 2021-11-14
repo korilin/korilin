@@ -30,8 +30,8 @@
   <strong>GitHub Statistics</strong>
 </summary>
 
-[![](https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&icon_color=88c0d0&text_color=273849&title_color=41b883&hide_title=false&line_height=30)](https://github.com/anuraghazra/github-readme-stats)
+[![](https://github-readme-stats.vercel.app/api?username=korilin&show_icons=true&hide_title=false&line_height=30&theme=material-palenight)](https://github.com/anuraghazra/github-readme-stats)
 
-[![](https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=vue&layout=compact&card_width=450&langs_count=10&hide=html,css)](https://github.com/anuraghazra/github-readme-stats)
+[![](https://github-readme-stats.vercel.app/api/top-langs/?username=korilin&theme=material-palenight&layout=compact&card_width=450&langs_count=10&hide=html,css)](https://github.com/anuraghazra/github-readme-stats)
 
 </details>
