@@ -12,21 +12,6 @@ $border = #27282c;
     .site-name {
         color: #2c3e50 !important;
         font-weight: bold;
-
-        @media (max-width: 959px) {
-            width: calc(100vw - 9.4rem);
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    }
-
-    @media (max-width: 959px) {
-        padding-left: 4rem;
-
-        .can-hide {
-            display: none;
-        }
     }
 
     .links {
@@ -41,16 +26,36 @@ $border = #27282c;
 
     .sidebar-button {
         color: #2c3e50 !important;
-
-        @media (max-width: 959px) {
-            display: block;
-        }
     }
 }
 
-.sidebar {
-    @media (max-width: 959px) {
+@media (max-width: 959px) {
+    .navbar {
+        padding-left: 4rem;
+
+        .can-hide {
+            display: none;
+        }
+
+        .site-name {
+            width: calc(100vw - 9.4rem);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .sidebar-button {
+            display: block;
+        }
+    }
+
+    .sidebar {
         transform: translateX(-100%);
+        transition: transform 0.2s ease;
+    }
+
+    .sidebar-open .sidebar {
+        transform: translateX(0%);
         transition: transform 0.2s ease;
     }
 }
@@ -117,8 +122,8 @@ div[class~=language-Cpp]:before {
     }
 
     p {
-        margin-block-start: 10px
-        margin-block-end: 10px
+        margin-block-start: 10px;
+        margin-block-end: 10px;
     }
 
     a {
