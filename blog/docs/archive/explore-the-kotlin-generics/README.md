@@ -27,9 +27,7 @@ fun <T> invoke(t: T) : T {
 我们可以在声明了类型参数的类中，声明一个泛型方法，但如果内部方法所声明的类型参数名称和类上所声明的相同，那么会覆盖类上所声明的类型参数。下面的代码不会报错，并会打印 `Hello` 字符串。
 
 ```Kotlin
-class GenericsDemo<T>(t: T) {
-
-    val value = t
+class GenericsDemo<T>() {
 
     fun <T> invoke(t: T) : T {
         return t
