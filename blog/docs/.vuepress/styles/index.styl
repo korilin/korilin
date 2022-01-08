@@ -1,5 +1,10 @@
 
-$border = #27282c;
+$border = #22272e;
+$primary-color = #3498db;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 
 #app {
     position: relative;
@@ -20,7 +25,7 @@ $border = #27282c;
     }
 
     .nav-links a:hover, .nav-links a.router-link-active {
-        color: #3498db;
+        color: $primary-color;
         border-bottom: 2px solid #ffffffcc !important;
     }
 
@@ -69,7 +74,7 @@ $border = #27282c;
 }
 
 div[class*='language-'] {
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid $border;
 }
 
@@ -111,7 +116,7 @@ div[class~=language-Cpp]:before {
     }
 
     h1, h2, h3 {
-        color: #3498db;
+        color: $primary-color;
         border: 0;
     }
 
@@ -128,7 +133,7 @@ div[class~=language-Cpp]:before {
 
     a {
         text-decoration: none;
-        color: #3498db;
+        color: $primary-color;
     }
 
     em {
@@ -146,9 +151,11 @@ div[class~=language-Cpp]:before {
     }
 
     blockquote {
-        border-left: 3px solid #3498db;
+        border-left: 4px solid $primary-color;
+        border-radius: 0px 10px 10px 0;
+        background: #f0f0f0cc;
         margin: 0;
-        padding: 2px 10px;
+        padding: 2px 8px;
 
         p {
             margin: 0;
@@ -156,11 +163,12 @@ div[class~=language-Cpp]:before {
     }
 
     code {
-        background: #f1f3f5;
+        background: #f0f0f0cc;
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 14px;
         margin: 0 0;
+        color: $primary-color;
     }
 
     pre {
