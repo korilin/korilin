@@ -15,9 +15,7 @@
                     <div v-html="page.excerpt"></div>
 
                     <div class="footer">
-                        <router-link :to="page.path" class="readmore">
-                            阅读全文
-                        </router-link>
+                        <router-link :to="page.path" class="readmore">阅读全文</router-link>
                     </div>
                 </div>
             </div>
@@ -60,14 +58,6 @@ h1 {
     font-size: 1.7rem !important;
 }
 
-h2 {
-    font-size: 1.5rem !important;
-}
-
-h3 {
-    font-size: 1.3rem !important;
-}
-
 .t {
     color: #3498db;
     margin: 0.67em 0 50px;
@@ -78,10 +68,11 @@ h3 {
     
 
     .title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         font-weight: bold;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         text-decoration: solid;
+        text-align: center;
     }
 
     .info {
