@@ -3,7 +3,7 @@ $border = #22272e;
 $primary-color = #3498db;
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 #app {
@@ -115,15 +115,27 @@ div[class~=language-Cpp]:before {
         line-height: 2;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
         color: $primary-color;
+        border: 0;
+        margin: 30px 0 10px !important;
+    }
+
+    h3, h4, h5 {
+        color: #00adc3;
         border: 0;
     }
 
-    h4, h5 {
-        color: #00adc3;
-        font-size: 18px;
-        border: 0;
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
     }
 
     p {
