@@ -3,7 +3,6 @@ $border = #22272e;
 $primary-color = #3498db;
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 #app {
@@ -111,7 +110,11 @@ div[class~=language-Cpp]:before {
     word-wrap: break-word;
     margin-top: 0 !important;
 
-    p, ul, ol {
+    p {
+        line-height: 1.75;
+    }
+
+    ul, ol {
         line-height: 2;
     }
 
@@ -152,6 +155,10 @@ div[class~=language-Cpp]:before {
         color: #5b7083;
     }
 
+    strong {
+        text-decoration: underline;
+    }
+
     .header-anchor {
         display: none;
     }
@@ -159,12 +166,13 @@ div[class~=language-Cpp]:before {
     img {
         display: flex;
         margin: auto;
-        width: 90%;
+        max-width: 95%;
     }
 
     blockquote {
         border-left: 4px solid $primary-color;
         border-radius: 0px 10px 10px 0;
+        color: #666;
         background: #f0f0f0cc;
         margin: 0;
         padding: 2px 8px;
@@ -181,6 +189,10 @@ div[class~=language-Cpp]:before {
         font-size: 14px;
         margin: 0 0;
         color: $primary-color;
+    }
+
+    .extra-class {
+        margin: 15px;
     }
 
     pre {
@@ -204,11 +216,11 @@ div[class~=language-Cpp]:before {
             }
 
             .function {
-                color: #8d6cca;
+                color: #b392f0;
             }
 
             .class-name {
-                color: #8d6cca;
+                color: #81a6ed;
             }
 
             .title, .type {
