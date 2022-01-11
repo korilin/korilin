@@ -145,16 +145,16 @@ export default {
             user-select: none;
 
             &:hover {
-                color: #3498db;
-                border: 1px solid #3498db;
+                color: #2196f3;
+                border: 1px solid #2196f3;
                 text-decoration: none;
             }
         }
 
         .selected {
             color: white !important;
-            background: #57bcff !important;
-            border: 1px solid #57bcff !important;
+            background: #2196f3 !important;
+            border: 1px solid #2196f3 !important;
         }
     }
 }
