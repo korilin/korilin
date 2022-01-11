@@ -166,7 +166,7 @@ export default {
         overflow: hidden;
 
         .title {
-            margin-top: 10px;
+            margin-top: 20px;
 
             a {
                 color: #2c3e50;
