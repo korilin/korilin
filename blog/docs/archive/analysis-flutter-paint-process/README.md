@@ -1100,17 +1100,15 @@ node2 绘制完成之后开始绘制 node1。由于我们将 node1 设置为单�
 ```dart
 int layerCount() {
   int deep = 0;
-  print('deep ==> $deep');
-  print('root is [${this.runtimeType}]');
+  print('$deep ==> root is [${this.runtimeType}]');
   return _layerCount(deep + 1);
 }
 
 int _layerCount(int deep) {
   int count = 1; // 算上当前节点
   Layer? child = firstChild;
-  print('deep ==> $deep}');
   while (child != null) {
-    print('child is [${child.runtimeType}]');
+    print('$deep ==> child is [${child.runtimeType}]');
     if(child is OffsetLayer)
       count += child._layerCount(deep + 1);
     else
@@ -1132,11 +1130,9 @@ flex.insert(node1);
 
 ![10.png](./10.png)
 
-可以看到依旧是 4 个 Layer 节点，但是 node1 和 node2 生成的 PictureLayer 都存在同一个 OffsetLayer 中。
+可以看到依旧是 4 个 Layer 节点，node2 生成的 PictureLayer 依旧是 TransformLayer 的子节点。
 
-这个 OffsetLayer 并不是 RenderFlex 所生成的，而是和上面一样在绘制 node1 的时候生成的，因为 RenderFlex 并没有和父节点分开绘制，因此不会生成 OffsetLayer。那么为什么 node2 的 PictureLayer 会和 node1 存在同一个 OffsetLayer 中呢？
-
-我们看一下 RenderFlex 是如何绘制子节点的，我们通过调试进入 RenderFlex 的 `paint()`方法，可以看到它调用的是 `paintDefault()`，也就是进行遍历依次调用 PaintingContext 的 `paintChild()`。
+我们看一下 RenderFlex 是如何绘制子节点的，我们通过调试进入 RenderFlex 的 `paint()` 方法，可以看到它调用的是 `paintDefault()`，也就是进行遍历依次调用**当前 PaintingContext** 的 `paintChild()` 绘制子节点。
 
 ```dart
 void defaultPaint(PaintingContext context, Offset offset) {
@@ -1149,23 +1145,7 @@ void defaultPaint(PaintingContext context, Offset offset) {
   }
 }
 ```
-
-RenderFlex 循环绘制时，子节点用的都是**同一个 PaintingContex**。由于 node1 绘制完只是调用  PaintingContext 的 `stopRecordingIfNeeded()`来移除当前的 Canvas、PictureRecorder、PictureLayer 对象 ，PaintingContext 本身和存储的 OffsetLayer 并没有销毁，因此轮到 node2 绘制时就只是依照 Canvas 的创建流程将新创建的 PictureLayer 添加到绘制 node1 时创建的 OffsetLayer。
-
-```dart
-void _startRecording() {
-  // 开始绘制 node1 创建的
-  _currentLayer = PictureLayer(estimatedBounds);
-  _recorder = ui.PictureRecorder();
-  _canvas = Canvas(_recorder!);
-  // _containerLayer 还是绘制 node2 时创建的 OffsetLayer
-  _containerLayer.append(_currentLayer!);
-}
-```
-
-因此我们就会得到这样一颗 Layer Tree。
-
-![yuque_diagram_3](./yuque_diagram_3.jpg)
+RenderFlex 循环绘制时，父节点和下面的子节点用的都是同一个 PaintingContex。由于 node1 是单独绘制，因此会创建一个**新的 PaintingContext 和 OffsetLayer**，但绘制 node2 时还是使用**父节点的 PaintingContext**，所以 flex 和 node2 会一起生成一个 PictureLayer 添加到根节点中。
 
 ## 结语
 
