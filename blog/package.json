@@ -11,8 +11,7 @@
   "scripts": {
     "blog:dev": "vuepress dev docs",
     "blog:build": "vuepress build docs",
-    "blog:deploy": "scp -r docs/.vuepress/dist/* root@korilin.com:/www/korilin/blog",
-    "home:deploy": "scp -r index.html root@korilin.com:/www/korilin/"
+    "blog:deploy": "scp -r docs/.vuepress/dist/* root@korilin.com:~/korilin/blog",
   },
   "dependencies": {
     "gitalk": "^1.7.2",
