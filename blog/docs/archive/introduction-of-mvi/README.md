@@ -14,16 +14,16 @@ Android 架构的两个设计原则主要有两个：**关注点分离** 和 **�
 
 ### 关注点分离
 
-个人认为一个 Android APP 包含的代码类型主要有以下几部分：
+个人认为一个 Android APP 包含的代码类型主要有以下几部分（当然可能不止这些）：
 - UI 构建代码，这些代码用于构建用户所看到的界面
 - 状态处理逻辑，包含向 UI 提供数据、用户行为处理、状态改变逻辑
 - 数据模型定义，定义界面数据格式和从数据源获取的数据格式
 - 数据源代码，用于从本地 / 网络获取数据和提交新数据
 - 特定领域代码，应用独特的功能代码
 
-官方最佳做法的建议中提到要 **在应用的各个模块之间设定明确定义的职责界限**，实际上就是让不同模块有特定的关注点，来对上面提到的代码类型进行区分，避免不同类型代码都放在同一个模型中，而应用架构设计就是在做这样的事情。
+官方最佳做法的建议中提到要**在应用的各个模块之间设定明确定义的职责界限**，实际上就是让不同模块有特定的关注点，来对上面提到的代码类型进行区分，避免不同类型代码都放在同一个区域中，而**应用架构设计**就是在做这样的事情。
 
-遵循关注点分离有几个好处：
+**遵循关注点分离有几个好处：**
 1. 不同模块可单独测试
 2. 提高可维护性和可扩展性
 3. 有利于团队的合作开发
@@ -38,7 +38,13 @@ Android 架构的两个设计原则主要有两个：**关注点分离** 和 **�
 
 ### MVI 架构介绍
 
-MVI 是 **Model-View-Intent** 的缩写，它和 MVVM 一样也是一种响应式 + 流式处理思想的架构。它分为三层：
+MVI 是 **Model-View-Intent** 的缩写，它也是一种响应式 + 流式处理思想的架构。
+
+MVI 的 Model 代表一种可订阅的状态模型的概念，添加了 Intent 概念来代表用户行为，采用单向数据流来控制数据流动和各层依赖关系。
+
+![UDF](./udf.jpg)
+
+在代码的层面上它分为三层：
 - **UI Layer（界面层）**：在屏幕上展示应用界面和数据
 - **Domian Layer（网域层）**：封装复杂或可复用的业务逻辑
 - **Data Layer（数据层）**：获取可公开应用数据和完成业务逻辑
@@ -49,9 +55,14 @@ MVI 是 **Model-View-Intent** 的缩写，它和 MVVM 一样也是一种响应�
 
 MVI 的分层命名并不像 MVC、MVP、MVVM 那样直接，而是根据职责去划分命名。
 
-MVI 中将 View 和 ViewModel 划分为 UI Layer，而添加了 Intent 的概念来代表用户行为，通过流式处理来控制各个层的依赖关系。
+MVVM 代码分层的 View 和 ViewModel 在 MVI 中统一称为 UI Layer，而 Model 层在 MVI 中变成了 Data Layer。
 
-在 MVVM 中的数据访问层处于 Model 层，而 MVI 则是属于 Data Layer 中。MVI 中的 Model 并不代表数据访问层和领域模型，而是可订阅的状态模型，在 UI Layer 的 ViewModel 和 Data Layer 的 Repository 中分别体现为 UI State 和 Data Flow。
+MVI 概念中的 Model 作为状态模型，在 UI Layer 的 ViewModel 和 Data Layer 的 Repository 中分别体现为 UI State 和 Data Flow。
+
+MVI 中的单项数据流工作流程如下：
+1. 用户操作以 Intent 的形式通知 Model
+2. Model 基于 Intent 更新 State
+3. View 接收到 State 变化刷新 UI
 
 ## UI Layer（界面层）
 
@@ -59,17 +70,17 @@ MVI 中将 View 和 ViewModel 划分为 UI Layer，而添加了 Intent 的概念
 
 界面层指的是用于显示 Activity 和 Fragment 界面元素，例如 UI 构建和用户交互逻辑，都属于界面层，这在 MVVM 或者 MVI 中都一样。
 
-MVI 的界面层包含两部分：
-- UI Element：在屏幕上呈现 UI 布局和数据的界面元素（可用 View 或者 Jetpack Compose 构建这些界面）
-- UI State：界面状态，临时存储数据、向应用提供数据和处理逻辑的状态容器（如 ViewModel）
-
 ![mad-arch-ui-elements-state](./mad-arch-ui-elements-state.png)
 
-值得注意的是，MVI 将 MVVM 的 View 和 ViewModel 划分到一起形成 UI Layer，这样可让 UI Layer 的状态有一个合适的处理容器，让 UI Element 专注于 UI 的构建。
+MVI 的概念中 UI 由 UI Element 和 UI State 两部分组成，因此 UI Layer 包含两部分：
+- UI Element：在屏幕上呈现 UI 布局和数据的界面元素（可用 View 或者 Jetpack Compose 构建这些界面）
+- State Holder：用于存储临时状态数据（UI State）、向界面提供数据和处理逻辑的状态容器（如 ViewModel）
+
+![mad-arch-overview-ui](./mad-arch-overview-ui.png)
 
 ### 状态定义与使用
 
-MVVM 中的状态表现为一个 LiveData 对应一个 State，而 MVI 中的 State 表现为集中管理的 Data Class 作为状态容器。
+MVVM 和 MVI 中的状态表现为一个 LiveData 或 Flow 对应一个 State，不同的是 MVI 中的 State 表现为集中管理的 Data Class 作为状态数据。
 
 ```Kotlin
 data class NewsUiState(
@@ -224,9 +235,7 @@ Repository 类负责以下任务：
 - 对应用其余部分的数据源进行抽象化处理
 - 包含数据处理的业务逻辑
 
-Repository 可从多个数据源获取数据，并提供公开 API 提供**一次性操作（如 Kotlin 的 suspend 函数）** 和 **接收关于数据随时间变化的通知**。
-
-为了保护数据一致性，该层公开的数据应该是不可变的，这样也可以在多线程中安全处理。
+Repository 可从多个数据源获取数据，并提供公开 API 提供**一次性操作（如 Kotlin 的 suspend 函数）** 和 **接收关于数据随时间变化的通知**。为了保护数据一致性，该层公开的数据应该是不可变的，这样也可以在多线程中安全处理。
 
 ```Kotlin
 class ExampleRepository(
@@ -304,4 +313,6 @@ Domain Layer 除了可以给 UI Layer 使用外，也可以提供给 Service 或
 
 ## 参考
 
-- Google 推荐使用 MVI 架构？卷起来了~ <https://juejin.cn/post/7048980213811642382>
+- [Google 推荐使用 MVI 架构？卷起来了~](https://juejin.cn/post/7048980213811642382)
+- [MVVM 进阶版：MVI 架构了解一下~](https://juejin.cn/post/7022624191723601928)
+- [应用架构指南 | Android 开发者](https://developer.android.com/jetpack/guide)
