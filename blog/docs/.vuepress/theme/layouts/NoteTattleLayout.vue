@@ -1,5 +1,5 @@
 <template>
-    <div class="theme-default-content note-tattle">
+    <div class="theme-default-content notes">
         <div>
             <h1 class="t">笔记 & 杂谈</h1>
         </div>
@@ -28,8 +28,8 @@ export default {
     created() {
         this.$site.pages.forEach((page) => {
             if (
-                page.path.match("/note-tattle/") &&
-                page.path != "/note-tattle/" &&
+                page.path.match("/notes/") &&
+                page.path != "/notes/" &&
                 page.frontmatter.hidden != true
             ) {
                 this.pages.push(page);
