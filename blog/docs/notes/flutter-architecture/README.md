@@ -9,7 +9,9 @@ tags:
 
 在 Flutter 中，单向数据流思维可用于外层的业务 StatefulWidget + ViewModel 或者 Widget 组件 + 高阶函数。
 
-在 Flutter 中也有 State 的概念，但它并不仅代表一个状态，而是 Widget + 状态的组合，并且不像在原生 Android 开发中一样可以利用 LiveData 或者 Kotlin Flow 在 ViewModel 中来定义一个可订阅 State。
+在 Flutter 中也有 State 的概念，但它并不仅代表一个状态，而是 Widget + 状态的组合，并且不像在原生 Android 开发中一样可以利用 LiveData 或者 Kotlin Flow 在 ViewModel 中来定义一个可订阅 State，这里记录下在 Flutter 中实现思路。
+
+<!-- more -->
 
 我们可以自己创建两个 State 类来实现 MVI 中的 State 概念：
 - **ValueState** 不可以修改状态值，仅提供给 UI 层监听变化

@@ -306,7 +306,7 @@ static class Entry extends WeakReference<ThreadLocal<?>> {
 
 ThreadLocal 对象并不会发生内存泄露，当我们将 ThreadLocal 引用置为 `null` 时，由于在 Thread 中的 ThreadLocalMap 中的 Entry，对 ThreadLocal 是一个弱引用，因此发生 GC 时就会被回收。
 
-所以在 ThreadLocalMap 中可能存在 key 为 `null` 的 Entry，但由于这个 Entry 的 value 对引用的对象是一个强引用，因此被引用的对象不会被回收，这才发生了内存泄露。
+所以在 ThreadLocalMap 中可能存在 key 为 `null` 的 Entry，但由于这个 Entry 以及存储的 value 本身是一个强引用，因此不会被回收，这才发生了内存泄露。
 
 ![](./MemoryLeak.jpg)
 
