@@ -13,7 +13,7 @@
                     href="http://beian.miit.gov.cn/"
                     data-v-882df4f6=""
                 >
-                    粤ICP备19149652号
+                    粤ICP备2022047648号
                 </a>
             </div>
         </div>
