@@ -1,7 +1,6 @@
 ## Hi there 👋 不点个 follow 吗
 
 - 单身技术宅，変態ガールコン，熬夜冠军🌛
-- 单身技术宅，変態ガールコン，熬夜冠军🌛
 - Blog：<https://korilin.com/>
 - Email：korilin.dev@gmail.com
 - 即刻 id：korilin
