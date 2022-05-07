@@ -1,0 +1,71 @@
+baseURL: "https://korilin.com/"
+languageCode: "cn-zh"
+title: "korilin's blog"
+theme: "PaperMod"
+paginate: 8
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: G-Y4112QEXZJ
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - name: Archive
+      url: archives
+      weight: 5
+    - name: Tags
+      url: tags
+      weight: 6
+    - name: Profile-X
+      url: profile
+      weight: 7
+    - name: Search
+      url: search
+      weight: 10
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "korilin"
+  description: "korilin's blog"
+  kewords: [blog, korilin]
+  author: 
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowPostNavLinks: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showToc: true
+  tocOpen: false
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi There 👋"
+    Content: >
+        Welcome to my blog, I'm korilin.
+
+        - A Android Developer & oragnizer of Shenzhen Kotlin Kotlin User Group.
+      
+  socialIcons:
+  - name: github
+    url: "https://github.com/korilin"
