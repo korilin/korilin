@@ -44,7 +44,7 @@ params:
   kewords: [blog, korilin]
   author: 
   defaultTheme: auto
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -60,11 +60,9 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi There 👋"
+    Title: "Hi There 👋 ~I'm korilin."
     Content: >
-        Welcome to my blog, I'm korilin.
-
-        - A Android Developer & oragnizer of Shenzhen Kotlin Kotlin User Group.
+        A Android developer & the oragnizer of Shenzhen Kotlin User Group.
       
   socialIcons:
   - name: github

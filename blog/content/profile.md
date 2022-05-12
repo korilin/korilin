@@ -22,15 +22,10 @@ ShowPostNavLinks: false
 
 ~~单身一辈子吧~~
 
-### 外表
+二次元都市/天真无邪小萝莉，
 
-可爱萝莉，例如
+例如
 
-![loli](../loli1.jpg)
-![loli](../loli2.jpg)
-
-
-### 内在
+![loli](../loli.png)
 
 存在自己认可的特长 or 有热衷于其中的兴趣
-
