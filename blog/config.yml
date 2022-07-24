@@ -61,8 +61,8 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi There 👋 ~I'm korilin."
-    Content: >
-        A Android developer & the oragnizer of Shenzhen Kotlin User Group.
+    Content: "Maybe a Android developer."
+        
       
   socialIcons:
   - name: github
