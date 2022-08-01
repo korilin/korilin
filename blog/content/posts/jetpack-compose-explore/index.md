@@ -7,12 +7,7 @@ tags: [Kotlin, Android, Jetpack Compose]
 Compose UI 的编写只需要 Kotlin，在遵循 Android 应用架构时，这样更有利于聚合 UI Elements 的代码，不需要去区分 Kotlin 代码和 xml 布局文件，在我看来这种方式更加容易采用 Android 架构指南去控制项目架构。
 
 但从另一方面来讲，Compose 这种嵌套的 UI 组合方式会加深代码层次，因此开发过程中需要对 UI 上各个元素做更细的区分，以增加代码的可读性。另外如果状态使用没有处理好，也会对 Compose 的重组性能带来影响。
-## Compose 环境与使用
-Compose Compiler 与 Kotlin 的版本是绑定的，对应的版本对照表可以参考官方文档：
-[https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn](https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn)
 
-Compose 的使用可以参考部门技术分享里的另外一篇文章：
-[https://nemo.yuque.com/client-doc/tech-share/wgvg9z#pr8Nh](https://nemo.yuque.com/client-doc/tech-share/wgvg9z#pr8Nh)
 ## 完善的声明式 UI
 Android View 系统设计的时候是遵循 OOP 的，虽然有 XML 可以帮我们减少下面这种命令式代码的使用，但这种声明式构建 + 命令式执行的缺点还是很明显，因为需要一个加载器把布局转化到业务逻辑代码中。
 
@@ -56,6 +51,10 @@ Compose 利用 Kotlin DSL 构建声明式 UI，一个 `@Composable` 相当于一
 
 @Composable fun Button()
 ```
+
+Compose Compiler 与 Kotlin 的版本是绑定的，对应的版本对照表可以参考官方文档：
+[https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn](https://developer.android.com/jetpack/androidx/releases/compose-kotlin?hl=zh-cn)
+
 ## 节点与作用域
 Compose 中节点分两种：
 
