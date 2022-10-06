@@ -1,8 +1,8 @@
 #!/bin/bash
 
-rm -rf public
+git pull --rebase && git submodule init && git submodule update
 
-cd repository && git pull --rebase && git submodule init && git submodule update
+rm -rf public
 
 cd blog && hugo --minify -d ../public
 
