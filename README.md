@@ -3,7 +3,7 @@
 - 单身技术宅，変態ガールコン，熬夜冠军🌛
 - blog：<https://korilin.com/>
 - email：korilin.dev@gmail.com
-- okjike id：korilin
+- okjike：korilin
 
 ### 目前主要研究 💣
 
