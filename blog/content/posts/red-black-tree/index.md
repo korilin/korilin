@@ -27,7 +27,7 @@ tags: ["Data Structures & Algorithms"]
 
 该图中对子节点的连接位置进行描述的只有 3 节点，不过 4 节点与子节点连接方式其实也是一样的，子节点的连接决定于子节点存放的数据的大小范围和父节点的存放的数据的大小。
 
-**2-3-4 树的结构是 Perfect Balance（完美的平衡）的，不同分支的高度都是一样的。**。
+**2-3-4 树的结构是 Perfect Balance（完美的平衡）的，不同分支的高度都是一样的。**
 
 在 2-3-4 树中，添加数据与普通的树不同，并不会在树根直接创建新的子节点进行插入，而是放入插入位置的父节点中，成为 3-node 或 4-node。
 
@@ -268,16 +268,10 @@ borrow from sibling 的操作比较麻烦，因为兄弟节点中的数据整体
 
 ## 参考
 
-> [30张图带你彻底理解红黑树 - 安卓大叔 | 简书](https://www.jianshu.com/p/e136ec79235c)
->
-> [算法 理解红黑树 - Ruby China @join](https://ruby-china.org/topics/22499)
->
-> [Left-Leaning Red-Black Trees (PPT) - Robert Sedgewick | Princeton University](https://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf)
->
-> [Left-leaning Red-Black Trees (Paper) - Robert Sedgewick | Princeton University](https://www.cs.princeton.edu/~rs/talks/LLRB/LLRB.pdf)
->
-> [红黑树深入剖析及Java实现 - 美团技术团队](https://tech.meituan.com/2016/12/02/redblack-tree.html)
->
-> [The-Art-Of-Programming-By-July - github/julycoding](https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md)
->
-> [通俗易懂的红黑树图解(下) - 政采云前端团队 | SegmentFault ](https://segmentfault.com/a/1190000022278733)
+- [30张图带你彻底理解红黑树 - 安卓大叔 | 简书](https://www.jianshu.com/p/e136ec79235c)
+- [算法 理解红黑树 - Ruby China @join](https://ruby-china.org/topics/22499)
+- [Left-Leaning Red-Black Trees (PPT) - Robert Sedgewick | Princeton University](https://sedgewick.io/wp-content/uploads/2022/03/2008-09LLRB.pdf)
+- [Left-leaning Red-Black Trees (Paper) - Robert Sedgewick | Princeton University](https://sedgewick.io/wp-content/themes/sedgewick/papers/2008LLRB.pdf)
+- [红黑树深入剖析及Java实现 - 美团技术团队](https://tech.meituan.com/2016/12/02/redblack-tree.html)
+- [The-Art-Of-Programming-By-July - github/julycoding](https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md)
+- [通俗易懂的红黑树图解(下) - 政采云前端团队 | SegmentFault ](https://segmentfault.com/a/1190000022278733)
