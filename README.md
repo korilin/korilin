@@ -1,8 +1,11 @@
 ## Hi there 👋 Here is Kori
 
-- blog：<https://korilin.com/>
-- email：korilin.dev@gmail.com
-- okjike：korilin
+- Shenzhen Kotlin User Group Organizer
+- Not only a Android developer
+- Blog：<https://korilin.com/>
+- Email：korilin.dev@gmail.com
+- Okjike：korilin
+- Wechat: korilin_daily
 
 ### Main Tech Skill Point 💣
 
