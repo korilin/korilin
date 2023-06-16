@@ -1,11 +1,10 @@
-## Hi there 👋 不点个 follow 吗
+## Hi there 👋 Here is Kori
 
-- 单身技术宅，変態ガールコン，熬夜冠军🌛
 - blog：<https://korilin.com/>
 - email：korilin.dev@gmail.com
 - okjike：korilin
 
-### 目前主要研究 💣
+### Main Tech Skill Point 💣
 
 ![Kotlin](https://img.shields.io/badge/-Kotlin-0095D5?style=flat-square&logo=Kotlin&logoColor=fff)
 ![Andriod](https://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=Android&logoColor=fff)
