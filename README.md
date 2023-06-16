@@ -2,9 +2,9 @@
 
 - Shenzhen Kotlin User Group Organizer
 - Not only a Android developer
-- Blog：<https://korilin.com/>
-- Email：korilin.dev@gmail.com
-- Okjike：korilin
+- Blog: <https://korilin.com/>
+- Email: korilin.dev@gmail.com
+- Okjike: korilin
 - Wechat: korilin_daily
 
 ### Main Tech Skill Point 💣
