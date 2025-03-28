@@ -2,7 +2,7 @@ baseURL: "https://korilin.com/"
 languageCode: "cn-zh"
 title: "korilin's blog"
 theme: "PaperMod"
-paginate: 8
+# paginate: 8
 
 enableRobotsTXT: true
 buildDrafts: false
