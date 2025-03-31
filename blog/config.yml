@@ -67,3 +67,10 @@ params:
   socialIcons:
   - name: github
     url: "https://github.com/korilin"
+
+markup:
+  highlight:
+    # anchorLineNos: true
+    lineNos: false
+    # noClasses: false
+    style: github-dark
