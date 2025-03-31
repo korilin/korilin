@@ -42,7 +42,7 @@ params:
   title: "korilin"
   description: "korilin's blog"
   kewords: [blog, korilin]
-  author: 
+  author: korilin
   defaultTheme: auto
   ShowReadingTime: false
   ShowShareButtons: true
