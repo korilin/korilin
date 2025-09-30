@@ -23,9 +23,12 @@ menu:
     - name: Tags
       url: tags
       weight: 6
+    - name: OKR
+      url: tags/okr
+      weight: 7
     - name: Profile-X
       url: profile
-      weight: 7
+      weight: 8
     - name: Search
       url: search
       weight: 10
