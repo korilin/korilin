@@ -1,3 +1,4 @@
 [submodule "blog/themes/PaperMod"]
 	path = blog/themes/PaperMod
 	url = https://github.com/korilin/hugo-PaperMod.git
+	branch = master

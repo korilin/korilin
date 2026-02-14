@@ -52,7 +52,6 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
-  ShowPostNavLinks: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: true
