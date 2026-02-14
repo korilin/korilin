@@ -4,7 +4,7 @@ date: 2026-02-14
 tags: [Kotlin, Compose Multiplatform, Image]
 ---
 
-早期由于 Android 主要的社区图片组件库（例如 Glide、Coil）在 Google Jetpack Compose 的支持上还不算好，因此基础 Glide 做了一个 akit 的 Compose 图片支持库
+早期由于 Android 主要的社区图片组件库（例如 Glide、Coil）在 Google Jetpack Compose 的支持上还不算好，因此当时基于 Glide 做了一个 akit 的 Compose 图片支持库，主要用于处理社区图片库一些在 Compose 上不支持的问题和 bugfix
 
 > 可参考 [《使用 Glide 在 Compose 中加载图片
 》](https://korilin.com/posts/compose-glide-image/)。
