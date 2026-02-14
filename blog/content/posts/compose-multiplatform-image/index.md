@@ -354,7 +354,7 @@ override fun startAnimation(coroutineContext: CoroutineContext) {
 
 动画生命周期由 `AsyncRequestNode` 统一接管：当 painter 切换时，若实现了 `AnimatablePainter` 就自动 `startAnimation/stopAnimation`。因此页面层不需要手动管理 gif/lottie 的启动与销毁。
 
-## Transformation 与高斯模糊支持
+## Transformation 支持
 
 Factory/Decoder 更适合解决“类型识别和解码入口”问题（例如 gif、lottie、ninepatch 识别）。
 
@@ -375,24 +375,97 @@ interface ImageTransformation<T> {
 }
 ```
 
-### Android：Glide 的 Transformation 链
-
 `akit-image-engine-glide` 里 `BitmapTransformation/DrawableTransformation` 同时实现了 Glide Transformation 与 `ImageTransformation`，这样既能接入 Glide pipeline，也能复用项目自己的转换抽象。
 
 请求阶段在 `setupTransforms` 里按 `ContentScale` 组合链路，并默认加上 `LargeBitmapLimitTransformation`。这个转换用于规避 Compose 场景的 `draw too large bitmap` 问题：当尺寸或 byteCount 超阈值时主动缩放，避免大图直接进绘制管线。
 
 另一个关键点是 `SkipNinePatchDrawableTransformation`。它会跳过 `NinePatchDrawable` 的 drawable 级变换，避免 ninepatch 被错误二次处理导致拉伸语义失真。
 
-高斯模糊对应 `GaussianBlurTransformation`，内部调用 `Toolkit.blur(bitmap, radius)`，并通过 `BlurConfig.coerceInMod` 限制参数范围（0~25）。`imageContext.blurConfig` 不为空时会自动追加这个 transformation。
+Coil 与 Glide 在请求入口不同，但转换层语义保持一致：都围绕 `ImageTransformation` 组织转换链，并让引擎缓存基于 key/cacheKey 生效。
 
-### iOS/Android：Coil 的 Transformation 链
+### 高斯模糊实现（Toolkit.blur）
 
-`akit-image-engine-coil` 同样提供 `GaussianBlurTransformation`（expect/actual）：
+`GaussianBlurTransformation` 在转换链里主要负责参数与缓存语义，真正的像素处理集中在 `Toolkit.blur`。Android 是基于 renderscript-toolkit 的 native 库来执行。
 
-- Android actual：调用 `Toolkit.blur(Bitmap, radius, ...)`
-- iOS actual：读取像素 ByteArray 后调用 `Toolkit.blur(inputArray, vectorSize=4, ...)` 再回写 Bitmap
+```kotlin
+fun blur(inputBitmap: Bitmap, radius: Int = 5, restriction: Range2d? = null): Bitmap {
+    validateBitmap("blur", inputBitmap)
+    require(radius in 1..25)
+    validateRestriction("blur", inputBitmap.width, inputBitmap.height, restriction)
 
-iOS 侧 `Toolkit` 的 blur 优先使用系统向量化能力，当 Accelerate `vImageBoxConvolve_*` 失败时回退到 Kotlin 计算逻辑，保证功能可用性。
+    val outputBitmap = createCompatibleBitmap(inputBitmap)
+    nativeBlurBitmap(nativeHandle, inputBitmap, outputBitmap, radius, restriction)
+    return outputBitmap
+}
+```
+
+iOS 的 `actual blur` 核心流程是：先算 kernel，优先走 `vImage` 盒卷积，失败再走 Kotlin fallback，最后统一处理 restriction 区域。
+
+```kotlin
+actual fun blur(
+    inputArray: ByteArray,
+    vectorSize: Int,
+    sizeX: Int,
+    sizeY: Int,
+    radius: Int,
+    restriction: Range2d?
+): ByteArray {
+    require(vectorSize == 1 || vectorSize == 4)
+    require(inputArray.size >= sizeX * sizeY * vectorSize)
+    require(radius in 1..25)
+    validateRestriction("blur", sizeX, sizeY, restriction)
+
+    val kernelSize = (radius * 2 + 1).coerceAtLeast(1)
+    val outputArray = ByteArray(inputArray.size)
+    val success = boxConvolve(
+        inputArray = inputArray,
+        outputArray = outputArray,
+        sizeX = sizeX,
+        sizeY = sizeY,
+        vectorSize = vectorSize,
+        kernelSize = kernelSize
+    )
+    if (!success) {
+        boxBlurFallback(inputArray, outputArray, sizeX, sizeY, vectorSize, radius)
+    }
+    if (restriction != null) {
+        zeroOutsideRestriction(outputArray, sizeX, sizeY, vectorSize, restriction)
+    }
+    return outputArray
+}
+```
+
+`boxConvolve` 负责走 Accelerate：根据 `vectorSize` 分发到 `vImageBoxConvolve_ARGB8888` 或 `vImageBoxConvolve_Planar8`，并按需申请 tempBuffer。
+
+```kotlin
+private fun boxConvolve(...): Boolean {
+    val kernel = kernelSize.toUInt()
+    val flags = kvImageEdgeExtend
+    val tempBufferSize = requiredTempBufferSize(src.ptr, dest.ptr, kernel, vectorSize)
+    ...
+    error = if (vectorSize == 4) {
+        vImageBoxConvolve_ARGB8888(..., kernel_height = kernel, kernel_width = kernel, flags = flags)
+    } else {
+        vImageBoxConvolve_Planar8(..., kernel_height = kernel, kernel_width = kernel, flags = flags)
+    }
+    return error == 0L
+}
+```
+
+fallback 路径是两次一维滑动窗口：先横向写 `temp`，再纵向写 `outputArray`，避免直接做二维卷积。
+
+```kotlin
+private fun boxBlurFallback(...) {
+    val window = radius * 2 + 1
+    val temp = ByteArray(inputArray.size)
+    // horizontal pass -> temp
+    for (y in 0 until sizeY) { ... }
+    // vertical pass -> outputArray
+    for (x in 0 until sizeX) { ... }
+}
+```
+
+整体上两端语义保持一致：Android 走 native blur，iOS 走 vImage + fallback，参数约束与输出约束由 `Toolkit.blur` 统一。
 
 ## 总结
 
