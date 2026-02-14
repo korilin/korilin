@@ -102,21 +102,104 @@ val chunk = when (type) {
 
 `NinePatchPainter` 则根据 chunk 的 x/y div 把图片分段，固定区保持原比例，可拉伸区按目标尺寸分配，这样能在 Compose 侧实现和原生 9-patch 一致的拉伸语义。
 
-Android + Glide 的路径是：
+实现思路的关键不是某个细节分支判断，而是先把不同来源统一成同一种中间结构 `NinePatchChunk`，再按平台输出目标资源类型。  
+可以把链路概括成三步：解析归一化 -> 平台映射 -> 绘制拉伸。
 
-- 在 `NinePatchLibraryGlideModule` 里注册 `NinePatchDrawableDecoder`
-- 通过 `NinepatchEnableOption` 控制是否启用
-- decoder 中识别类型后，`Chunk` 直接构建 `NinePatchDrawable`，`Raw` 通过 `RawNinePatchProcessor` 先裁掉 1px 边框并按密度重算 padding/div，再构建 `NinePatchDrawable`
+Coil 侧的核心解析逻辑在 `NinePatchDecoder.decode`，会把解析结果统一封装成 `NinePatchCoilImage`（内部持有 `NinePatchPainter`）：
 
-Coil 路径则统一在 `NinePatchDecoder`：
+```kotlin
+val parsed = parseNinePatch(
+    ImageBitmapNinePatchSource(image.asComposeImageBimap),
+    image.ninePatchChunk
+)
+when (parsed.type) {
+    NinePatchType.Raw -> cropNinePatchContent(image)
+    NinePatchType.Chunk -> image
+    else -> null
+}?.let {
+    val chunk = parsed.chunk ?: NinePatchChunk.createEmptyChunk()
+    NinePatchCoilImage(
+        image = it,
+        content = it.asComposeImageBimap,
+        chunk = chunk,
+    )
+}
+```
 
-- 先判断是否 PNG 与是否开启 `NinePatchDecodeEnabled`
-- 解析类型后封装成 `NinePatchCoilImage`，内部持有 `NinePatchPainter`
-- `Raw` 会先 `cropNinePatchContent`，`Chunk` 在 Android 可直接拿 `Bitmap.ninePatchChunk`
+这里 `NinePatchCoilImage` 本质上只是桥接容器，把解码得到的内容和 `chunk` 打包后交给 `NinePatchPainter`。  
+真正决定 NinePatch 拉伸行为的是 `NinePatchPainter` 的分段与绘制逻辑。
 
-iOS 侧有一个明确差异：`isNinePatchChunk(bytes)` 返回 `false`，即 iOS 不依赖平台 chunk 校验，主要走 Raw NinePatch 解析逻辑。这也是为什么 NinePatch 的跨端核心是 `akit-graph` 的解析器，而不是平台 API。
+`NinePatchPainter.onDraw` 的核心链路是：
 
-另外 `Modifier.akitAsyncBackground` 会读取 `HasPaddingPainter.padding`，在测量阶段把图片内边距计算进来（可由 `ignoreImagePadding` 控制忽略），这让气泡背景这类场景在双端都能保持一致布局表现。
+```kotlin
+override fun DrawScope.onDraw() {
+    val xSegments = buildSegments(chunk.xDivs, image.width)
+    val ySegments = buildSegments(chunk.yDivs, image.height)
+
+    val destWidths = computeDestLengths(xSegments, size.width.roundToInt())
+    val destHeights = computeDestLengths(ySegments, size.height.roundToInt())
+
+    var destY = 0
+    for (yIndex in ySegments.indices) {
+        var destX = 0
+        for (xIndex in xSegments.indices) {
+            val xSeg = xSegments[xIndex]
+            val ySeg = ySegments[yIndex]
+            drawImageRect(
+                image = image,
+                src = IntRect(xSeg.start, ySeg.start, xSeg.start + xSeg.length, ySeg.start + ySeg.length),
+                dst = IntRect(destX, destY, destX + destWidths[xIndex], destY + destHeights[yIndex])
+            )
+            destX += destWidths[xIndex]
+        }
+        destY += destHeights[yIndex]
+    }
+}
+```
+
+其中最关键的是目标尺寸分配算法 `computeDestLengths`：
+
+```kotlin
+val fixedTotal = segments.filterNot { it.stretch }.sumOf { it.length }
+val stretchTotal = segments.filter { it.stretch }.sumOf { it.length }
+
+if (destLength < fixedTotal || stretchTotal == 0) {
+    // 空间不足时，所有分段按同一比例整体缩放
+} else {
+    // 先保留 fixed 段，再把剩余空间按比例分给 stretch 段
+    val remaining = destLength - fixedTotal
+    val scale = remaining.toFloat() / stretchTotal
+}
+```
+
+也就是说，NinePatch 的实现核心不是“把整图放大”，而是：
+
+1. 先按 `chunk` 把位图切成 fixed/stretch 段。
+2. 再按目标尺寸把可拉伸段重新分配长度。
+3. 最后按二维网格逐块映射 `src -> dst` 绘制。
+
+这样可以保证边角等固定区域不被错误拉伸，而中间可拉伸区域按规则扩展。
+
+Android 侧会把解析结果进一步转换为 `Drawable`：`Chunk` 直接构建 `NinePatchDrawable`，`Raw` 先做裁边与密度重算再构建：
+
+```kotlin
+val parsed = parseNinePatch(bitmap.asNinePatchSource(), bitmap.ninePatchChunk)
+return when (parsed.type) {
+    NinePatchType.Chunk -> {
+        val chunk = parsed.chunk ?: return bitmap.toDrawable(resources)
+        NinePatchDrawable(
+            resources, bitmap, chunk.toBytes(), chunk.padding.toAndroidRect(), srcName
+        )
+    }
+    NinePatchType.Raw -> {
+        val chunk = parsed.chunk ?: return bitmap.toDrawable(resources)
+        RawNinePatchProcessor.createDrawable(resources, bitmap, chunk, srcName)
+    }
+    NinePatchType.None -> bitmap.toDrawable(resources)
+}
+```
+
+iOS 和 Android 的底层解码细节可以不同，但最终都会回到同一套 `parseNinePatch -> NinePatchChunk -> NinePatchPainter` 的跨端链路。
 
 ## Gif、Lottie 动画支持
 
