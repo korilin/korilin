@@ -83,13 +83,9 @@ object LocalEngineContextRegister {
 
 ## Ninepatch 图片加载支持
 
-NinePatch 的双端支持，本质是三层协作：
+`akit-graph` 提供跨端 NinePatch 解析的 NinePatchChunk 与绘制的 NinePatchPainter，Glide 侧通过通过 NinePatchChunk 把解码结果转成 `NinePatchDrawable`，而 Coil 侧通过则直接解码为 `NinePatchPainter`
 
-1. `akit-graph` 提供跨端 NinePatch 解析与绘制
-2. Android 侧通过 `akit-image-engine-glide` 把 Glide 解码结果转成 `NinePatchDrawable`
-3. Coil 侧通过 `akit-image-engine-coil` 把解码结果转成 `NinePatchPainter`
-
-先看解析层。`parseNinePatch` 会优先判断 chunk，再判断 raw 边框（1px 黑线规则）：
+先看解析层的 `parseNinePatch` 会优先判断 chunk，再判断 raw 边框（1px 黑线规则）：
 
 ```kotlin
 val type = determineNinePatchType(source, chunkBytes)
